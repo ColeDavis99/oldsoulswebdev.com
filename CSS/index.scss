@@ -8,12 +8,14 @@ body{
   background-image: url("../IMAGES./background_1.jpg");
 }
 
-header{
-
+.hamburger{
+  visibility: hidden;
 }
 
-
-
+#logo{
+  display: inline-block;
+  width: 25%;
+}
 /////////////////////////////////////////////////////////////
 //////////////////      Media Queries     //////////////////
 ////////////////////////////////////////////////////////////
@@ -21,18 +23,20 @@ header{
 /* Smartphones */
 @media only screen and (min-width: 310px) and (max-width: 880px) {
   @import"../3rd_Party_Libraries/Hamburgers/hamburgers.scss";
+  header{
+    text-align: center;
+  }
 
   #logo{
-    display: block;
-    margin: auto;
-    border-radius: 190px;
+    display: inline-block;
     width: 50%;
   }
 
   .hamburger{
-    position: absolute;
-    top: 28px;
-    left: 5px;
+    visibility: visible;
+    position: relative;
+    right: 15vw;
+    bottom:4vw;
   }
   .hamburger:focus{
     outline:0;
@@ -40,6 +44,23 @@ header{
 }
 
 /* Tablets */
-@media only screen and (min-width: 881px) and (max-width: 1380px) {
+@media only screen and (min-width: 881px) and (max-width: 1580px) {
+  header{
+    text-align: center;
+  }
 
+  #logo{
+    display: inline-block;
+    width: 50%;
+  }
+
+  .hamburger{
+    visibility: visible;
+    position: relative;
+    right: 10vw;
+    bottom:4vw;
+  }
+  .hamburger:focus{
+    outline:0;
+  }
 }
