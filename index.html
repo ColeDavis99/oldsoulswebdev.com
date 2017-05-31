@@ -6,7 +6,7 @@
     <!-- Animate.css-->
     <link rel="stylesheet" href="3rd_Party_Libraries/animate.css">
     <!--  Hamburger Library.-->
-    <link rel="stylesheet" href="3rd_Party_Libraries/Hamburgers/hamburgers.scss">
+    <link rel="stylesheet" href="3rd_Party_Libraries/Hamburgers/hamburgers.min.css">
     <!-- The ever-holy JQuery. -->
     <script src="3rd_Party_Libraries/JQuery.js"></script>
     <!--  Nav Animations & Speed Control-->
@@ -15,7 +15,15 @@
   </head>
   <body>
     <div id="wrapper">
-
+      <header>
+        <img src="IMAGES/logo.png" id="logo">
+        <button class="hamburger hamburger--elastic" type="button">
+           <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </header>
     </div>
+    <script src="3rd_Party_Libraries/Hamburgers/hamburger.js"></script>
   </body>
 </html>
