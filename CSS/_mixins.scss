@@ -1,1 +1,9 @@
-
+@mixin HamburgerNav{
+  nav{
+    height: 70vh;
+    width:90vw;
+    background-color: rgba(140,140,140,.6);
+    position: relative;
+    bottom:15px;
+  }
+}

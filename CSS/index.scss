@@ -1,4 +1,5 @@
-@import"../3rd_Party_Libraries/Hamburgers/_hamburgers.scss";
+@import "../3rd_Party_Libraries/Hamburgers/_hamburgers.scss";
+@import "_mixins.scss";
 
 *{
   margin: 0;
@@ -10,6 +11,11 @@ body{
   background-image: url("../IMAGES./background_1.jpg");
 }
 
+nav{
+  //So it doesn't pop up when you first load the page.
+  visibility: hidden;
+}
+
 .hamburger{
   visibility: hidden;
 }
@@ -18,12 +24,17 @@ body{
   display: inline-block;
   width: 25%;
 }
+
+
 /////////////////////////////////////////////////////////////
 //////////////////      Media Queries     //////////////////
 ////////////////////////////////////////////////////////////
 
 /* Smartphones */
 @media only screen and (min-width: 0px) and (max-width: 416px){
+
+  @include HamburgerNav();
+
   header{
     text-align: center;
   }
@@ -38,15 +49,19 @@ body{
     position: relative;
     right: 5vw;
     bottom:3vw;
-
   }
   .hamburger:focus{
     outline:0;
   }
+
 }
 
 /* Large Smartphones */
 @media only screen and (min-width: 417px) and (max-width: 880px) {
+
+@include HamburgerNav();
+
+
   header{
     text-align: center;
   }
@@ -62,7 +77,7 @@ body{
     right: 10vw;
     bottom:4vw;
   }
-  
+
   .hamburger:focus{
     outline:0;
   }
