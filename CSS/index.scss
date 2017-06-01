@@ -11,19 +11,21 @@ body{
   background-image: url("../IMAGES./background_1.jpg");
 }
 
+header{
+  border-bottom: 5px solid white;
+  background-image: url("../IMAGES./background_1.jpg");
+}
+
 nav{
   //So it doesn't pop up when you first load the page.
   visibility: hidden;
 }
 
-.hamburger{
-  visibility: hidden;
+#headerWrapper{
+  position: relative;
+  z-index: 1;
 }
 
-#logo{
-  display: inline-block;
-  width: 25%;
-}
 
 
 /////////////////////////////////////////////////////////////
@@ -33,7 +35,7 @@ nav{
 /* Smartphones */
 @media only screen and (min-width: 0px) and (max-width: 416px){
 
-  @include HamburgerNav();
+  @include HamburgerNav(80vh, 90vw);
 
   header{
     text-align: center;
@@ -42,13 +44,14 @@ nav{
   #logo{
     display: inline-block;
     width: 70%;
+    position: relative;
   }
 
   .hamburger{
     visibility: visible;
     position: relative;
     right: 5vw;
-    bottom:3vw;
+    bottom:3.5vw;
   }
   .hamburger:focus{
     outline:0;
@@ -59,8 +62,7 @@ nav{
 /* Large Smartphones */
 @media only screen and (min-width: 417px) and (max-width: 880px) {
 
-@include HamburgerNav();
-
+  @include HamburgerNav(60vh, 80vw);
 
   header{
     text-align: center;
@@ -68,14 +70,15 @@ nav{
 
   #logo{
     display: inline-block;
-    width: 60%;
+    width: 50%;
+    position: relative;
   }
 
   .hamburger{
     visibility: visible;
     position: relative;
-    right: 10vw;
-    bottom:4vw;
+    right: 19vw;
+    bottom:3.1vw;
   }
 
   .hamburger:focus{
@@ -92,9 +95,23 @@ nav{
   #logo{
     display: inline-block;
     width: 40%;
+    position: relative;
   }
 
   .hamburger{
     visibility: hidden;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1281px) and (max-width: 9920px){
+  .hamburger{
+    visibility: hidden;
+  }
+
+  #logo{
+    display: inline-block;
+    width: 25%;
+    position: relative;
   }
 }

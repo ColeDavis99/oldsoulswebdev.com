@@ -1,9 +1,8 @@
-@mixin HamburgerNav{
+@mixin HamburgerNav($height, $width){
   nav{
-    height: 70vh;
-    width:90vw;
-    background-color: rgba(140,140,140,.6);
-    position: relative;
-    bottom:15px;
+    height: $height;
+    width: $width;
+    background-color: rgba(140,140,140,.5);
+    position: absolute;
   }
 }
