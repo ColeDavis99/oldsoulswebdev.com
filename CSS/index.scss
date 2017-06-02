@@ -39,6 +39,16 @@ main{
   height: 100vh;
 }
 
+// SCROLL MAGIC FADING animation
+.about{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+.about.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
 /////////////////////////////////////////////////////////////
 //////////////////      Media Queries     //////////////////
 ////////////////////////////////////////////////////////////
