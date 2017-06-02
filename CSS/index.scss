@@ -1,3 +1,123 @@
-body{
+@import "../3rd_Party_Libraries/Hamburgers/_hamburgers.scss";
+@import "_mixins.scss";
+
+*{
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+#contentWrapper{
   background-image: url("../IMAGES./background_1.jpg");
+  width:100%;
+}
+
+header{
+  border-bottom: 5px solid white;
+  background-image: url("../IMAGES./background_1.jpg");
+}
+
+nav{
+  //So it doesn't pop up mobile menu when you first load the page.
+  visibility: hidden;
+  position: absolute;
+}
+
+#headerWrapper{
+  position: relative;
+  z-index: 1;
+}
+
+#contentWrapper{
+    z-index: -1;
+}
+
+
+
+/////////////////////////////////////////////////////////////
+//////////////////      Media Queries     //////////////////
+////////////////////////////////////////////////////////////
+
+/* Smartphones */
+@media only screen and (min-width: 0px) and (max-width: 416px){
+
+  @include HamburgerNav(80vh, 90vw);
+
+  header{
+    text-align: center;
+  }
+
+  #logo{
+    display: inline-block;
+    width: 70%;
+    position: relative;
+  }
+
+  .hamburger{
+    visibility: visible;
+    position: relative;
+    right: 5vw;
+    bottom:3.5vw;
+  }
+  .hamburger:focus{
+    outline:0;
+  }
+
+}
+
+/* Large Smartphones */
+@media only screen and (min-width: 417px) and (max-width: 880px) {
+
+  @include HamburgerNav(160vh, 80vw);
+
+  header{
+    text-align: center;
+  }
+
+  #logo{
+    display: inline-block;
+    width: 50%;
+    position: relative;
+  }
+
+  .hamburger{
+    visibility: visible;
+    position: relative;
+    right: 19vw;
+    bottom:3.1vw;
+  }
+
+  .hamburger:focus{
+    outline:0;
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 881px) and (max-width: 1280px) {
+  header{
+    text-align: center;
+  }
+
+  #logo{
+    display: inline-block;
+    width: 40%;
+    position: relative;
+  }
+
+  .hamburger{
+    visibility: hidden;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1281px) and (max-width: 9920px){
+  .hamburger{
+    visibility: hidden;
+  }
+
+  #logo{
+    display: inline-block;
+    width: 25%;
+    position: relative;
+  }
 }
