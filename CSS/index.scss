@@ -7,7 +7,7 @@
   padding: 0;
 }
 
-#contentWrapper, body{
+body{
   background-image: url("../IMAGES./background_1.jpg");
   width:100%;
 }
@@ -31,8 +31,13 @@ nav{
 #contentWrapper{
   z-index: -1;
 }
+.Large{
+  font-size: 200%;
+}
+main{
+  background-color: rgba(50, 86, 156, 0.90);
 
-
+}
 
 /////////////////////////////////////////////////////////////
 //////////////////      Media Queries     //////////////////
@@ -62,6 +67,7 @@ nav{
   .hamburger:focus{
     outline:0;
   }
+
 
 }
 
