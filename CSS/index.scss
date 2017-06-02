@@ -7,7 +7,7 @@
   padding: 0;
 }
 
-#contentWrapper{
+#contentWrapper, body{
   background-image: url("../IMAGES./background_1.jpg");
   width:100%;
 }
@@ -29,7 +29,7 @@ nav{
 }
 
 #contentWrapper{
-    z-index: -1;
+  z-index: -1;
 }
 
 
