@@ -7,8 +7,9 @@
   padding: 0;
 }
 
-body{
+#contentWrapper{
   background-image: url("../IMAGES./background_1.jpg");
+  width:100%;
 }
 
 header{
@@ -17,13 +18,18 @@ header{
 }
 
 nav{
-  //So it doesn't pop up when you first load the page.
+  //So it doesn't pop up mobile menu when you first load the page.
   visibility: hidden;
+  position: absolute;
 }
 
 #headerWrapper{
   position: relative;
   z-index: 1;
+}
+
+#contentWrapper{
+    z-index: -1;
 }
 
 
@@ -62,7 +68,7 @@ nav{
 /* Large Smartphones */
 @media only screen and (min-width: 417px) and (max-width: 880px) {
 
-  @include HamburgerNav(60vh, 80vw);
+  @include HamburgerNav(160vh, 80vw);
 
   header{
     text-align: center;

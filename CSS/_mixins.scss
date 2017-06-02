@@ -1,6 +1,6 @@
 @mixin HamburgerNav($height, $width){
   nav{
-    height: $height;
+    height: auto; //$height;
     width: $width;
     background-color: rgba(140,140,140,.5);
     position: absolute;
