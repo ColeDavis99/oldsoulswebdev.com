@@ -53,11 +53,10 @@ nav {
   .bio{
     background-color: rgb(157, 157, 157);
     border: 2px solid navy;
-    height:50%;
     text-align: center;
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
-    margin-top: 10px;
+
 
   }
   .desc{
@@ -66,19 +65,17 @@ nav {
 
   }
   .left, .right{
-    border-radius: 10px;
     width: 10%;   // THIS IS BEING A PAIN
   }
-  .left{
-    float: left;
-  }
-  .right{
-    float: right;
+  .aboutWrap{
+    background-color: rgba(102, 121, 226, 0.8);
   }
   // -------------------------------
 //------------------------------------
 // SCROLLMAGIC Fading animation-------
 .about{
+  padding-top:10px;
+  padding-bottom:10px;
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease-out;
@@ -145,6 +142,17 @@ nav {
 
   .hamburger:focus{
     outline:0;
+  }
+
+  .left, .right{
+    border-radius: 10px;
+    width: 10%;   // THIS IS BEING A PAIN
+  }
+  .left{
+    float: left;
+  }
+  .right{
+    float: right;
   }
 }
 
