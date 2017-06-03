@@ -2,7 +2,14 @@
   nav{
     height: auto; //$height;
     width: $width;
-    background-color: rgba(140,140,140,.5);
+    background-color: rgba(140,140,140,.9);
     position: absolute;
+    z-index: 2;
   }
+}
+
+
+@mixin spacer($height){
+  width:100%;
+  height:$height;
 }

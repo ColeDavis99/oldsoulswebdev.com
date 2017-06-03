@@ -9,12 +9,15 @@ $( document ).ready(function() {
       //Make nav visible when button is clicked for the first time.
       $("nav").css("visibility", "visible");
       //Make the menu scroll, but not the rest of the page.
-      $("#headerWrapper, #contentWrapper").css("position","fixed");
+      $("main").css("position","fixed");
+      //Keeps body's background image from scrolling when nav is open.
+      $("body").css("background-attachment", "fixed");
     }
     else{
       $('nav').removeClass('animated slideInDown').addClass('animated slideOutUp');
       //Make the content scrollable again.
-      $("#headerWrapper, #contentWrapper").css("position","absolute");
+      $("main").css("position","relative");
+      $("body").css("background-attachment", "scroll");
     }
   });
   //===============End of mobile menu logic===//

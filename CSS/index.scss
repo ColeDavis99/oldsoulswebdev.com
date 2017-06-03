@@ -18,8 +18,11 @@
 // -----------------------------
 // ---------- NAVIGATION -------
 header {
+  //Header contains hamburger button, and logo.
+  position: fixed;
   border-bottom: 5px solid white;
   background-image: url("../IMAGES./background_1.jpg");
+  width: 100%;
 }
 
 nav {
@@ -30,11 +33,13 @@ nav {
 
 #headerWrapper{
   position: relative;
-  z-index: 1;
+  z-index: 999;
 }
-// ---------------------------
 
+// ---------------------------
 //------ MAIN CONTENT --------
+
+
   #contentWrapper{
     z-index: -1;
     height:100%;
@@ -43,10 +48,11 @@ nav {
   #intro{
     text-align: center;
     background-color: rgba(50, 86, 156, 0.90);
+    width: 100%;
   }
   #introText{
     font-family: 'Pacifico', cursive;
-    font-size: 500%;
+    font-size: 300%;
   }
 
   // -------- ABOUT US SECTION -------
@@ -95,6 +101,8 @@ nav {
 
   @include HamburgerNav(80vh, 90vw);
 
+  .spacer{@include spacer(21vw);}
+
   header{
     text-align: center;
   }
@@ -122,6 +130,8 @@ nav {
 @media only screen and (min-width: 417px) and (max-width: 880px) {
 
   @include HamburgerNav(160vh, 80vw);
+  .spacer{@include spacer(15.5vw);}
+
 
   header{
     text-align: center;
