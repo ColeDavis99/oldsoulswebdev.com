@@ -12,10 +12,12 @@ $( document ).ready(function() {
       $("main").css("position","fixed");
       //Keeps body's background image from scrolling when nav is open.
       $("body").css("background-attachment", "fixed");
+
+
     }
     else{
       $('nav').removeClass('animated slideInDown').addClass('animated slideOutUp');
-      //Make the content scrollable again.
+      //Make the main content scrollable again.
       $("main").css("position","relative");
       $("body").css("background-attachment", "scroll");
     }

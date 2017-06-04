@@ -2,6 +2,11 @@
 @import "_mixins.scss";
 
 // ------ MAIN CONTENT -------
+main{
+  //Keep the main content centered, even when it is given position:fixed.
+  transform: translate(7.5%, 0);
+  width: 85%;
+}
 
 //------- BODY/HTML ----------
   * {
@@ -11,7 +16,7 @@
   }
 
   body {
-    background-image: url("../IMAGES./background_1.jpg");
+    background-image: url("../IMAGES./background_1_light.jpg");
     width:100%;
   }
 
@@ -101,7 +106,9 @@ nav {
 
   @include HamburgerNav(80vh, 90vw);
 
-  .spacer{@include spacer(21vw);}
+  .spacer{
+    @include spacer(21vw);
+  }
 
   header{
     text-align: center;
@@ -130,7 +137,10 @@ nav {
 @media only screen and (min-width: 417px) and (max-width: 880px) {
 
   @include HamburgerNav(160vh, 80vw);
-  .spacer{@include spacer(15.5vw);}
+
+  .spacer{
+    @include spacer(15.5vw);
+  }
 
 
   header{
