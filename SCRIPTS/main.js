@@ -6,6 +6,6 @@ $(document).ready(function(){
     var ourScene = new ScrollMagic.Scene({
       triggerElement: '#about'
     })
-    .setClassToggle('#about', 'fade-in') //add class to elem with practiceFade ID
+    .setClassToggle('#about', 'fade-in') //add class to elem with about ID
     .addTo(controller);
 });
