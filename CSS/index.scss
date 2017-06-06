@@ -33,7 +33,7 @@ header {
 nav {
   //So it doesn't pop up mobile menu when you first load the page.
   visibility: hidden;
-  position: absolute;
+  position: fixed;
 }
 
 #headerWrapper{
@@ -73,7 +73,15 @@ nav {
 
   .name{
     color:white;
-    margin-top: 1.5;
+    margin-top: 3vw;
+  }
+
+  .name:hover{
+    -webkit-transform:scale(1.1); /* Safari and Chrome */
+    -moz-transform:scale(1.1); /* Firefox */
+    -ms-transform:scale(1.1); /* IE 9 */
+    -o-transform:scale(1.1); /* Opera */
+     transform:scale(1.1);
   }
 
   .mugshot:hover{
@@ -83,7 +91,6 @@ nav {
     -o-transform:scale(1.1); /* Opera */
      transform:scale(1.1);
   }
-
 
   .mugshot{
     -webkit-transition: all .4s ease; /* Safari and Chrome */
@@ -100,7 +107,7 @@ nav {
     display: none;
     //Keep slideToggle() from making ugly twitching.
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 15px;
     padding-bottom: 25px;
   }
@@ -233,7 +240,9 @@ section {
   #introText{
     font-size: 228%;
   }
-
+  .name{
+    margin-top: 3vw;
+  }
   .about img{
     height:35vw;
     width:35vw;
@@ -269,7 +278,6 @@ section {
   }
   .name{
     margin-top: 1.5vw;
-
   }
 }
 
@@ -295,6 +303,5 @@ section {
     }
     .name{
       margin-top: 1.5vw;
-
     }
 }
