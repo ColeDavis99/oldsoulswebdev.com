@@ -23,7 +23,6 @@ $( document ).ready(function() {
 
 
     //CLose navigation if user clicks anywhere that isn't an option in the nav.
-
     $("main").on("click", function(){
       if($hamburger.hasClass("is-active")){
           $('nav').removeClass('animated slideInDown').addClass('animated slideOutUp');
