@@ -28,7 +28,7 @@ header {
   border-bottom: 5px solid white;
   background-image: url("../IMAGES./background_1.jpg");
   width: 100%;
-  padding-top: 1vw;
+  padding-top: 18px;
 }
 
 nav {
@@ -75,14 +75,6 @@ nav {
   .name{
     color:white;
     margin-top: 3vw;
-  }
-
-  .name:hover{
-    -webkit-transform:scale(1.1); /* Safari and Chrome */
-    -moz-transform:scale(1.1); /* Firefox */
-    -ms-transform:scale(1.1); /* IE 9 */
-    -o-transform:scale(1.1); /* Opera */
-     transform:scale(1.1);
   }
 
   .mugshot:hover{
