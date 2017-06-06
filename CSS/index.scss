@@ -73,7 +73,7 @@ nav {
 
   .name{
     color:white;
-
+    margin-top: 2vw;
   }
 
   .mugshot:hover{
@@ -102,16 +102,21 @@ nav {
     overflow: hidden;
   }
   .desc h3{
+    font-family: "Source Sans Pro", Arial, Tahoma, sans-serif;
     padding-left: 2vw;
     color:white;
+    border-bottom: 1px solid white;
+    padding-bottom: 8px;
   }
 
 
   .subject{
+    font-family: "Open Sans",Arial,sans-serif;
     font-size: 25px;
     display: block;
     margin-top: 5.5vw;
     text-align: left;
+    color:gray;
   }
 
   // -------------------------------
@@ -153,7 +158,7 @@ section {
 /* Smartphones */
 @media only screen and (min-width: 0px) and (max-width: 416px){
 
-  @include HamburgerNav(80vh, 90vw);
+  @include HamburgerNav(80vh, 80vw);
 
   .spacer{
     @include spacer(21vw);
@@ -195,7 +200,7 @@ section {
 /* Large Smartphones */
 @media only screen and (min-width: 417px) and (max-width: 740px) {
 
-  @include HamburgerNav(160vh, 80vw);
+  @include HamburgerNav(160vh, 70vw);
 
   .spacer{
     @include spacer(15.5vw);
