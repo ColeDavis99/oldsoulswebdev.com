@@ -73,21 +73,8 @@ nav {
 
   .name{
     color:white;
-    -webkit-transition: all .4s ease; /* Safari and Chrome */
-    -moz-transition: all .4s ease; /* Firefox */
-    -ms-transition: all .4s ease; /* IE 9 */
-    -o-transition: all .4s ease; /* Opera */
-    transition: all .4s ease;
-
   }
 
-  .name:hover{
-    -webkit-transform:scale(1.1); /* Safari and Chrome */
-    -moz-transform:scale(1.1); /* Firefox */
-    -ms-transform:scale(1.1); /* IE 9 */
-    -o-transform:scale(1.1); /* Opera */
-     transform:scale(1.1);
-  }
 
   .mugshot:hover{
     -webkit-transform:scale(1.1); /* Safari and Chrome */
