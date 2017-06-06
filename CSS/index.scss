@@ -267,5 +267,9 @@ section {
     width: 25%;
     position: relative;
   }
+  .mugshot:hover + .name{
+    padding-top:30px;
+    transition: all .4s;
+  }
 
 }
