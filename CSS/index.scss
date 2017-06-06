@@ -33,7 +33,7 @@ header {
 nav {
   //So it doesn't pop up mobile menu when you first load the page.
   visibility: hidden;
-  position: absolute;
+  position: fixed;
 }
 
 #headerWrapper{
@@ -280,8 +280,7 @@ section {
     transition: all .4s ease; */
   }
   .name{
-    margin-top: 2vw;
-
+    margin-top: 1.5vw;
   }
 }
 
@@ -306,7 +305,6 @@ section {
       transition: all .4s ease; */
     }
     .name{
-      margin-top: 2vw;
-
+      margin-top: 1.5vw;
     }
 }
