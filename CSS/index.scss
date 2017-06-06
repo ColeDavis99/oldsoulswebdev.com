@@ -100,12 +100,14 @@ nav {
     display: none;
     //Keep slideToggle() from making ugly twitching.
     overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding-bottom: 25px;
   }
   .desc h3{
     font-family: "Source Sans Pro", Arial, Tahoma, sans-serif;
     padding-left: 2vw;
     color:white;
-    border-bottom: 1px solid white;
     padding-bottom: 8px;
   }
 
@@ -114,7 +116,7 @@ nav {
     font-family: "Open Sans",Arial,sans-serif;
     font-size: 25px;
     display: block;
-    margin-top: 5.5vw;
+    margin-top: 4%;
     text-align: left;
     color:gray;
   }
