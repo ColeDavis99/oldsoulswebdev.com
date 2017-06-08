@@ -53,7 +53,7 @@ $(document).ready(function(){
 
     var fadeScene4 = new ScrollMagic.Scene({
       triggerElement: '#fade-left2',
-      triggerHook: 0.65,
+      triggerHook: 0.8,
       reverse:false
     })
     .setClassToggle('#fade-left2', 'left')

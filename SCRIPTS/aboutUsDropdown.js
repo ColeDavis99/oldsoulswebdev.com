@@ -6,7 +6,7 @@ $(document).ready(function(){
   $('.mugshot').on("click", function(){
     expandedPerson = $(this).next().next();
     expandedPerson.slideToggle();
- 
+
     $(".desc").not(expandedPerson).slideUp();
   });
 
