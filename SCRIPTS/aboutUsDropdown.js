@@ -15,7 +15,7 @@ $(document).ready(function(){
       return;
     }
     if($nav.hasClass("slideOutUp")){
-      lastClicked.next().next().slideToggle();
+      lastClicked.next().next().slideUp();
     };
   });
 });
