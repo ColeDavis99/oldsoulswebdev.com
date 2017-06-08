@@ -4,7 +4,6 @@
 // ------ MAIN CONTENT -------
 main{
   //Keep the main content centered, even when it is given position:fixed.
-
   width: 100%;
 }
 
@@ -55,7 +54,7 @@ nav {
     text-align: center;
     width: 100%;
   }
-  #introText{
+  .introText{
     padding-top: 2vw;
     font-family: 'Pacifico', cursive;
     font-size: 200%;
@@ -242,7 +241,7 @@ section {
     outline:0;
   }
 
-  #introText{
+  .introText{
     font-size: 228%;
   }
 
