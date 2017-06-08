@@ -72,10 +72,6 @@ nav {
     padding-right: 5%;
   }
 
-  .name{
-    color:white;
-    margin-top: 3vw;
-  }
 
   .mugshot:hover{
     -webkit-transform:scale(1.1); /* Safari and Chrome */
@@ -93,13 +89,19 @@ nav {
     transition: all .4s ease;
   }
 
+  .name{
+    margin-top: 10px;
+    width: 40%;
+    margin: auto;
+  }
+
   .desc{
     width: 92%;
     margin: auto;
     text-align: left;
     display: none;
     //Keep slideToggle() from making ugly twitching.
-    overflow: hidden;
+      overflow: hidden;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 15px;
     padding-bottom: 25px;
@@ -233,9 +235,7 @@ section {
   #introText{
     font-size: 228%;
   }
-  .name{
-    margin-top: 3vw;
-  }
+
   .about img{
     height:35vw;
     width:35vw;
@@ -259,19 +259,6 @@ section {
   .hamburger{
     visibility: hidden;
   }
-  .mugshot:hover + .name{
-    -webkit-transition: all .4s ease;
-    transform:scale(1.1);
-
-    /* Safari and Chrome /
-    -moz-transition: all .4s ease; / Firefox /
-    -ms-transition: all .4s ease; / IE 9 /
-    -o-transition: all .4s ease; / Opera /
-    transition: all .4s ease; */
-  }
-  .name{
-    margin-top: 1.5vw;
-  }
 }
 
 /* Desktop */
@@ -285,16 +272,4 @@ section {
     width: 25%;
     position: relative;
   }
-  .mugshot:hover + .name{
-      -webkit-transition: all .4s ease;
-      transform:scale(1.1);
-      /* Safari and Chrome /
-      -moz-transition: all .4s ease; / Firefox /
-      -ms-transition: all .4s ease; / IE 9 /
-      -o-transition: all .4s ease; / Opera /
-      transition: all .4s ease; */
-    }
-    .name{
-      margin-top: 1.5vw;
-    }
 }
