@@ -90,9 +90,10 @@ nav {
   }
 
   .name{
-    margin-top: 10px;
     width: 40%;
     margin: auto;
+    padding-top: 5px;
+    font-size: relative;
   }
 
   .desc{
@@ -138,6 +139,27 @@ nav {
 .about.fade-in {
   opacity: 1;
   transform: translateY(0);
+}
+
+// first fade in for the fade in from the left
+.reason-left{
+    opacity: 0;
+    transform: translateX(500px);
+    transition: all 1s ease-out;
+}
+.reason-left.left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reason-right{
+    opacity: 0;
+    transform: translateX(-500px);
+    transition: all 1s ease-out;
+}
+.reason-right.right{
+  opacity: 1;
+  transform: translateX(0);
 }
 //------------------------------------
 //------ The Why Us Section ----------
