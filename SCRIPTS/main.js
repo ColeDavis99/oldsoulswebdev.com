@@ -10,7 +10,7 @@ $(document).ready(function(){
     .addTo(controller);
 
 // ---------------  LARRYS CODE -----------------------------------------
-    // Scene Handler
+    //SCENE HANDLER
     var scene = new ScrollMagic.Scene({
     triggerElement: "#pinned-trigger1", // point of execution
     duration: $(window).height() - 100, // pin element for the window height - 1
@@ -32,10 +32,30 @@ $(document).ready(function(){
     scene2
     ]);
 // ---------------------------------------------------------------------
-    // This is the function for sliding in the why choose us reasons
+    // These are the functions for sliding in the why choose us reasons
+
     var fadeScene2 = new ScrollMagic.Scene({
-      triggerElement: '#pinned-trigger2'
+      triggerElement: '#fade-left1', // what element the triggerHook needs to touch to activate
+      triggerHook: 0.65, // This pushes the trigger point (when things happen) lower
+      reverse:false // This is so that the setClassToggle doesnt toggle off anymore
     })
-    .setClassToggle('#', 'fade-in') //add class to elem with about ID
+    .setClassToggle('#fade-left1', 'left') // append 'left' onto the class of whatever element has the ID of 'fade-left1'
+    .addTo(controller);
+
+
+    var fadeScene3 = new ScrollMagic.Scene({
+      triggerElement: '#fade-right',
+      triggerHook: 0.65,
+      reverse:false
+    })
+    .setClassToggle('#fade-right', 'right')
+    .addTo(controller);
+
+    var fadeScene4 = new ScrollMagic.Scene({
+      triggerElement: '#fade-left2',
+      triggerHook: 0.8,
+      reverse:false
+    })
+    .setClassToggle('#fade-left2', 'left')
     .addTo(controller);
 });
