@@ -10,7 +10,7 @@ $(document).ready(function(){
     $(".desc").not(expandedPerson).slideUp();
 
     //And open our clicked .desc
-    expandedPerson.delay(300).slideToggle();
+    expandedPerson.delay(0).slideToggle();
   });
 
 

@@ -3,7 +3,6 @@
 
 // ------ MAIN CONTENT -------
 main{
-  //Keep the main content centered, even when it is given position:fixed.
   width: 100%;
 }
 
@@ -14,6 +13,10 @@ main{
     border: 0;
     padding: 0;
   }
+
+  html,body{
+  overflow-x: hidden;//This should solve resizing problems
+}
 
   body {
     background-image: url("../IMAGES./background_1_light.jpg");
@@ -65,12 +68,12 @@ nav {
   // -------- ABOUT US SECTION -------
 
   .bio{
+    width:22%;
     margin-top: 10vw;
     margin-bottom: 10vw;
     text-align: center;
     padding-left: 5%;
     padding-right: 5%;
-    transform: translate(7.5%, 0);
   }
 
 
@@ -98,8 +101,6 @@ nav {
   }
 
   .desc{
-    width: 100%;
-    margin: auto;
     text-align: left;
     display: none;
     //Keep slideToggle() from making ugly twitching.
@@ -131,7 +132,7 @@ nav {
 //------------------------------------
 // SCROLLMAGIC Fading animation-------
 .about{
-  text-align: center;
+  margin: auto;
   padding-top:10px;
   padding-bottom:10px;
   opacity: 0;
@@ -208,7 +209,7 @@ section {
   }
 
   .full-screen.why{
-    @include spacer(100vh);
+    @include spacer(150vh);
   }
 
   header{
@@ -311,6 +312,7 @@ section {
 
 /* Desktop */
 @media only screen and (min-width: 1281px) and (max-width: 9920px){
+
   .hamburger{
     visibility: hidden;
   }
@@ -319,5 +321,24 @@ section {
     display: inline-block;
     width: 25%;
     position: relative;
+  }
+
+  .spacer{
+    @include spacer(5vw);
+  }
+
+  .bio{
+    display: inline-block;
+    margin-top:1vw;
+  }
+  .bio img{
+    width:15vw;
+    height:15vw;
+  }
+
+  .desc{
+    width:31.75%;
+    position: fixed;
+    left:19.25%;
   }
 }
