@@ -75,11 +75,11 @@ nav {
 
 
   .mugshot:hover{
-    -webkit-transform:scale(1.1); /* Safari and Chrome */
-    -moz-transform:scale(1.1); /* Firefox */
-    -ms-transform:scale(1.1); /* IE 9 */
-    -o-transform:scale(1.1); /* Opera */
-     transform:scale(1.1);
+    -webkit-transform:scale(1.08); /* Safari and Chrome */
+    -moz-transform:scale(1.08); /* Firefox */
+    -ms-transform:scale(1.08); /* IE 9 */
+    -o-transform:scale(1.08); /* Opera */
+     transform:scale(1.08);
   }
 
   .mugshot{
@@ -91,15 +91,14 @@ nav {
   }
 
   .name{
-    margin-top: 10px;
+    padding-top: 4px;
     width: 70%;
     margin: auto;
     font-weight: bold;
-
   }
 
   .desc{
-    width: 92%;
+    width: 100%;
     margin: auto;
     text-align: left;
     display: none;
@@ -110,17 +109,18 @@ nav {
     padding-bottom: 25px;
   }
 
-  .desc h3{
+  .desc p{
     font-family: "Source Sans Pro", Arial, Tahoma, sans-serif;
-    padding-left: 2vw;
+    width: 95%;
     color:white;
-    padding-bottom: 8px;
+    padding-left: 16px;
+    font-size: 18px;
   }
 
 
   .subject{
     font-family: "Open Sans",Arial,sans-serif;
-    font-size: 25px;
+    font-size: 23px;
     display: block;
     margin-top: 5.5%;
     text-align: left;
@@ -209,7 +209,6 @@ section {
 
   .full-screen.why{
     @include spacer(100vh);
-
   }
 
   header{
@@ -233,7 +232,7 @@ section {
   }
 
   main{
-    //Keep the main content centered, even when it is given position:fixed.
+    //Keep the main content centered, even with position:fixed.
     transform: translate(0%, 0);
     width: 100%;
   }
@@ -253,6 +252,10 @@ section {
 
   .spacer{
     @include spacer(15.5vw);
+  }
+
+  .full-screen.why{
+    @include spacer(80vh);
   }
 
   header{
