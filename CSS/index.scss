@@ -167,7 +167,7 @@ nav {
 
 .full-screen.why{
   background-image: url("../IMAGES/background_1.jpg");
-  @include spacer(55vh);
+  @include spacer(60vh);
   display: block;
   margin: 0 auto;
 
@@ -179,8 +179,20 @@ nav {
   color: rgb(65, 102, 233);
 }
 // -------------------------------
-//------------------------------------
-// SCROLLMAGIC Section styling-------
+// --- The Contact Us section ----
+
+.full-screen.contact{
+  background-image: url("../IMAGES/background_1_light.jpg");
+  @include spacer(55vh);
+  display: block;
+  margin: 0 auto;
+
+}
+
+
+//--------------------------------
+// ---------------------------------
+// SCROLLMAGIC Section styling------
 section {
   text-align: center;
   color: #EFEFEF;
@@ -206,7 +218,7 @@ section {
   }
 
   .full-screen.why{
-    @include spacer(100vh);
+    @include spacer(120vh);
 
   }
 
@@ -253,6 +265,9 @@ section {
     @include spacer(15.5vw);
   }
 
+  .full-screen.why{
+    @include spacer(95vh);
+  }
   header{
     text-align: center;
   }
@@ -291,7 +306,9 @@ section {
   header{
     text-align: center;
   }
-
+  .full-screen.why{
+    @include spacer(70vh);
+  }
 
   #logo{
     display: inline-block;
