@@ -31,7 +31,7 @@ $(document).ready(function(){
     scene,
     scene2
     ]);
-
+// ---------------------------------------------------------------------
     // This is the function for sliding in the why choose us reasons
     var fadeScene2 = new ScrollMagic.Scene({
       triggerElement: '#pinned-trigger2'
