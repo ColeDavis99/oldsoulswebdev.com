@@ -90,11 +90,6 @@ nav {
   }
 
   .name{
-
-    // width: 40%;
-    // margin: auto;
-    // padding-top: 5px;
-    // font-size: relative;
     margin-top: 10px;
     width: 70%;
     margin: auto;
@@ -172,12 +167,17 @@ nav {
 
 .full-screen.why{
   background-image: url("../IMAGES/background_1.jpg");
-  @include spacer(100vw);
+  @include spacer(55vh);
   display: block;
   margin: 0 auto;
 
 }
 
+.reason-subject{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: rgb(65, 102, 233);
+}
 // -------------------------------
 //------------------------------------
 // SCROLLMAGIC Section styling-------
@@ -203,6 +203,11 @@ section {
 
   .spacer{
     @include spacer(21vw);
+  }
+
+  .full-screen.why{
+    @include spacer(100vh);
+
   }
 
   header{
@@ -243,10 +248,10 @@ section {
 
   @include HamburgerNav(160vh, 70vw);
 
+
   .spacer{
     @include spacer(15.5vw);
   }
-
 
   header{
     text-align: center;
@@ -286,6 +291,7 @@ section {
   header{
     text-align: center;
   }
+
 
   #logo{
     display: inline-block;
