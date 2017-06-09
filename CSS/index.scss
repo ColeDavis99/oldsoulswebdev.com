@@ -31,10 +31,10 @@ header {
   border-bottom: 5px solid white;
   background-image: url("../IMAGES./background_1.jpg");
   width: 100%;
-  padding-top: 18px;
+  padding-top: 6px;
 }
 
-nav {
+#mobileNav{
   //So it doesn't pop up mobile menu when you first load the page.
   visibility: hidden;
   position: fixed;
@@ -42,17 +42,12 @@ nav {
 
 #headerWrapper{
   position: relative;
-  z-index: 999;
+  z-index: 3;
 }
 
 // ---------------------------
 //------ MAIN CONTENT --------
 
-
-  #contentWrapper{
-    z-index: -1;
-    height:100%;
-  }
 
   #intro{
     text-align: center;
@@ -68,9 +63,8 @@ nav {
   // -------- ABOUT US SECTION -------
 
   .bio{
-    width:22%;
     margin-top: 10vw;
-    margin-bottom: 10vw;
+    margin-bottom: 2vw;
     text-align: center;
     padding-left: 5%;
     padding-right: 5%;
@@ -98,6 +92,7 @@ nav {
     width: 70%;
     margin: auto;
     font-weight: bold;
+    font-size: 30px;
   }
 
   .desc{
@@ -170,7 +165,7 @@ nav {
 
 .full-screen.why{
   background-image: url("../IMAGES/background_1.jpg");
-  @include spacer(55vh);
+  @include spacer(60vh);
   display: block;
   margin: 0 auto;
 
@@ -182,8 +177,20 @@ nav {
   color: rgb(65, 102, 233);
 }
 // -------------------------------
-//------------------------------------
-// SCROLLMAGIC Section styling-------
+// --- The Contact Us section ----
+
+.full-screen.contact{
+  background-image: url("../IMAGES/background_1_light.jpg");
+  @include spacer(55vh);
+  display: block;
+  margin: 0 auto;
+
+}
+
+
+//--------------------------------
+// ---------------------------------
+// SCROLLMAGIC Section styling------
 section {
   text-align: center;
   color: #EFEFEF;
@@ -201,6 +208,9 @@ section {
 
 /* Smartphones */
 @media only screen and (min-width: 0px) and (max-width: 416px){
+  #desktopNav{
+    display: none;
+  }
 
   @include HamburgerNav(80vh, 80vw);
 
@@ -209,7 +219,7 @@ section {
   }
 
   .full-screen.why{
-    @include spacer(150vh);
+    @include spacer(120vh);
   }
 
   header{
@@ -248,6 +258,10 @@ section {
 /* Large Smartphones */
 @media only screen and (min-width: 417px) and (max-width: 740px) {
 
+  #desktopNav{
+    display: none;
+  }
+
   @include HamburgerNav(160vh, 70vw);
 
 
@@ -256,9 +270,9 @@ section {
   }
 
   .full-screen.why{
-    @include spacer(80vh);
-  }
 
+    @include spacer(95vh);
+  }
   header{
     text-align: center;
   }
@@ -297,7 +311,9 @@ section {
   header{
     text-align: center;
   }
-
+  .full-screen.why{
+    @include spacer(70vh);
+  }
 
   #logo{
     display: inline-block;
@@ -321,6 +337,36 @@ section {
     display: inline-block;
     width: 25%;
     position: relative;
+    top:1vw;
+  }
+
+  #desktopNav{
+    position: absolute;
+    z-index: 3;
+    right: 20px;
+    top:6.35vw;
+  }
+
+  #desktopNav a{
+    margin-left: .6vw;
+    margin-right: .6vw;
+    text-decoration:none;
+    color:white;
+    font-size: 20px;
+    font-family: "Comic Sans MS", cursive, sans-serif
+  }
+
+  #desktopNav a:hover{
+    background-color: red;
+  }
+
+  header {
+    //Header contains hamburger button, and logo.
+    position: fixed;
+    border-bottom: 5px solid white;
+    background-image: url("../IMAGES./background_1.jpg");
+    width: 100%;
+    padding-top: 6px;
   }
 
   .spacer{
@@ -329,16 +375,21 @@ section {
 
   .bio{
     display: inline-block;
+    position: relative;
     margin-top:1vw;
+    width:22%;
   }
   .bio img{
     width:15vw;
     height:15vw;
+    border-radius: 50%;
   }
 
   .desc{
-    width:31.75%;
-    position: fixed;
-    left:19.25%;
+    width:130%;
+    position: relative;
+    right:15%;
+    //Keep from moving other .bio containers
+    float:left
   }
 }

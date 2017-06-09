@@ -6,11 +6,12 @@ $(document).ready(function(){
   $('.mugshot').on("click", function(){
     expandedPerson = $(this).next().next();
 
-    //...Close all other .descs, except for the one just clicked
-    $(".desc").not(expandedPerson).slideUp();
-
-    //And open our clicked .desc
+    //... open our clicked .desc
     expandedPerson.delay(0).slideToggle();
+
+    //.... and close all other .descs, except for the one just clicked
+    $(".desc").not(expandedPerson).delay(380).slideUp();
+
   });
 
 
