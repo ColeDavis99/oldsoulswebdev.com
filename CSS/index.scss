@@ -6,7 +6,6 @@ main{
   width: 100%;
 }
 
-
 //------- BODY/HTML ----------
   * {
     margin: 0;
@@ -32,6 +31,10 @@ header {
   background-image: url("../IMAGES./background_1.jpg");
   width: 100%;
   padding-top: 6px;
+}
+
+.hamburger:focus{
+  outline:0;
 }
 
 #mobileNav{
@@ -238,9 +241,6 @@ section {
     right: 5vw;
     bottom:3.5vw;
   }
-  .hamburger:focus{
-    outline:0;
-  }
 
   main{
     //Keep the main content centered, even with position:fixed.
@@ -290,10 +290,6 @@ section {
     bottom:3.1vw;
   }
 
-  .hamburger:focus{
-    outline:0;
-  }
-
   .introText{
     font-size: 228%;
   }
@@ -311,6 +307,23 @@ section {
   header{
     text-align: center;
   }
+
+  #desktopNav{
+    display: none;
+  }
+
+  @include HamburgerNav(160vh, 50vw);
+
+  .hamburger{
+    position: relative;
+    right: 26vw;
+    bottom: 3.1vw;
+  }
+
+  .spacer{
+    @include spacer(11vw);
+  }
+
   .full-screen.why{
     @include spacer(70vh);
   }
@@ -321,9 +334,6 @@ section {
     position: relative;
   }
 
-  .hamburger{
-    visibility: hidden;
-  }
 }
 
 /* Desktop */
@@ -341,10 +351,11 @@ section {
   }
 
   #desktopNav{
-    position: absolute;
+    position: fixed;
     z-index: 3;
     right: 20px;
-    top:6.35vw;
+    top:0;
+    padding-top:6.3vw;
   }
 
   #desktopNav a{
@@ -352,12 +363,16 @@ section {
     margin-right: .6vw;
     text-decoration:none;
     color:white;
-    font-size: 20px;
-    font-family: "Comic Sans MS", cursive, sans-serif
+    font-size: 23px;
+    font-family: "Garamond", cursive, sans-serif;
+    transition: 0.2s all ease;
+    position: relative;
+    bottom:0px;
   }
 
   #desktopNav a:hover{
-    background-color: red;
+    color:rgb(66, 212, 244);
+    bottom:3px;
   }
 
   header {

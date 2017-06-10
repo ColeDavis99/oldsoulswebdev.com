@@ -6,7 +6,10 @@ $( document ).ready(function() {
     if($hamburger.hasClass("is-active")){
       //Animate the Nav
       $('nav').removeClass('animated slideOutUp').addClass('animated slideInDown');
+
       //Make nav visible when button is clicked for the first time.
+      $('nav').css("top", "11vw");
+
       $("nav").css("visibility", "visible");
       //Make the menu scroll, but not the rest of the page.
           //$("main").css("position","fixed");
@@ -15,9 +18,9 @@ $( document ).ready(function() {
     }
     else{
       $('nav').removeClass('animated slideInDown').addClass('animated slideOutUp');
-      //Make the main content scrollable again.
-      $("main").css("position","relative");
-      //$("body").css("background-attachment", "scroll");
+
+      //Little Nav fixed (Get it out of Dodge!)
+      $('nav').css("top", "0");
     }
   });
 
@@ -26,9 +29,13 @@ $( document ).ready(function() {
     $("main").on("click", function(){
       if($hamburger.hasClass("is-active")){
           $('nav').removeClass('animated slideInDown').addClass('animated slideOutUp');
+
+          //Little Nav fixed (Get it out of Dodge!)
+          $('nav').css("top", "0");
+
           //Make the main content scrollable again.
               //$("main").css("position","relative");
-          $("body").css("background-attachment", "scroll");
+              //$("body").css("background-attachment", "scroll");
           //Make the hamburger back to it's 3 line position.
           $hamburger.removeClass("is-active");
         };
