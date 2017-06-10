@@ -13,19 +13,18 @@ var distance = $(window).scrollTop();
         $('header, #desktopNav').removeClass('animated slideOutUp').addClass('animated slideOutUp');
       }
 
-    //Change the ID, corresponding to the appropriate speed I made it.
-      //  $('img#thumb').removeAttr('id');
-      //  $('nav').attr('id','navSlow');
+    //Change the ID, corresponding to the appropriate speed I made it (it's defaulting here).
+
   }
 
   if(distance < scrollAmount - pixelsToTriggerExpand){
       //User is Scrolling Up
         scrollAmount = distance;
-      //Change animation type (animate.css)
 
+      //Change animation type and speed (animate.css)
       $('header, #desktopNav').removeClass('animated slideOutUp').addClass('animated slideInDown');
+      $('header, #desktopNav')
       //Change the ID, corresponding to the appropriate speed I made it.
-        //$('img#thumb').removeAttr('id');
-        //$('nav').attr('id','navFast');
+
   }
 });

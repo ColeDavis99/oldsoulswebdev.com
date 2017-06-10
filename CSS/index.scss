@@ -38,9 +38,15 @@ header {
 }
 
 #mobileNav{
-  //So it doesn't pop up mobile menu when you first load the page.
   visibility: hidden;
-  position: fixed;
+  //Fix for when minimizing hamburger menu while the header is slidingOutUp
+  transition-property: top, bottom;
+  transition-duration: 0.5s;
+}
+
+#navFast{
+  //Used for increasing speed of header slideOutUp
+  animation-duration: .5s;
 }
 
 #headerWrapper{
@@ -211,8 +217,13 @@ section {
 
 /* Smartphones */
 @media only screen and (min-width: 0px) and (max-width: 416px){
+
   #desktopNav{
     display: none;
+  }
+
+  #mobileNav{
+    padding-top: 7vw;
   }
 
   @include HamburgerNav(80vh, 80vw);
@@ -260,6 +271,10 @@ section {
 
   #desktopNav{
     display: none;
+  }
+
+  #mobileNav{
+    padding-top: 3vw;
   }
 
   @include HamburgerNav(160vh, 70vw);
@@ -334,10 +349,20 @@ section {
     position: relative;
   }
 
+  .bio img{
+    width:23vw;
+    height:23vw;
+    border-radius: 50%;
+  }
+
 }
 
 /* Desktop */
 @media only screen and (min-width: 1281px) and (max-width: 9920px){
+
+  #mobileNav{
+    display: none;
+  }
 
   .hamburger{
     visibility: hidden;

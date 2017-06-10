@@ -4,39 +4,29 @@ $( document ).ready(function() {
   $hamburger.on("click", function() {
     $hamburger.toggleClass("is-active");
     if($hamburger.hasClass("is-active")){
-      //Animate the Nav
+      //Slide Nav In
       $('nav').removeClass('animated slideOutUp').addClass('animated slideInDown');
-
-      //Make nav visible when button is clicked for the first time.
+      //Make nav visible when button is clicked.
       $('nav').css("top", "11vw");
-
       $("nav").css("visibility", "visible");
-      //Make the menu scroll, but not the rest of the page.
-          //$("main").css("position","fixed");
-      //Keeps body's background image from scrolling when nav is open.
-          //$("body").css("background-attachment", "fixed");
     }
     else{
+      //Slide Nav Up and Out
       $('nav').removeClass('animated slideInDown').addClass('animated slideOutUp');
-
-      //Little Nav fixed (Get it out of Dodge!)
+      //Little Nav Fix for when user minimizes hamburger menu and triggers header to slideOutUp
       $('nav').css("top", "0");
     }
   });
 
 
-    //CLose navigation if user clicks anywhere that isn't an option in the nav.
+    //CLose navigation if user clicks blank space.
     $("main").on("click", function(){
       if($hamburger.hasClass("is-active")){
           $('nav').removeClass('animated slideInDown').addClass('animated slideOutUp');
 
-          //Little Nav fixed (Get it out of Dodge!)
+          //Little Nav Fix for when user minimizes hamburger menu and triggers header to slideOutUp
           $('nav').css("top", "0");
 
-          //Make the main content scrollable again.
-              //$("main").css("position","relative");
-              //$("body").css("background-attachment", "scroll");
-          //Make the hamburger back to it's 3 line position.
           $hamburger.removeClass("is-active");
         };
       });
