@@ -1,6 +1,6 @@
 var scrollAmount = 0;
 var pixelsToTriggerExpand = 30;
-var pixelsToTriggerContract = 150;
+var pixelsToTriggerContract = 30;
 
 $(document).scroll(function() {
 var distance = $(window).scrollTop();
@@ -23,7 +23,6 @@ var distance = $(window).scrollTop();
 
       //Change animation type and speed (animate.css)
       $('header, #desktopNav').removeClass('animated slideOutUp').addClass('animated slideInDown');
-      $('header, #desktopNav')
       //Change the ID, corresponding to the appropriate speed I made it.
 
   }

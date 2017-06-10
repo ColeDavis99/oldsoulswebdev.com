@@ -22,8 +22,8 @@ main{
     width:100%;
   }
 
+  // ---------- NAVIGATION -------
 // -----------------------------
-// ---------- NAVIGATION -------
 header {
   //Header contains hamburger button, and logo.
   position: fixed;
@@ -42,6 +42,15 @@ header {
   //Fix for when minimizing hamburger menu while the header is slidingOutUp
   transition-property: top, bottom;
   transition-duration: 0.5s;
+
+    a{//This is nested within #mobileNav
+      text-decoration:none;
+      color:rgb(66, 212, 244);
+      font-size: 23px;
+      font-family: "Garamond", cursive, sans-serif;
+      transition: 0.2s all ease;
+      padding-left: 10px;
+    }
 }
 
 #navFast{
@@ -54,9 +63,8 @@ header {
   z-index: 3;
 }
 
-// ---------------------------
 //------ MAIN CONTENT --------
-
+// ---------------------------
 
   #intro{
     text-align: center;
@@ -223,13 +231,13 @@ section {
   }
 
   #mobileNav{
-    padding-top: 7vw;
+    padding-top: 15vw;
   }
 
-  @include HamburgerNav(80vh, 80vw);
+  @include HamburgerNav(80vh, 210px);
 
   .spacer{
-    @include spacer(21vw);
+    @include spacer(15vw);
   }
 
   .full-screen.why{
@@ -244,13 +252,13 @@ section {
     display: inline-block;
     width: 70%;
     position: relative;
+    top:4vw;
   }
 
   .hamburger{
     visibility: visible;
     position: relative;
     right: 5vw;
-    bottom:3.5vw;
   }
 
   main{
@@ -277,11 +285,11 @@ section {
     padding-top: 3vw;
   }
 
-  @include HamburgerNav(160vh, 70vw);
+  @include HamburgerNav(160vh, 210px);
 
 
   .spacer{
-    @include spacer(15.5vw);
+    @include spacer(7.5vw);
   }
 
   .full-screen.why{
@@ -294,15 +302,15 @@ section {
 
   #logo{
     display: inline-block;
-    width: 50%;
+    width: 45%;
     position: relative;
+    top:2vw;
   }
 
   .hamburger{
     visibility: visible;
     position: relative;
     right: 19vw;
-    bottom:3.1vw;
   }
 
   .introText{
@@ -327,16 +335,16 @@ section {
     display: none;
   }
 
-  @include HamburgerNav(160vh, 50vw);
+  @include HamburgerNav(160vh, 210px);
 
   .hamburger{
     position: relative;
     right: 26vw;
-    bottom: 3.1vw;
+    bottom:.5vw;
   }
 
   .spacer{
-    @include spacer(11vw);
+    @include spacer(5.3vw);
   }
 
   .full-screen.why{
@@ -345,8 +353,9 @@ section {
 
   #logo{
     display: inline-block;
-    width: 40%;
+    width: 28%;
     position: relative;
+    top:1vw;
   }
 
   .bio img{
@@ -370,7 +379,7 @@ section {
 
   #logo{
     display: inline-block;
-    width: 25%;
+    width: 18%;
     position: relative;
     top:1vw;
   }
@@ -380,7 +389,7 @@ section {
     z-index: 3;
     right: 20px;
     top:0;
-    padding-top:6.3vw;
+    padding-top:4.3vw;
   }
 
   #desktopNav a{
@@ -403,14 +412,14 @@ section {
   header {
     //Header contains hamburger button, and logo.
     position: fixed;
-    border-bottom: 5px solid white;
+    border-bottom: 2px solid white;
     background-image: url("../IMAGES./background_1.jpg");
     width: 100%;
     padding-top: 6px;
   }
 
   .spacer{
-    @include spacer(5vw);
+    @include spacer(3vw);
   }
 
   .bio{
