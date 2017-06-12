@@ -177,9 +177,9 @@ header {
 }
 
 .reason-wrapper2{
-    opacity: 0;
-    transform: translateX(-500px);
-    transition: all 1s ease-out;
+  opacity: 0;
+  transform: translateX(-500px);
+  transition: all 1s ease-out;
 }
 .reason-wrapper2.right{
   opacity: 1;
@@ -193,15 +193,18 @@ header {
   margin: 0 auto;
   padding-bottom: 20px;
 }
-
 .reason-wrapper{
   margin-top: 60px;
   text-align: center;
 }
+.reason-right ul, .reason-left ul{
+  text-decoration:none;
+  list-style-type: none;
+}
 .reason-right, .reason-left{
   width: 65%;
   border-top: 5px solid rgb(65, 102, 233);
-  margin: auto;
+  margin: 0 auto;
   padding-bottom: 40px;
   text-align: left;
 }
@@ -212,7 +215,7 @@ header {
 .reason-subject{
   margin-top: 10px;
   margin-bottom: 10px;
-  color: rgb(65, 102, 233);
+  font-family: 'Raleway', sans-serif;
 }
 
 .highlight{
@@ -455,5 +458,10 @@ section {
     right:22.5%;
     //Keep from moving other .bio containers
     float:left
+  }
+
+  .reason-right, .reason-left{
+    width: 45%;
+  text-align: center;
   }
 }
