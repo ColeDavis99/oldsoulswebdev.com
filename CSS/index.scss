@@ -80,12 +80,13 @@ header {
     padding-top: 2vw;
     font-family: 'Raleway', sans-serif;
     //font-family: 'Pacifico', cursive;
-    border-bottom: 2px solid rgb(100, 225, 232);
+    border-bottom: 1px solid rgb(100, 225, 232);
     padding-bottom: 4px;
     font-size: 200%;
     width:15%;
     margin: auto;
     color: white;
+    margin-bottom: 20px;
   }
 
   // -------- ABOUT US SECTION -------
@@ -177,12 +178,13 @@ header {
 .reason-wrapper.left {
   opacity: 1;
   transform: translateX(0);
+  margin-top: -5px;
 }
 
 .reason-wrapper2{
-    opacity: 0;
-    transform: translateX(-500px);
-    transition: all 1s ease-out;
+  opacity: 0;
+  transform: translateX(-500px);
+  transition: all 1s ease-out;
 }
 .reason-wrapper2.right{
   opacity: 1;
@@ -196,15 +198,18 @@ header {
   margin: 0 auto;
   padding-bottom: 20px;
 }
-
 .reason-wrapper{
   margin-top: 60px;
   text-align: center;
 }
+.reason-right ul, .reason-left ul{
+  text-decoration:none;
+  list-style-type: none;
+}
 .reason-right, .reason-left{
   width: 65%;
   border-top: 5px solid rgb(65, 102, 233);
-  margin: auto;
+  margin: 0 auto;
   padding-bottom: 40px;
   text-align: left;
 }
@@ -215,7 +220,7 @@ header {
 .reason-subject{
   margin-top: 10px;
   margin-bottom: 10px;
-  color: rgb(65, 102, 233);
+  font-family: 'Raleway', sans-serif;
 }
 
 .highlight{
@@ -343,6 +348,7 @@ section {
 
   .introText{
     font-size: 228%;
+
   }
 
   .about img{
@@ -439,14 +445,14 @@ section {
   }
 
   #desktopNav a:hover{
-    color:rgb(100, 225, 232);
+    color:rgb(183, 116, 7);
     bottom:3px;
   }
 
   header {
     //Header contains hamburger button, and logo.
     position: fixed;
-    border-bottom: 5px solid rgb(100, 225, 232);
+    border-bottom: 3px solid rgb(183, 116, 7);
     background-image: url("../IMAGES./background_1.jpg");
     width: 100%;
     padding-top: 6px;
@@ -482,5 +488,10 @@ section {
     right:22.5%;
     //Keep from moving other .bio containers
     float:left
+  }
+
+  .reason-right, .reason-left{
+    width: 45%;
+    text-align: center;
   }
 }
