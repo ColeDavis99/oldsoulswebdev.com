@@ -4,7 +4,8 @@ $(document).ready(function(){
 
     // build a scene
     var fadeScene = new ScrollMagic.Scene({
-      triggerElement: '#about'
+      triggerElement: '#about',
+      reverse:false
     })
     .setClassToggle('#about', 'fade-in') //add class to elem with about ID
     .addTo(controller);
