@@ -189,21 +189,26 @@ header {
 
 .full-screen.why{
   background-image: url("../IMAGES/background_1.jpg");
-  @include spacer(60vh);
-  display: block;
   margin: 0 auto;
-
+  padding-bottom: 20px;
 }
+
 .reason-right, .reason-left{
-  margin-top: 20px;
   width: 80%;
   border-top: 5px solid rgb(65, 102, 233);
+  border-bottom: 5px solid rgb(65, 102, 233);
+  margin: auto;
+  padding-bottom: 40px;
+  margin-top: 60px;
+  text-align: left;
 }
+
 .reason-subject{
   margin-top: 10px;
   margin-bottom: 10px;
   color: rgb(65, 102, 233);
 }
+
 // -------------------------------
 // --- The Contact Us section ----
 
@@ -249,10 +254,6 @@ section {
 
   .spacer{
     @include spacer(15vw);
-  }
-
-  .full-screen.why{
-    @include spacer(120vh);
   }
 
   header{
@@ -303,10 +304,6 @@ section {
     @include spacer(7.5vw);
   }
 
-  .full-screen.why{
-
-    @include spacer(95vh);
-  }
   header{
     text-align: center;
   }
@@ -357,10 +354,6 @@ section {
 //
 //   .spacer{
 //     @include spacer(5.3vw);
-//   }
-//
-//   .full-screen.why{
-//     @include spacer(70vh);
 //   }
 //
 //   #logo{
