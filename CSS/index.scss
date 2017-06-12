@@ -189,7 +189,10 @@ header {
 //------ The Why Us Section ----------
 
 #jumboText{
-  
+  font-family: "Open Sans",Arial,sans-serif;
+  font-weight: 100;
+  font-size: 54px;
+  margin-top:15vw;
 }
 
 .full-screen.why{
@@ -405,7 +408,7 @@ section {
     z-index: 3;
     right: 20px;
     top:0;
-    padding-top:6.15vw;
+    padding-top:5.93vw;
   }
 
   #desktopNav a{
