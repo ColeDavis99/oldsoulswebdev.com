@@ -27,7 +27,6 @@ main{
 header {
   //Header contains hamburger button, and logo.
   position: fixed;
-  border-bottom: 5px solid white;
   background-image: url("../IMAGES./background_1.jpg");
   width: 100%;
   padding-top: 6px;
@@ -81,7 +80,11 @@ header {
     padding-top: 2vw;
     font-family: 'Raleway', sans-serif;
     //font-family: 'Pacifico', cursive;
+    border-bottom: 2px solid rgb(100, 225, 232);
+    padding-bottom: 4px;
     font-size: 200%;
+    width:15%;
+    margin: auto;
     color: white;
   }
 
@@ -436,14 +439,14 @@ section {
   }
 
   #desktopNav a:hover{
-    color:rgb(80, 188, 194);
+    color:rgb(100, 225, 232);
     bottom:3px;
   }
 
   header {
     //Header contains hamburger button, and logo.
     position: fixed;
-    border-bottom: 2px solid white;
+    border-bottom: 5px solid rgb(100, 225, 232);
     background-image: url("../IMAGES./background_1.jpg");
     width: 100%;
     padding-top: 6px;
