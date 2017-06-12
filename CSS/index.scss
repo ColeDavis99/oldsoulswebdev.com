@@ -87,7 +87,7 @@ header {
     width:15%;
     margin: auto;
     color: white;
-    margin-bottom: 20px;
+    padding-bottom: 5px;
   }
 
   // -------- ABOUT US SECTION -------
@@ -170,7 +170,7 @@ header {
   transform: translateY(0);
 }
 
-// first fade in for the fade in from the left
+// FADING IN SECTION
 .reason-wrapper{
     opacity: 0;
     transform: translateX(500px);
@@ -179,7 +179,6 @@ header {
 .reason-wrapper.left {
   opacity: 1;
   transform: translateX(0);
-  margin-top: -5px;
 }
 
 .reason-wrapper2{
@@ -190,6 +189,9 @@ header {
 .reason-wrapper2.right{
   opacity: 1;
   transform: translateX(0);
+}
+#fade-left2{
+  margin-top: -20px;
 }
 //------------------------------------
 //------ The Why Us Section ----------
@@ -493,6 +495,6 @@ section {
 
   .reason-right, .reason-left{
     width: 45%;
-    text-align: center;
+
   }
 }
