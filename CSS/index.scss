@@ -81,13 +81,12 @@ header {
     padding-top: 2vw;
     font-family: 'Raleway', sans-serif;
     //font-family: 'Pacifico', cursive;
-    border-bottom: 1px solid rgb(183, 116, 7);
     padding-bottom: 4px;
     font-size: 200%;
     width:15%;
     margin: auto;
     color: white;
-    padding-bottom: 5px;
+    margin-bottom: 20px;
   }
 
   // -------- ABOUT US SECTION -------
@@ -170,7 +169,7 @@ header {
   transform: translateY(0);
 }
 
-// FADING IN SECTION
+// first fade in for the fade in from the left
 .reason-wrapper{
     opacity: 0;
     transform: translateX(500px);
@@ -179,6 +178,7 @@ header {
 .reason-wrapper.left {
   opacity: 1;
   transform: translateX(0);
+  margin-top: -5px;
 }
 
 .reason-wrapper2{
@@ -189,9 +189,6 @@ header {
 .reason-wrapper2.right{
   opacity: 1;
   transform: translateX(0);
-}
-#fade-left2{
-  margin-top: -20px;
 }
 //------------------------------------
 //------ The Why Us Section ----------
@@ -495,6 +492,6 @@ section {
 
   .reason-right, .reason-left{
     width: 45%;
-
+    text-align: center;
   }
 }
