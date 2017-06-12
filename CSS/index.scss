@@ -206,13 +206,16 @@ header {
   text-align: center;
 }
 .reason-right, .reason-left{
-  width: 80%;
+  width: 65%;
   border-top: 5px solid rgb(65, 102, 233);
   margin: auto;
   padding-bottom: 40px;
-
+  text-align: left;
 }
 
+.reason-text{
+  margin-top: 10px;
+}
 .reason-subject{
   margin-top: 10px;
   margin-bottom: 10px;
