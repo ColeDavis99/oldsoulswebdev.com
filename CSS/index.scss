@@ -45,7 +45,7 @@ header {
 
     a{//This is nested within #mobileNav
       text-decoration:none;
-      color:rgb(66, 212, 244);
+      color: rgb(65, 102, 233);
       font-size: 18px;
       font-family: "Garamond", cursive, sans-serif;
       transition: 0.2s all ease;
@@ -399,7 +399,7 @@ section {
     z-index: 3;
     right: 20px;
     top:0;
-    padding-top:4.6vw;
+    padding-top:6.15vw;
   }
 
   #desktopNav a{
@@ -415,7 +415,7 @@ section {
   }
 
   #desktopNav a:hover{
-    color:rgb(66, 212, 244);
+    color: rgb(65, 102, 233);
     bottom:3px;
   }
 
@@ -448,7 +448,6 @@ section {
     width:145%;
     position: relative;
     right:22.5%;
-    padding-right: 1px;
     //Keep from moving other .bio containers
     float:left
   }
