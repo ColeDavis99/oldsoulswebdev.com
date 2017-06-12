@@ -45,7 +45,7 @@ header {
 
     a{//This is nested within #mobileNav
       text-decoration:none;
-      color: rgb(65, 102, 233);
+      color:rgb(80, 188, 194);
       font-size: 18px;
       font-family: "Garamond", cursive, sans-serif;
       transition: 0.2s all ease;
@@ -188,14 +188,6 @@ header {
 //------------------------------------
 //------ The Why Us Section ----------
 
-#jumboText{
-  font-family: 'Raleway', sans-serif;
-  font-weight: 100;
-  font-size: 54px;
-  margin-top:20vw;
-  background-color: rgba(20,20,20,.6);
-}
-
 .full-screen.why{
   background-image: url("../IMAGES/background_1.jpg");
   margin: 0 auto;
@@ -290,6 +282,14 @@ section {
     right: 5vw;
   }
 
+  #jumboText{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 54px;
+    margin-top:20vw;
+    background-color: rgba(20,20,20,.6);
+  }
+
   main{
     //Keep the main content centered, even with position:fixed.
     transform: translate(0%, 0);
@@ -373,6 +373,14 @@ section {
     @include spacer(5.3vw);
   }
 
+  #jumboText{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 54px;
+    margin-top:35vw;
+    background-color: rgba(20,20,20,.6);
+  }
+
   #logo{
     display: inline-block;
     width: 28%;
@@ -443,6 +451,14 @@ section {
 
   .spacer{
     @include spacer(3vw);
+  }
+
+  #jumboText{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 54px;
+    margin-top:20vw;
+    background-color: rgba(20,20,20,.6);
   }
 
   .bio{
