@@ -208,7 +208,7 @@ header {
 }
 .reason-right, .reason-left{
   width: 65%;
-  border-top: 5px solid rgb(65, 102, 233);
+  border-top: 5px solid rgb(99, 132, 249);
   margin: 0 auto;
   padding-bottom: 40px;
   text-align: left;
@@ -216,6 +216,7 @@ header {
 
 .reason-text{
   margin-top: 10px;
+  //color: rgb(99, 132, 249);
 }
 .reason-subject{
   margin-top: 10px;
@@ -224,7 +225,7 @@ header {
 }
 
 .highlight{
-  color: rgb(65, 102, 233);
+  //color:white;
 }
 // -------------------------------
 // --- The Contact Us section ----
