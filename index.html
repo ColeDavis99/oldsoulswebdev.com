@@ -10,8 +10,10 @@
     <!-- The library for using super dank scroll functionality  -->
     <script src="3rd_Party_Libraries\ScrollMagic\ScrollMagic.min.js"></script>
     <script src="3rd_Party_Libraries\ScrollMagic\debug.addIndicators.min.js"></script>
-    <!-- Font for the introduction  -->
+    <!-- Font for the category introductions-->
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <!--  Font for the jumboText-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
     <!--  Zach's Font (Suggested by Cole)-->
     <link href="https://fonts.googleapis.com/css?family=Oregano" rel="stylesheet">
@@ -20,7 +22,7 @@
     <meta charset="utf-8">
   </head>
   <body>
-    <!---------------------------- HEADER ---------------------->
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ HEADER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
       <div id="headerWrapper">
         <header>
           <button class="hamburger hamburger--elastic" type="button">
@@ -60,9 +62,11 @@
         <!-- This will be what is first seen when opening the site. What our Company is ETC. -->
          <section class="full-screen opening" id="intro">
           <div class="spacer"></div>
-          <h1 class="introText">Who Are We?</h1>
+          <!--
+            <h1 class="introText">Who Are We?</h1>
+          -->
+          <h1 id="jumboText">Think&nbsp;of us&nbsp;as&nbsp;your personal online architects...</h1>
         </section>
-
         <!-- This is for our Bio's about each of us. -->
         <section class="full-screen aboutUs" id="pinned-trigger1">
           <div id="bioIntro">
@@ -71,7 +75,7 @@
           <div id="about" class="about">
 
           <!-- Here are the different divs for each of us.-->
-          <!--   -->
+          <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ COLE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
             <div class="bio">
               <img src="IMAGES/Cole.png" alt="Cole Davis" class="mugshot">
               <h1 class="name" style="font-family: 'Oregano', cursive;">Cole&nbsp;Davis</h1>
@@ -100,7 +104,7 @@
               </div>
             </div>
 
-
+            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ZACH ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
             <div class="bio">
               <img src="IMAGES/Zach.png" alt="Zach Bingham" class="mugshot">
               <h1 class="name" style="font-family: 'Oregano', cursive;">Zach&nbsp;Bingham</h1>
@@ -119,12 +123,13 @@
                   <span class="subject">
                     Favorite Quote:
                   </span>
-                  "Genius is one percent inspiration and ninety-nine percent perspiration." -Thomas Edison
+                  "Genius is one percent inspiration and ninety-nine percent
+                  perspiration." -Thomas Edison
                 </p>
               </div>
             </div>
 
-
+            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ lARRY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
             <div class="bio">
               <img src="IMAGES/Larry.png" alt="Larry Fry III" class="mugshot">
               <h1 class="name" style="font-family: 'Oregano', cursive;">Larry&nbsp;Fry&nbsp;III</h1>
@@ -154,7 +159,7 @@
         <!--  Here is the Why Us? section. -->
         <section class="full-screen why" id="pinned-trigger2">
 
-          <!-- These are the sections for the reasons on why choose us -->
+          <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ WHY CHOOSE US SECTION  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
           <h1 class="introText">Why Choose Us?</h1>
 
 
@@ -218,10 +223,9 @@
 
         </section>
 
-        <!-- This seciton is for our contact infomation and email us part. -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~ CONTACT US SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~- -->
         <section class="full-screen contact" id="pinned-trigger3">
           <h1 class="introText">Contact Us</h1>
-
           <form action="#">
             <label for="Name">Name: </label><input type="text" name="name" required><br>
             <label for="Email"> Email: </label><input type="email" name="email" required><br>

@@ -22,7 +22,7 @@ main{
     width:100%;
   }
 
-  // ---------- NAVIGATION -------
+// ---------- NAVIGATION -------
 // -----------------------------
 header {
   //Header contains hamburger button, and logo.
@@ -45,7 +45,7 @@ header {
 
     a{//This is nested within #mobileNav
       text-decoration:none;
-      color: rgb(65, 102, 233);
+      color:rgb(80, 188, 194);
       font-size: 18px;
       font-family: "Garamond", cursive, sans-serif;
       transition: 0.2s all ease;
@@ -67,8 +67,7 @@ header {
 // ---------------------------
 
   #intro{
-    //background-image: url("../IMAGES/wood.jpg");
-    background-color: purple;
+    background-image: url("../IMAGES/foggyForest.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height:100vh;
@@ -80,9 +79,11 @@ header {
   }
   .introText{
     padding-top: 2vw;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Raleway', sans-serif;
+    //font-family: 'Pacifico', cursive;
     font-size: 200%;
     color: white;
+    margin-bottom: 20px;
   }
 
   // -------- ABOUT US SECTION -------
@@ -174,6 +175,7 @@ header {
 .reason-wrapper.left {
   opacity: 1;
   transform: translateX(0);
+  margin-top: -5px;
 }
 
 .reason-wrapper2{
@@ -285,6 +287,14 @@ section {
     right: 5vw;
   }
 
+  #jumboText{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 54px;
+    margin-top:20vw;
+    background-color: rgba(20,20,20,.6);
+  }
+
   main{
     //Keep the main content centered, even with position:fixed.
     transform: translate(0%, 0);
@@ -335,6 +345,7 @@ section {
 
   .introText{
     font-size: 228%;
+
   }
 
   .about img{
@@ -366,6 +377,14 @@ section {
 
   .spacer{
     @include spacer(5.3vw);
+  }
+
+  #jumboText{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 54px;
+    margin-top:35vw;
+    background-color: rgba(20,20,20,.6);
   }
 
   #logo{
@@ -407,7 +426,7 @@ section {
     z-index: 3;
     right: 20px;
     top:0;
-    padding-top:6.15vw;
+    padding-top:5.93vw;
   }
 
   #desktopNav a{
@@ -423,7 +442,7 @@ section {
   }
 
   #desktopNav a:hover{
-    color: rgb(65, 102, 233);
+    color:rgb(80, 188, 194);
     bottom:3px;
   }
 
@@ -438,6 +457,14 @@ section {
 
   .spacer{
     @include spacer(3vw);
+  }
+
+  #jumboText{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 54px;
+    margin-top:20vw;
+    background-color: rgba(20,20,20,.6);
   }
 
   .bio{
@@ -462,6 +489,6 @@ section {
 
   .reason-right, .reason-left{
     width: 45%;
-  text-align: center;
+    text-align: center;
   }
 }
