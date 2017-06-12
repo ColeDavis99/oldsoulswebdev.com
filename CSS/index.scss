@@ -67,7 +67,8 @@ header {
 // ---------------------------
 
   #intro{
-    background-image: url("../IMAGES/wood.jpg");
+    //background-image: url("../IMAGES/wood.jpg");
+    background-color: purple;
     background-repeat: no-repeat;
     background-size: cover;
     height:100vh;
@@ -287,7 +288,7 @@ section {
 }
 
 /* Large Smartphones */
-@media only screen and (min-width: 417px) and (max-width: 920px) {
+@media only screen and (min-width: 417px) and (max-width: 768px) {
 
   #desktopNav{
     display: none;
@@ -335,46 +336,45 @@ section {
 
 
 /* Tablets */
-// @media only screen and (min-width: 769px) and (max-width: 1280px) {
-//   header{
-//     text-align: center;
-//   }
-//
-//   // #desktopNav{
-//   //   display: none;
-//   // }
-//
-//   // @include HamburgerNav(160vh, 210px);
-//
-//   .hamburger{
-//     position: relative;
-//     right: 26vw;
-//     bottom:.5vw;
-//   }
-//
-//   .spacer{
-//     @include spacer(5.3vw);
-//   }
-//
-//   #logo{
-//     display: inline-block;
-//     width: 28%;
-//     position: relative;
-//     top:1vw;
-//   }
-//
-//   .bio img{
-//     width:23vw;
-//     height:23vw;
-//     border-radius: 50%;
-//   }
-//
-// }
+@media only screen and (min-width: 769px) and (max-width: 1280px) {
+  header{
+    text-align: center;
+  }
+
+  #desktopNav{
+    display: none;
+  }
+
+   @include HamburgerNav(160vh, 210px);
+
+  .hamburger{
+    position: relative;
+    right: 26vw;
+    bottom:.5vw;
+  }
+
+  .spacer{
+    @include spacer(5.3vw);
+  }
+
+  #logo{
+    display: inline-block;
+    width: 28%;
+    position: relative;
+    top:1vw;
+  }
+
+  .bio img{
+    width:23vw;
+    height:23vw;
+    border-radius: 50%;
+  }
+}
 
 
 
-/* Desktop */        //(min-width: 1281px)
-@media only screen and (min-width: 921px) and (max-width: 9920px){
+/* Desktop */
+@media only screen and (min-width: 1281px) and (max-width: 9920px){
 
   #mobileNav{
     display: none;
