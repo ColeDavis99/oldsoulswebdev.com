@@ -81,12 +81,12 @@ header {
     padding-top: 2vw;
     font-family: 'Raleway', sans-serif;
     //font-family: 'Pacifico', cursive;
-    padding-bottom: 4px;
+    padding-bottom: 20px;
     font-size: 200%;
     width:15%;
     margin: auto;
     color: white;
-    margin-bottom: 20px;
+
   }
 
   // -------- ABOUT US SECTION -------
@@ -149,7 +149,7 @@ header {
     display: block;
     margin-top: 5.5%;
     text-align: left;
-    color:gray;
+    color:rgb(99, 132, 249);
   }
 
   // -------------------------------
@@ -178,7 +178,8 @@ header {
 .reason-wrapper.left {
   opacity: 1;
   transform: translateX(0);
-  margin-top: -5px;
+  padding-top: -50px;
+
 }
 
 .reason-wrapper2{
@@ -199,7 +200,6 @@ header {
   padding-bottom: 20px;
 }
 .reason-wrapper{
-  margin-top: 60px;
   text-align: center;
 }
 .reason-right ul, .reason-left ul{
@@ -493,6 +493,5 @@ section {
 
   .reason-right, .reason-left{
     width: 45%;
-    text-align: center;
   }
 }
