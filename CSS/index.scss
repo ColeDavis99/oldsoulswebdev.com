@@ -194,11 +194,10 @@ header {
   margin: 0 auto;
 
 }
-.reason-wrapper{
-  background-color: darkgreen;
+.reason-right, .reason-left{
+  margin-top: 20px;
   width: 80%;
-  margin: 0 auto;
-  border-top: thick single rgb(65, 102, 233);
+  border-top: 5px solid rgb(65, 102, 233);
 }
 .reason-subject{
   margin-top: 10px;
