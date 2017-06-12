@@ -166,22 +166,22 @@ header {
 }
 
 // first fade in for the fade in from the left
-.reason-left{
+.reason-wrapper{
     opacity: 0;
     transform: translateX(500px);
     transition: all 1s ease-out;
 }
-.reason-left.left {
+.reason-wrapper.left {
   opacity: 1;
   transform: translateX(0);
 }
 
-.reason-right{
+.reason-wrapper2{
     opacity: 0;
     transform: translateX(-500px);
     transition: all 1s ease-out;
 }
-.reason-right.right{
+.reason-wrapper2.right{
   opacity: 1;
   transform: translateX(0);
 }
@@ -194,14 +194,16 @@ header {
   padding-bottom: 20px;
 }
 
+.reason-wrapper{
+  margin-top: 60px;
+  text-align: center;
+}
 .reason-right, .reason-left{
   width: 80%;
   border-top: 5px solid rgb(65, 102, 233);
-  border-bottom: 5px solid rgb(65, 102, 233);
   margin: auto;
   padding-bottom: 40px;
-  margin-top: 60px;
-  text-align: left;
+
 }
 
 .reason-subject{
