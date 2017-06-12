@@ -14,7 +14,7 @@ $( document ).ready(function() {
       //Slide #mobileNav Up and Out
       $('#mobileNav').removeClass('animated slideInDown').addClass('animated slideOutUp');
       //Little #mobileNav Fix for when user minimizes hamburger menu and triggers header to slideOutUp
-      $('#mobileNav').css("top", "0");
+      $('#mobileNav').css("top", "0"); 
     }
   });
 

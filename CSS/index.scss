@@ -67,6 +67,13 @@ header {
 // ---------------------------
 
   #intro{
+    background-image: url("../IMAGES/wood.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+  }
+
+  #bioIntro{
     text-align: center;
     width: 100%;
   }
@@ -119,14 +126,14 @@ header {
       overflow: hidden;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 15px;
-    padding-bottom: 25px;
+    padding-bottom: 8px;
   }
 
   .desc p{
     font-family: "Source Sans Pro", Arial, Tahoma, sans-serif;
     width: 95%;
     color:white;
-    padding-left: 16px;
+    padding-left: 10px;
     font-size: 18px;
   }
 
@@ -392,7 +399,7 @@ section {
     z-index: 3;
     right: 20px;
     top:0;
-    padding-top:4.3vw;
+    padding-top:4.6vw;
   }
 
   #desktopNav a{
@@ -438,9 +445,10 @@ section {
   }
 
   .desc{
-    width:130%;
+    width:145%;
     position: relative;
-    right:15%;
+    right:22.5%;
+    padding-right: 1px;
     //Keep from moving other .bio containers
     float:left
   }
