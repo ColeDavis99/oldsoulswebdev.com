@@ -44,7 +44,8 @@ header {
 
     a{//This is nested within #mobileNav
       text-decoration:none;
-      color:rgb(80, 188, 194);
+      color:rgb(183, 116, 7);
+      font-weight: 900;
       font-size: 18px;
       font-family: "Garamond", cursive, sans-serif;
       transition: 0.2s all ease;
@@ -80,7 +81,7 @@ header {
     padding-top: 2vw;
     font-family: 'Raleway', sans-serif;
     //font-family: 'Pacifico', cursive;
-    border-bottom: 1px solid rgb(100, 225, 232);
+    border-bottom: 1px solid rgb(183, 116, 7);
     padding-bottom: 4px;
     font-size: 200%;
     width:15%;
