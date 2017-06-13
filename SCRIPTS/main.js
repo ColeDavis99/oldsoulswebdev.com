@@ -5,6 +5,7 @@ $(document).ready(function(){
     // build a scene
     var fadeScene = new ScrollMagic.Scene({
       triggerElement: '#about',
+      triggerHook: 0.65,
       reverse:false
     })
     .setClassToggle('#about', 'fade-in') //add class to elem with about ID
