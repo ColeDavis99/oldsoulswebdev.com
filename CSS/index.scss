@@ -30,6 +30,7 @@ header {
   background-image: url("../IMAGES./background_1.jpg");
   width: 100%;
   padding-top: 6px;
+  border-bottom: 1px solid white;
 }
 
 .hamburger:focus{
@@ -67,26 +68,36 @@ header {
 // ---------------------------
 
   #intro{
-    background-image: url("../IMAGES/foggyForest.jpg");
-    background-repeat: no-repeat;
+/*                   url("../IMAGES/foggyForest.jpg");
+                     url("../IMAGES/buildingsRising.jpg")*/
+    background-image:url("../IMAGES/chicagoSkyscrapers.jpg");
     background-size: cover;
-    height:100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height:95vh;
   }
 
-  #bioIntro{
-    text-align: center;
-    width: 100%;
+  #jumboText{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    background-color: rgba(20,20,20,.7);
   }
+
+  #introWrapper{
+    height:100%;
+    width: 100%;
+    background-color:rgba(20,20,20,.4);
+  }
+
   .introText{
     padding-top: 2vw;
     font-family: 'Raleway', sans-serif;
     //font-family: 'Pacifico', cursive;
     padding-bottom: 20px;
     font-size: 200%;
-    width:15%;
     margin: auto;
     color: white;
-
   }
 
   // -------- ABOUT US SECTION -------
@@ -94,7 +105,6 @@ header {
   .bio{
     margin-top: 10vw;
     margin-bottom: 2vw;
-    text-align: center;
     padding-left: 5%;
     padding-right: 5%;
   }
@@ -119,9 +129,9 @@ header {
   .name{
     padding-top: 4px;
     width: 70%;
-    margin: auto;
     font-weight: bold;
     font-size: 30px;
+    margin:auto;
   }
 
   .desc{
@@ -214,7 +224,6 @@ header {
 
 .reason-text{
   margin-top: 10px;
-  //color: rgb(99, 132, 249);
 }
 .reason-subject{
   margin-top: 10px;
@@ -290,11 +299,9 @@ section {
   }
 
   #jumboText{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100;
-    font-size: 54px;
-    margin-top:20vw;
-    background-color: rgba(20,20,20,.6);
+    font-size: 25px;
+    position: relative;
+    top:36.4%;
   }
 
   main{
@@ -311,7 +318,7 @@ section {
 }
 
 /* Large Smartphones */
-@media only screen and (min-width: 417px) and (max-width: 768px) {
+@media only screen and (min-width: 417px) and (max-width: 767px) {
 
   #desktopNav{
     display: none;
@@ -345,9 +352,14 @@ section {
     right: 19vw;
   }
 
+  #jumboText{
+    font-size: 30px;
+    position: relative;
+    top:20%;
+  }
+
   .introText{
     font-size: 228%;
-
   }
 
   .about img{
@@ -360,7 +372,7 @@ section {
 
 
 /* Tablets */
-@media only screen and (min-width: 769px) and (max-width: 1280px) {
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
   header{
     text-align: center;
   }
@@ -382,12 +394,11 @@ section {
   }
 
   #jumboText{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100;
     font-size: 54px;
-    margin-top:35vw;
-    background-color: rgba(20,20,20,.6);
+    position: relative;
+    top:37%;
   }
+
 
   #logo{
     display: inline-block;
@@ -396,10 +407,39 @@ section {
     top:1vw;
   }
 
+
+
+  .bio{
+    display: inline-block;
+    position: relative;
+    margin-top:1vw;
+    width:38%;
+  }
+
   .bio img{
-    width:23vw;
-    height:23vw;
+    width:30vw;
+    height:30vw;
     border-radius: 50%;
+  }
+
+  .desc{
+    position: relative;
+  }
+
+  .desc.cole{
+    width:139%;
+    right:30%;
+    float:left
+  }
+  .desc.zach{
+    width:139%;
+    right:8%;
+    float:left
+  }
+  .desc.larry{
+    width:190%;
+    right:45%;
+    float:left
   }
 }
 
@@ -454,7 +494,6 @@ section {
     border-bottom: 3px solid rgb(183, 116, 7);
     background-image: url("../IMAGES./background_1.jpg");
     width: 100%;
-    padding-top: 6px;
   }
 
   .spacer{
@@ -462,11 +501,9 @@ section {
   }
 
   #jumboText{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100;
     font-size: 54px;
-    margin-top:20vw;
-    background-color: rgba(20,20,20,.6);
+    position: relative;
+    top:37%;
   }
 
   .bio{
@@ -475,6 +512,7 @@ section {
     margin-top:1vw;
     width:22%;
   }
+
   .bio img{
     width:15vw;
     height:15vw;
