@@ -7,9 +7,15 @@
     <link rel="stylesheet" href="3rd_Party_Libraries/animate.css">
     <!-- The ever-holy JQuery. -->
     <script src="3rd_Party_Libraries/JQuery.js"></script>
-    <!-- The library for using super dank scroll functionality  -->
+    <!-- The library for using super dank scroll functionality and GSAP libraries (which is used for parallaxing images)-->
     <script src="3rd_Party_Libraries\ScrollMagic\ScrollMagic.min.js"></script>
-    <script src="3rd_Party_Libraries\ScrollMagic\debug.addIndicators.min.js"></script>
+    <script src="3rd_Party_Libraries\ScrollMagic\plugins\GSAP_Tweening.js"></script>
+    <script src="3rd_Party_Libraries\ScrollMagic\plugins\animation.gsap.min.js"></script>
+    <script src="SCRIPTS/main.js"></script>
+
+
+
+
     <!-- Font for the category introductions-->
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <!--  Font for the jumboText-->
@@ -58,15 +64,18 @@
 
     <!--~~~~~~~~~~~~~~~~~~~~~ MAIN (pretty much everything) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-    <main class="full-screen" role="main">
-      <!-- Pretty Tree Pic Intro-->
-      <section class="full-screen opening" id="intro">
-        <div id="introWrapper">
-          <div class="spacer"></div>
-          <!-- <h1 class="introText">Who Are We?</h1> -->
+    <main role="main">
+      <!-- Pretty Parallax Intro-->
+      <div id="bcg-parallax">
+        <div id="bcg"></div>
+        <div id="content-wrapper">
+          <!-- <div class="spacer"></div> -->
           <h1 id="jumboText">Think&nbsp;of us&nbsp;as&nbsp;your personal online architects...</h1>
         </div>
-      </section>
+      </div>
+
+
+
       <!-- This is for our Bio's about each of us. -->
       <section class="full-screen aboutUs" id="pinned-trigger1">
           <h1 class="introText"> Meet The Team</h1>
@@ -245,7 +254,6 @@
     </main>
   <!-- This is for the animations in javascript -->
       <script src="SCRIPTS/hamburger.js"></script>
-      <script src="SCRIPTS/main.js"></script>
       <script src="SCRIPTS/aboutUsDropdown.js"></script>
       <!--  Header disappear/reappear upon scroll logic-->
       <script src="SCRIPTS/headerLogic.js"></script>

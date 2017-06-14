@@ -60,4 +60,19 @@ $(document).ready(function(){
     })
     .setClassToggle('#fade-left2', 'left')
     .addTo(controller);
+
+    // ---------------------------------------------------------------------
+    // This is Cole's Parallax Scene
+
+	var slideParallaxScene = new ScrollMagic.Scene({
+		triggerElement: '#bcg-parallax',
+		triggerHook:0,
+    offset:-200,//Change this offset to alter when the parallax effect begins.
+                //Right now, I have it to where the effect stops just before the img leaves the screen.
+		duration: '120%',
+	})
+	.setTween(TweenMax.from('#bcg', 1, {y: '-40%', ease:Power0.easeNone}))
+	.addTo(controller)
+
+
 });
