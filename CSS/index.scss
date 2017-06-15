@@ -204,12 +204,16 @@ header {
 .reason-wrapper.left {
   opacity: 1;
   transform: translateX(0);
+  //Adjust position between elements
+  margin-top: -5%;
 }
 
 .reason-wrapper2{
   opacity: 0;
   transform: translateX(-500px);
   transition: all 1s ease-out;
+  //Adjust position between elements
+  margin-top: -5%;
 }
 .reason-wrapper2.right{
   opacity: 1;
@@ -223,13 +227,16 @@ header {
   margin: 0 auto;
   padding-bottom: 20px;
 }
+
 .reason-wrapper{
   text-align: center;
 }
+
 .reason-right ul, .reason-left ul{
   text-decoration:none;
   list-style-type: none;
 }
+
 .reason-right, .reason-left{
   width: 65%;
   border-top: 5px solid rgb(99, 132, 249);
@@ -241,14 +248,36 @@ header {
 .reason-text{
   margin-top: 10px;
 }
+
 .reason-subject{
   margin-top: 10px;
   margin-bottom: 10px;
   font-family: 'Raleway', sans-serif;
 }
 
-.highlight{
-  //color:white;
+#ruler{
+  transform: rotate(330deg);
+  position:relative;
+  height:100px;
+  width:170px;
+  top:9.5vw;
+  right:30%;
+}
+#phone{
+  transform: rotate(25deg);
+  position: relative;
+  height:160px;
+  width:140px;
+  top:9.5vw;
+  right:30%;
+}
+#rose{
+  transform: rotate(17deg);
+  position: relative;
+  height:160px;
+  width:110px;
+  top:9.5vw;
+  right:30%;
 }
 // -------------------------------
 // --- The Contact Us section ----
@@ -449,6 +478,32 @@ section {
     width:190%;
     right:45%;
     float:left
+  }
+
+//The Why Us Images
+  #ruler{
+    transform: rotate(330deg);
+    position:relative;
+    height:65px;
+    width:112px;
+    top:15vw;
+    right:42%;
+  }
+  #phone{
+    transform: rotate(25deg);
+    position: relative;
+    height:105px;
+    width:94px;
+    top:15.5vw;
+    right:42%;
+  }
+  #rose{
+    transform: rotate(21deg);
+    position: relative;
+    height:105px;
+    width:95px;
+    top:15.5vw;
+    right:42%;
   }
 }
 
