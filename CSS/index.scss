@@ -122,6 +122,18 @@ header {
     margin-bottom: 2vw;
     padding-left: 5%;
     padding-right: 5%;
+    text-align: center;
+  }
+
+  .bioArrow{
+    transition: all .4s ease;
+    display: block;
+    width:30%;
+    height:40%;
+    margin: auto;
+  }
+  .flip{
+    transform: rotate(-180deg);
   }
 
   .mugshot{
@@ -356,6 +368,29 @@ section {
     width:50vw;
     border-radius: 50%;
   }
+
+  #ruler{
+    display: none;
+  }
+  #phone{
+    display: none;
+  }
+  #rose{
+    display: none;
+  }
+
+//The Left-Side Icons are gone now, so fix the margins.
+  .reason-wrapper.left {
+    margin-top: 8%;
+  }
+
+  .reason-wrapper2{
+    margin-top: 8%;
+  }
+
+  .desc p{
+    font-size: 13px;
+  }
 }
 
 /* Large Smartphones */
@@ -408,6 +443,29 @@ section {
     border-radius: 50%;
   }
 
+  .desc p{
+    font-size: 14px;
+  }
+
+  #ruler{
+    display: none;
+  }
+  #phone{
+    display: none;
+  }
+  #rose{
+    display: none;
+  }
+
+//The Left-Side Icons are gone now, so fix the margins.
+  .reason-wrapper.left {
+    margin-top: 3%;
+  }
+
+  .reason-wrapper2{
+    margin-top: 3%;
+  }
+
 }
 
 
@@ -454,7 +512,7 @@ section {
     width:38%;
   }
 
-  .bio img{
+  .mugshot{
     width:30vw;
     height:30vw;
     border-radius: 50%;
@@ -577,7 +635,7 @@ section {
     width:22%;
   }
 
-  .bio img{
+  .mugshot{
     width:15vw;
     height:15vw;
     border-radius: 50%;
