@@ -93,7 +93,7 @@
                 </span>
                 Just recently, I discovered within myself a love
                 for mountain biking. I also enjoy tooting my
-                tenor sax, working out, and the occasional paintball game.
+                tenor sax, tinkering with robotics, and the occasional paintball game.
 
                 <span class="subject">
                   Interesting Skills:
@@ -248,22 +248,48 @@
       </section>
 
       <!-- ~~~~~~~~~~~~~~~~~~~~~~~ CONTACT US SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~- -->
-      <section class="full-screen contact" id="pinned-trigger3">
+      <section class="contact" id="pinned-trigger3">
         <h1 class="introText" style="padding-bottom: 0;">Contact Us</h1>
         <p id="dontBite">(we don't bite)</p>
         <form action="form-to-email.php" method="post" enctype="text/plain">
 
+        <!--  Name and Email-->
           <h2>Name<span>*</span></h2>
           <input id="formName" type="text" name="name" required>
 
-          <h2 style="margin-top:2%;">Email<span>*</span></h2>
+          <h2 class="formGutters">Email<span>*</span></h2>
           <input id="formEmail" type="email" name="email" required>
 
-          <!-- <input type="radio" name="type" value="Suggestion/Comment" checked>  Question/Comment<br>
-          <input type="radio" name="type" value="Job"> Job Request<br>
-          <input type="radio" name="type" value="Other"> Other<br> -->
 
-          <h2 style="margin-top: 2%">Comment/Request:</h2>
+        <!--  How they heard of us-->
+        <div id="radioWrapper_1">
+          <h2 id="howYouHear">How Did You Hear About Us?</h2>
+          <div id="radioWrapper_2">
+            <label id="mouth" class="radioText">
+              <input id="mouth" type="radio" name="type" value="Word Of Mouth">
+              Word Of Mouth
+            </label><br>
+
+            <label id="google" class="radioText">
+              <input id="google" type="radio" name="type" value="Googling for Web Devs">
+              Googling For Web Developers
+            </label><br>
+
+            <label id="inPerson" class="radioText">
+              <input id="inPerson" type="radio" name="type" value="Contacted By Us">
+              Contacted In Person
+            </label><br>
+
+            <label id="other" class="radioText">
+              <input id="other" type="radio" name="type" value="other">
+              Other
+              <input id="other" type="text" name="type" placeholder="E.g. Messenger Pigeon"value="">
+            </label><br>
+          </div>
+        </div>
+
+        <!--  Their Message -->
+          <h2 class="formGutters">Comment/Request:</h2>
           <textarea id="formComment" name="paragraph" cols="60" rows="7"></textarea><br>
 
           <input id="formSubmit" type="submit" value="Submit">
@@ -272,17 +298,6 @@
 
       <!-- ~~~~~~~~~~~~~~~~~~~~~~~  FOOTER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~- -->
       <footer>
-        <p style="padding-top100px; font-size:70px;">This perpil is the footer BTW</p>
-        <p style="padding-top100px; font-size:70px;">CSS for it is on line 348</p>
-        <h1>Old Souls, New Ideas</h1>
-        <h1>Old Souls, New Ideas</h1>
-        <h1>Old Souls, New Ideas</h1>
-        <h1>Old Souls, New Ideas</h1>
-        <h1>Old Souls, New Ideas</h1>
-        <h1>Old Souls, New Ideas</h1>
-        <h1>Old Souls, New Ideas</h1>
-        <h1>Old Souls, New Ideas</h1>
-        <h1>Old Souls, New Ideas</h1>
         <h1>Old Souls, New Ideas</h1>
       </footer>
 
