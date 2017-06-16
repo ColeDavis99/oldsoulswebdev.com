@@ -118,7 +118,6 @@ header {
   // -------- ABOUT US SECTION -------
 
   .bio{
-    margin-top: 10vw;
     margin-bottom: 2vw;
     padding-left: 5%;
     padding-right: 5%;
@@ -129,7 +128,6 @@ header {
     transition: all .4s ease;
     display: block;
     width:30%;
-    height:40%;
     margin: auto;
   }
   .flip{
@@ -234,7 +232,7 @@ header {
 //------------------------------------
 //------ The Why Us Section ----------
 
-.full-screen.why{
+.why{
   background-image: url("../IMAGES/background_1.jpg");
   margin: 0 auto;
   padding-bottom: 20px;
@@ -259,6 +257,7 @@ header {
 
 .reason-text{
   margin-top: 10px;
+  width:90vw;
 }
 
 .reason-subject{
@@ -272,7 +271,7 @@ header {
   position:relative;
   height:100px;
   width:170px;
-  top:9.5vw;
+  top:8.5vw;
   right:30%;
 }
 #phone{
@@ -292,18 +291,50 @@ header {
   right:30%;
 }
 // -------------------------------
-// --- The Contact Us section ----
+//------ The Why Us Section ----------
 
-.full-screen.contact{
+.portfolio{
   background-image: url("../IMAGES/background_1_light.jpg");
-  @include spacer(55vh);
   display: block;
   margin: 0 auto;
+}
+// --- The Contact Us section ----
 
+.contact{
+  background-image: url("../IMAGES/background_1.jpg");
+  display: block;
+  margin: 0 auto;
 }
 
+form span{
+  //Required * styling
+  color:red;
+}
 
-//--------------------------------
+textarea, input{
+  font-family:'Raleway', sans-serif;
+  padding-top:4px;
+  padding-bottom:4px;
+  font-size: 17px;
+}
+
+#formEmail{
+  width: 200px;
+}
+
+#formSubmit{
+  padding-left:6px;
+  padding-right: 6px;
+}
+
+textarea{
+  width:60%;
+}
+
+#dontBite{
+  padding-bottom: 20px;
+}
+
 // ---------------------------------
 // SCROLLMAGIC Section styling------
 section {
@@ -312,6 +343,25 @@ section {
 }
 
 //--------------
+
+//------ FOOTER ----------
+footer{
+  width:100vw;
+  background-color: purple;
+  text-align: center;
+    h1{
+      margin-top: 20px;
+      font-family: "comic sans MS";
+      color:yellow;
+      font-size: 50px;
+      background-color: red;
+      position: relative;
+      top:5vw;
+      text-shadow: 10px 10px green;
+    }
+}
+
+
 
 
 /////////////////////////////////////////////////////////////
@@ -363,7 +413,7 @@ section {
     width: 100%;
   }
 
-  .about img{
+  .mugshot{
     height:50vw;
     width:50vw;
     border-radius: 50%;
@@ -379,17 +429,17 @@ section {
     display: none;
   }
 
-//The Left-Side Icons are gone now, so fix the margins.
-  .reason-wrapper.left {
-    margin-top: 8%;
+  .desc p{
+    font-size: 10px;
   }
 
-  .reason-wrapper2{
-    margin-top: 8%;
-  }
 
   .desc p{
     font-size: 13px;
+  }
+
+  .reason-text{
+    text-align: left;
   }
 }
 
@@ -437,7 +487,7 @@ section {
     font-size: 228%;
   }
 
-  .about img{
+  .mugshot{
     height:35vw;
     width:35vw;
     border-radius: 50%;
@@ -544,7 +594,7 @@ section {
     position:relative;
     height:65px;
     width:112px;
-    top:15vw;
+    top:14vw;
     right:42%;
   }
   #phone{
