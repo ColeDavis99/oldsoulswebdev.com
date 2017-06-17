@@ -197,7 +197,7 @@ header {
   padding-bottom:10px;
   opacity: 0;
   transform: translateY(50px);
-  transition: all 1s ease-out;
+  transition: transform 1s ease-out, opacity 1s ease-out;
   width: 85%;
 }
 .about.fade-in {
@@ -209,13 +209,13 @@ header {
 .reason-wrapper{
     opacity: 0;
     transform: translateX(500px);
-    transition: all 1s ease-out;
+    transition: transform 1s ease-out, opacity 1s ease-out;
 }
 .reason-wrapper.left {
   opacity: 1;
   transform: translateX(0);
   //Adjust position between elements
-  margin-top: -5%;
+  margin-top: -2%;
 }
 
 .reason-wrapper2{
@@ -223,7 +223,7 @@ header {
   transform: translateX(-500px);
   transition: all 1s ease-out;
   //Adjust position between elements
-  margin-top: -5%;
+  margin-top: -2%;
 }
 .reason-wrapper2.right{
   opacity: 1;
@@ -256,7 +256,7 @@ header {
 }
 
 .reason-text{
-  margin-top: 10px;
+  margin-top: 8px;
   width:90%;
 }
 
@@ -291,7 +291,7 @@ header {
   right:30%;
 }
 // -------------------------------
-//------ The Why Us Section ----------
+//------ The PORTFOLIO Section ----------
 
 .portfolio{
   background-image: url("../IMAGES/background_1_light.jpg");
@@ -468,17 +468,12 @@ footer{
     display: none;
   }
 
-  .desc p{
-    font-size: 10px;
+  .reason-right, .reason-left{
+    width: 92%;
   }
-
 
   .desc p{
     font-size: 13px;
-  }
-
-  .reason-text{
-    text-align: left;
   }
 }
 
