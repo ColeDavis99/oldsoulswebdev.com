@@ -148,6 +148,13 @@ $(document).ready(function(){
      //Get the header out of here lul
      $('header, #desktopNav').removeClass('animated slideInDown').addClass('animated slideOutUp');
 
+     //Slide #mobileNav Up and Out
+     $('#mobileNav').removeClass('animated slideInDown').addClass('animated slideOutUp');
+     //Little #mobileNav Fix for when user minimizes hamburger menu and triggers header to slideOutUp
+     $('#mobileNav').css("top", "0");
+     //Make the hamburger button return to resting state
+     $('.hamburger').toggleClass("is-active");
+
 
      //reset "fromNav" to false after 1000ms has passed.
      setTimeout(function () {
