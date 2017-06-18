@@ -30,6 +30,7 @@ header {
   background-image: url("../IMAGES./background_1.jpg");
   width: 100%;
   padding-top: 6px;
+  border-bottom: 1px solid white;
 }
 
 .hamburger:focus{
@@ -63,42 +64,84 @@ header {
   z-index: 3;
 }
 
-//------ MAIN CONTENT --------
+//------ INTRO CONTENT --------
 // ---------------------------
+                              //~~~~~~~~~~~~~Parralax Stuff~~~~~~~~~~~~~~//
+                                    #bcg-parallax{
+                                    	padding: 55vh 0;
+                                    	color:#fff;
+                                    	background-color:#000;
+                                    	text-align:center;
+                                    	position:relative;
+                                    	overflow: hidden;
+                                      z-index: -2;
+                                    }
 
-  #intro{
-    background-image: url("../IMAGES/foggyForest.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height:100vh;
-  }
+                                    #bcg{
+                                    	background-image: url('../IMAGES/expanse.jpg');
+                                    	background-repeat: no-repeat;
+                                    	background-size: cover;
+                                    	background-position: center;
+                                    	position: absolute;
+                                    	width: 100%;
+                                    	height: 100%;
+                                    	top: 30%;
+                                    	z-index: 1;
+                                    	opacity: 0.7;
+                                    }
 
-  #bioIntro{
-    text-align: center;
-    width: 100%;
-  }
-  .introText{
-    padding-top: 2vw;
-    font-family: 'Raleway', sans-serif;
-    //font-family: 'Pacifico', cursive;
-    padding-bottom: 20px;
-    font-size: 200%;
-    width:15%;
-    margin: auto;
-    color: white;
+                                    #content-wrapper{
+                                    	width:100%;
+                                    	position:relative;
+                                    	z-index: 2;
+                                    }
 
-  }
+
+#jumboText{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  background-color: rgba(20,20,20,.7);
+  position: relative;
+}
+
+
+.introText{
+  padding-top: 2vw;
+  font-family: 'Raleway', sans-serif;
+  //font-family: 'Pacifico', cursive;
+  padding-bottom: 20px;
+  font-size: 200%;
+  margin: auto;
+  color: white;
+}
 
   // -------- ABOUT US SECTION -------
 
   .bio{
-    margin-top: 10vw;
     margin-bottom: 2vw;
-    text-align: center;
     padding-left: 5%;
     padding-right: 5%;
+    text-align: center;
   }
 
+  .bioArrow{
+    transition: all .4s ease;
+    display: block;
+    width:30%;
+    margin: auto;
+  }
+  .flip{
+    transform: rotate(-180deg);
+  }
+
+  .mugshot{
+    -webkit-transition: all .4s ease; /* Safari and Chrome */
+    -moz-transition: all .4s ease; /* Firefox */
+    -ms-transition: all .4s ease; /* IE 9 */
+    -o-transition: all .4s ease; /* Opera */
+    transition: all .4s ease;
+    padding-top:45px;
+  }
 
   .mugshot:hover{
     -webkit-transform:scale(1.08); /* Safari and Chrome */
@@ -108,20 +151,13 @@ header {
      transform:scale(1.08);
   }
 
-  .mugshot{
-    -webkit-transition: all .4s ease; /* Safari and Chrome */
-    -moz-transition: all .4s ease; /* Firefox */
-    -ms-transition: all .4s ease; /* IE 9 */
-    -o-transition: all .4s ease; /* Opera */
-    transition: all .4s ease;
-  }
 
   .name{
     padding-top: 4px;
     width: 70%;
-    margin: auto;
     font-weight: bold;
     font-size: 30px;
+    margin:auto;
   }
 
   .desc{
@@ -161,7 +197,7 @@ header {
   padding-bottom:10px;
   opacity: 0;
   transform: translateY(50px);
-  transition: all 1s ease-out;
+  transition: transform 1s ease-out, opacity 1s ease-out;
   width: 85%;
 }
 .about.fade-in {
@@ -173,17 +209,21 @@ header {
 .reason-wrapper{
     opacity: 0;
     transform: translateX(500px);
-    transition: all 1s ease-out;
+    transition: transform 1s ease-out, opacity 1s ease-out;
 }
 .reason-wrapper.left {
   opacity: 1;
   transform: translateX(0);
+  //Adjust position between elements
+  margin-top: -2%;
 }
 
 .reason-wrapper2{
   opacity: 0;
   transform: translateX(-500px);
   transition: all 1s ease-out;
+  //Adjust position between elements
+  margin-top: -2%;
 }
 .reason-wrapper2.right{
   opacity: 1;
@@ -192,18 +232,21 @@ header {
 //------------------------------------
 //------ The Why Us Section ----------
 
-.full-screen.why{
+.why{
   background-image: url("../IMAGES/background_1.jpg");
   margin: 0 auto;
   padding-bottom: 20px;
 }
+
 .reason-wrapper{
   text-align: center;
 }
+
 .reason-right ul, .reason-left ul{
   text-decoration:none;
   list-style-type: none;
 }
+
 .reason-right, .reason-left{
   width: 65%;
   border-top: 5px solid rgb(99, 132, 249);
@@ -213,31 +256,133 @@ header {
 }
 
 .reason-text{
-  margin-top: 10px;
-  //color: rgb(99, 132, 249);
+  margin-top: 8px;
+  width:90%;
 }
+
 .reason-subject{
   margin-top: 10px;
   margin-bottom: 10px;
   font-family: 'Raleway', sans-serif;
 }
 
-.highlight{
-  //color:white;
+#ruler{
+  transform: rotate(330deg);
+  position:relative;
+  height:100px;
+  width:170px;
+  top:8.5vw;
+  right:30%;
+}
+#phone{
+  transform: rotate(25deg);
+  position: relative;
+  height:160px;
+  width:140px;
+  top:9.5vw;
+  right:30%;
+}
+#rose{
+  transform: rotate(17deg);
+  position: relative;
+  height:160px;
+  width:110px;
+  top:9.5vw;
+  right:30%;
 }
 // -------------------------------
-// --- The Contact Us section ----
+//------ The PORTFOLIO Section ----------
 
-.full-screen.contact{
+.portfolio{
   background-image: url("../IMAGES/background_1_light.jpg");
-  @include spacer(55vh);
-  display: block;
   margin: 0 auto;
-
 }
 
 
-//--------------------------------
+
+// --- The Contact Us Form ------------------
+
+.contact{
+  background-image: url("../IMAGES/background_1.jpg");
+  margin: 0 auto;
+}
+
+.formGutters{
+  margin-top:20px;
+}
+
+form span{
+  //"Required Field" styling
+  color:red;
+}
+
+
+textarea, input{
+  font-family:'Raleway', sans-serif;
+  padding-top:4px;
+  padding-bottom:4px;
+  font-size: 17px;
+}
+
+#howYouHear{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+label{
+  display: block;
+  text-align: left;
+  margin-top: -35px;
+}
+
+#radioWrapper_1{
+  width: 100%;
+  margin: auto;
+}
+#radioWrapper_2{
+  margin: auto;
+  width:320px;
+}
+
+.radioText{
+  font-size: 20px;
+}
+
+label,#mouth{
+  padding-top: 20px;
+}
+
+#formEmail{
+  width: 200px;
+}
+
+#other{
+  font-size: 15px;
+}
+
+#formSubmit{
+  padding-left:10px;
+  padding-right: 10px;
+  margin-top:15px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  transition: 0.15s all ease;
+  background-color: rgb(200,200,200);
+  border-radius: 7px;
+
+}
+#formSubmit:hover{
+  background-color: rgb(183, 116, 7);
+}
+
+textarea{
+  width:60%;
+}
+
+#dontBite{
+  padding-bottom: 20px;
+}
+
 // ---------------------------------
 // SCROLLMAGIC Section styling------
 section {
@@ -245,10 +390,17 @@ section {
   color: #EFEFEF;
 }
 
-.full-screen {
-  height: 100%; /* makes panels the entire window height */
-}
 //--------------
+
+//------ FOOTER ----------
+footer{
+  width:100%;
+  background-color: purple;
+  text-align: center;
+  height:30vh;
+}
+
+
 
 
 /////////////////////////////////////////////////////////////
@@ -290,11 +442,8 @@ section {
   }
 
   #jumboText{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100;
-    font-size: 54px;
-    margin-top:20vw;
-    background-color: rgba(20,20,20,.6);
+    font-size: 25px;
+    top:36.4%;
   }
 
   main{
@@ -303,15 +452,33 @@ section {
     width: 100%;
   }
 
-  .about img{
+  .mugshot{
     height:50vw;
     width:50vw;
     border-radius: 50%;
   }
+
+  #ruler{
+    display: none;
+  }
+  #phone{
+    display: none;
+  }
+  #rose{
+    display: none;
+  }
+
+  .reason-right, .reason-left{
+    width: 92%;
+  }
+
+  .desc p{
+    font-size: 13px;
+  }
 }
 
 /* Large Smartphones */
-@media only screen and (min-width: 417px) and (max-width: 768px) {
+@media only screen and (min-width: 417px) and (max-width: 767px) {
 
   #desktopNav{
     display: none;
@@ -345,22 +512,49 @@ section {
     right: 19vw;
   }
 
-  .introText{
-    font-size: 228%;
-
+  #jumboText{
+    font-size: 30px;
+    top:20%;
   }
 
-  .about img{
+  .introText{
+    font-size: 228%;
+  }
+
+  .mugshot{
     height:35vw;
     width:35vw;
     border-radius: 50%;
+  }
+
+  .desc p{
+    font-size: 14px;
+  }
+
+  #ruler{
+    display: none;
+  }
+  #phone{
+    display: none;
+  }
+  #rose{
+    display: none;
+  }
+
+//The Left-Side Icons are gone now, so fix the margins.
+  .reason-wrapper.left {
+    margin-top: 3%;
+  }
+
+  .reason-wrapper2{
+    margin-top: 3%;
   }
 
 }
 
 
 /* Tablets */
-@media only screen and (min-width: 769px) and (max-width: 1280px) {
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
   header{
     text-align: center;
   }
@@ -382,12 +576,10 @@ section {
   }
 
   #jumboText{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100;
     font-size: 54px;
-    margin-top:35vw;
-    background-color: rgba(20,20,20,.6);
+    top:37%;
   }
+
 
   #logo{
     display: inline-block;
@@ -396,10 +588,64 @@ section {
     top:1vw;
   }
 
-  .bio img{
-    width:23vw;
-    height:23vw;
+
+  .bio{
+    display: inline-block;
+    position: relative;
+    margin-top:1vw;
+    width:38%;
+  }
+
+  .mugshot{
+    width:30vw;
+    height:30vw;
     border-radius: 50%;
+  }
+
+  .desc{
+    position: relative;
+  }
+
+  .desc.cole{
+    width:139%;
+    right:30%;
+    float:left
+  }
+  .desc.zach{
+    width:139%;
+    right:8%;
+    float:left
+  }
+  .desc.larry{
+    width:190%;
+    right:45%;
+    float:left
+  }
+
+//The Why Us Images
+  #ruler{
+    transform: rotate(330deg);
+    position:relative;
+    height:65px;
+    width:112px;
+    top:14vw;
+    right:42%;
+  }
+  #phone{
+    transform: rotate(25deg);
+    position: relative;
+    height:105px;
+    width:94px;
+    top:15.5vw;
+    right:42%;
+  }
+  #rose{
+    transform: rotate(21deg);
+    position: relative;
+    height:105px;
+    width:95px;
+    top:15.5vw;
+    right:42%;
   }
 }
 
@@ -454,7 +700,6 @@ section {
     border-bottom: 3px solid rgb(183, 116, 7);
     background-image: url("../IMAGES./background_1.jpg");
     width: 100%;
-    padding-top: 6px;
   }
 
   .spacer{
@@ -462,11 +707,9 @@ section {
   }
 
   #jumboText{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100;
     font-size: 54px;
-    margin-top:20vw;
-    background-color: rgba(20,20,20,.6);
+    width:100%;
+    bottom:4vw;
   }
 
   .bio{
@@ -475,7 +718,8 @@ section {
     margin-top:1vw;
     width:22%;
   }
-  .bio img{
+
+  .mugshot{
     width:15vw;
     height:15vw;
     border-radius: 50%;

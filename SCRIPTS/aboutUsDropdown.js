@@ -4,13 +4,21 @@ $(document).ready(function(){
 
   //When our image is clicked...
   $('.mugshot').on("click", function(){
-    expandedPerson = $(this).next().next();
 
-    //... open our clicked .desc
-    expandedPerson.delay(0).slideToggle();
+    //Select the .desc to be expanded...
+          expandedDesc = $(this).next().next();
+    //... and open it
+        expandedDesc.slideToggle();
+
+    // then, select and animate the corresponding bioArrow 180deg.
+    //Keep in mind, $(this) is still referring to .mugshot
+    animateThisArrow = $(this).parent().find(".bioArrow");
+    animateThisArrow.toggleClass("flip");
+    //De-Animate All Who Are Not The currently selected bioArrow
+    $(".bioArrow").not(animateThisArrow).removeClass("flip");
 
     //.... and close all other .descs, except for the one just clicked
-    $(".desc").not(expandedPerson).delay(380).slideUp();
+    $(".desc").not(expandedDesc).delay(380).slideUp();
 
   });
 
@@ -26,5 +34,7 @@ $(document).ready(function(){
     if($nav.hasClass("slideOutUp")){
       $('.desc').slideUp();
     };
+
+    $(".bioArrow").removeClass("flip");
   });
 });

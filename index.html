@@ -7,9 +7,15 @@
     <link rel="stylesheet" href="3rd_Party_Libraries/animate.css">
     <!-- The ever-holy JQuery. -->
     <script src="3rd_Party_Libraries/JQuery.js"></script>
-    <!-- The library for using super dank scroll functionality  -->
+    <!-- The library for using super dank scroll functionality and GSAP libraries (which is used for parallaxing images)-->
     <script src="3rd_Party_Libraries\ScrollMagic\ScrollMagic.min.js"></script>
-    <script src="3rd_Party_Libraries\ScrollMagic\debug.addIndicators.min.js"></script>
+    <script src="3rd_Party_Libraries\ScrollMagic\plugins\GSAP_Tweening.js"></script>
+    <script src="3rd_Party_Libraries\ScrollMagic\plugins\animation.gsap.min.js"></script>
+    <script src="SCRIPTS/main.js"></script>
+
+
+
+
     <!-- Font for the category introductions-->
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <!--  Font for the jumboText-->
@@ -22,231 +28,284 @@
     <meta charset="utf-8">
   </head>
   <body>
+
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ HEADER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-      <div id="headerWrapper">
-        <header>
-          <button class="hamburger hamburger--elastic" type="button">
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
-            </span>
-          </button>
-          <img src="IMAGES/logo_2.png" id="logo">
-        </header>
-        <div class="spacer"></div>
+    <div id="headerWrapper">
+      <header>
+        <button class="hamburger hamburger--elastic" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <img src="IMAGES/logo_2.png" id="logo">
+      </header>
+      <div class="spacer"></div>
+    </div>
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ NAVIGATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <!--  Mobile Navigation-->
+    <nav class="slideOutUp" id="mobileNav">
+      <ul class="mobileNav">
+        <li style="padding-top: 42px;"><a  href="#bcg-parallax">Home</a></li>
+        <li style="padding-top: 25px;"><a  href="#pinned-trigger1">Meet The Team</a></li>
+        <li style="padding-top: 25px;"><a  href="#pinned-trigger2">Why Choose Us?</a></li>
+        <li style="padding-top: 25px;"><a  href="#portfolio">Portfolio</a></li>
+        <li style="padding-top: 25px; padding-bottom:5px;"><a href="#pinned-trigger3">Contact Us</a></li>
+      </ul>
+    </nav>
+    <!--  Desktop Navigation -->
+    <nav id="desktopNav">
+      <a href="#bcg-parallax">Home</a>
+      <a href="#pinned-trigger1">Meet the Team</a>
+      <a href="#pinned-trigger2">Why Choose Us?</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#pinned-trigger3">Contact Us</a>
+    </nav>
+
+    <!--~~~~~~~~~~~~~~~~~~~~~ MAIN (pretty much everything) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <main role="main">
+      <!-- Pretty Parallax Intro-->
+      <div id="bcg-parallax">
+        <div id="bcg"></div>
+        <div id="content-wrapper">
+          <!-- <div class="spacer"></div> -->
+          <h1 id="jumboText">Think&nbsp;of us&nbsp;as&nbsp;your personal online architects...</h1>
+        </div>
       </div>
-      <!--  Mobile Navigation-->
-        <nav class="slideOutUp" id="mobileNav">
-          <ul class="mobileNav">
-            <li style="padding-top: 40px;"><a  href="#">Home</a></li>
-            <li style="padding-top: 30px;"><a  href="#">Meet The Team</a></li>
-            <li style="padding-top: 30px;"><a  href="#">Why Choose Us?</a></li>
-            <li style="padding-top: 30px;"><a  href="#">Portfolio</a></li>
-            <li style="padding-top: 30px; padding-bottom:15px;"><a  href="#">Contact Us</a></li>
-          </ul>
-        </nav>
-      <!--  Desktop Navigation -->
-      <nav id="desktopNav">
-        <a href="#">Home</a>
-        <a href="#">Meet the Team</a>
-        <a href="#">Why Choose Us?</a>
-        <a href="#">Portfolio</a>
-        <a href="#">Contact Us</a>
-      </nav>
-  <!-- Navigation and Header Above-->
 
 
 
-  <!-- Main Content Below This Line.-->
-      <main class="full-screen" role="main">
+      <!-- This is for our Bio's about each of us. -->
+      <section class="aboutUs" id="pinned-trigger1">
+          <h1 class="introText"> Meet The Team</h1>
+        <div id="about" class="about">
 
-        <!-- This will be what is first seen when opening the site. What our Company is ETC. -->
-         <section class="full-screen opening" id="intro">
-          <div id="introWrapper">
-            <div class="spacer"></div>
-            <!-- <h1 class="introText">Who Are We?</h1> -->
-            <h1 id="jumboText">Think&nbsp;of us&nbsp;as&nbsp;your personal online architects...</h1>
+        <!-- Here are the different divs for each of us.-->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ COLE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+          <div class="bio">
+            <img src="IMAGES/Cole.png" alt="Cole Davis" class="mugshot">
+            <h1 class="name" style="font-family: 'Oregano', cursive;">Cole&nbsp;Davis</h1>
+            <div class= "desc cole">
+              <p>
+                <span class="subject">
+                  Hobbies:
+                </span>
+                Just recently, I discovered within myself a love
+                for mountain biking. I also enjoy tooting my
+                tenor sax, tinkering with robotics, and the occasional paintball game.
+
+                <span class="subject">
+                  Interesting Skills:
+                </span>
+                I taught myself to juggle, and can set my
+                smartphone down long enough to enjoy face
+                to face conversation.
+
+                <span class="subject">
+                  Favorite Quote:
+                </span>
+                "Whenever you find yourself on the side of the majority, it
+                 is time to pause and reflect." -Mark Twain
+              </p>
+            </div>
+            <img src="IMAGES/bioArrow.png" class="bioArrow">
           </div>
-        </section>
-        <!-- This is for our Bio's about each of us. -->
-        <section class="full-screen aboutUs" id="pinned-trigger1">
-          <div id="bioIntro">
-            <h1 class="introText"> Meet The Team</h1>
+
+          <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ZACH ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+          <div class="bio">
+            <img src="IMAGES/Zach.png" alt="Zach Bingham" class="mugshot">
+            <h1 class="name" style="font-family: 'Oregano', cursive;">Zach&nbsp;Bingham</h1>
+            <div class= "desc  zach">
+              <p>
+                <span class="subject">
+                  Hobbies:
+                </span>
+                   I enjoy playing video games, reading books,
+                    writing/drawing, and learning. Knowledge fuels my day to day life.
+                <span class="subject">
+                  Interesting Skills:
+                </span>
+                  writing short stories and poetry
+
+                <span class="subject">
+                  Favorite Quote:
+                </span>
+                "Genius is one percent inspiration and ninety-nine percent
+                perspiration." -Thomas Edison
+              </p>
+            </div>
+            <img src="IMAGES/bioArrow.png" class="bioArrow">
           </div>
-          <div id="about" class="about">
 
-          <!-- Here are the different divs for each of us.-->
-          <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ COLE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-            <div class="bio">
-              <img src="IMAGES/Cole.png" alt="Cole Davis" class="mugshot">
-              <h1 class="name" style="font-family: 'Oregano', cursive;">Cole&nbsp;Davis</h1>
-              <div class= "desc">
-                <p>
-                  <span class="subject">
-                    Hobbies:
-                  </span>
-                  Just recently, I discovered within myself a love
-                  for mountain biking. I also enjoy tooting my
-                  tenor sax, working out, and the occasional paintball game.
+          <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ lARRY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+          <div class="bio">
+            <img src="IMAGES/Larry.png" alt="Larry Fry III" class="mugshot">
+            <h1 class="name" style="font-family: 'Oregano', cursive;">Larry&nbsp;Fry&nbsp;III</h1>
+            <div class= "desc larry">
+              <p>
+                <span class="subject">
+                  Hobbies:
+                </span>
+                I play guitar off and on and enjoy playing video games.
+                I have a decently large record collection and am constanly hunting for more.
+                 I love to code and am ready to find the next best thing technology wise.
 
-                  <span class="subject">
-                    Interesting Skills:
-                  </span>
-                  I taught myself to juggle, and can set my
-                  smartphone down long enough to enjoy face
-                  to face conversation.
+                <span class="subject">
+                  Interesting Skills:
+                </span>
+                I practice calligraphy using fountian pens and can spin rope tops pretty well.
 
-                  <span class="subject">
-                    Favorite Quote:
-                  </span>
-                  "Whenever you find yourself on the side of the majority, it
-                   is time to pause and reflect." -Mark Twain
-                </p>
-              </div>
+                <span class="subject">
+                  Favorite Quote:
+                </span>
+                "Time you enjoyed wasting, was not wasted." -John Lennon
+              </p>
             </div>
+            <img src="IMAGES/bioArrow.png" class="bioArrow">
+          </div>
+      </section>
 
-            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ZACH ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-            <div class="bio">
-              <img src="IMAGES/Zach.png" alt="Zach Bingham" class="mugshot">
-              <h1 class="name" style="font-family: 'Oregano', cursive;">Zach&nbsp;Bingham</h1>
-              <div class= "desc" id="zachDesc">
-                <p>
-                  <span class="subject">
-                    Hobbies:
-                  </span>
-                     I enjoy playing video games, reading books,
-                      writing/drawing, and learning. Knowledge fuels my day to day life.
-                  <span class="subject">
-                    Interesting Skills:
-                  </span>
-                    writing short stories and poetry
+      <!--  Here is the Why Us? section. -->
+      <section class="why" id="pinned-trigger2">
 
-                  <span class="subject">
-                    Favorite Quote:
-                  </span>
-                  "Genius is one percent inspiration and ninety-nine percent
-                  perspiration." -Thomas Edison
-                </p>
-              </div>
-            </div>
-
-            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ lARRY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-            <div class="bio">
-              <img src="IMAGES/Larry.png" alt="Larry Fry III" class="mugshot">
-              <h1 class="name" style="font-family: 'Oregano', cursive;">Larry&nbsp;Fry&nbsp;III</h1>
-              <div class= "desc">
-                <p>
-                  <span class="subject">
-                    Hobbies:
-                  </span>
-                  I play guitar off and on and enjoy playing video games.
-                  I have a decently large record collection and am constanly hunting for more.
-                   I love to code and am ready to find the next best thing technology wise.
-
-                  <span class="subject">
-                    Interesting Skills:
-                  </span>
-                  I practice calligraphy using fountian pens and can spin rope tops pretty well.
-
-                  <span class="subject">
-                    Favorite Quote:
-                  </span>
-                  "Time you enjoy wasting, was not wasted." -John Lennon
-                </p>
-              </div>
-            </div>
-        </section>
-
-        <!--  Here is the Why Us? section. -->
-        <section class="full-screen why" id="pinned-trigger2">
-
-          <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ WHY CHOOSE US SECTION  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-          <h1 class="introText">Why Choose Us?</h1>
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ WHY CHOOSE US SECTION  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <h1 class="introText">Why Choose Us?</h1>
 
 
-          <div class="reason-wrapper" id="fade-left1">
-            <h2 class="reason-subject">Personalized Websites</h2>
-            <div class="reason-left">
+        <div class="reason-wrapper" id="fade-left1">
+          <img src="IMAGES/ruler.png" id="ruler">
+          <h2 class="reason-subject">Personalized Websites</h2>
+          <div class="reason-left">
+            <ul>
+              <li class="reason-text">
+                <h3>- Your website deserves
+                    to have an original and creative look</h3>
+              </li>
+              <li class="reason-text">
+                <h3><span class="highlight">- No </span> cookie cutter presets </h3>
+              </li>
+              <li class="reason-text">
+                <h3>- Personal <span class="highlight">customization</span></h3>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+          <div class="reason-wrapper2" id="fade-right">
+            <img src="IMAGES/phone.png" id="phone">
+            <h2 class="reason-subject">Exceptional Customer Service</h2>
+            <div class="reason-right">
+              <!-- <h3 class="reason-text">Have any burning questions that need answering? Want to make a design change? Need some design advice?</h3> -->
               <ul>
-                <li class="reason-text">
-                  <h3>- Your website deserves
-                      to have an original and creative look</h3>
+                <li>
+                  <h3 class="reason-text"><span class="highlight">- Clear and simple</span>&nbsp;communication</h3>
                 </li>
-                <li class="reason-text">
-                  <h3><span class="highlight">- No </span> cookie cutter presets </h3>
+                <li>
+                  <h3 class="reason-text"> <span class="highlight">- Personal</span> customer support </h3>
                 </li>
-                <li class="reason-text">
-                  <h3>- Personal <span class="highlight">customization</span></h3>
+                <li>
+                  <h3 class="reason-text"><span class="highlight">- You </span> are the boss</h3>
                 </li>
               </ul>
-
             </div>
           </div>
 
-            <div class="reason-wrapper2" id="fade-right">
-              <h2 class="reason-subject">Exceptional Customer Service</h2>
-              <div class="reason-right">
-                <!-- <h3 class="reason-text">Have any burning questions that need answering? Want to make a design change? Need some design advice?</h3> -->
-                <ul>
-                  <li>
-                    <h3 class="reason-text"><span class="highlight">- Clear and simple</span> communication</h3>
-                  </li>
-                  <li>
-                    <h3 class="reason-text"> <span class="highlight">- Personal</span> customer support </h3>
-                  </li>
-                  <li>
-                    <h3 class="reason-text"><span class="highlight">- You </span> are in control</h3>
-                  </li>
-                </ul>
-              </div>
+          <div class="reason-wrapper" id="fade-left2">
+            <img src="IMAGES/rose.png" id="rose">
+            <h2 class="reason-subject">Reasonable Prices, Beautiful Results</h2>
+            <div class="reason-left">
+              <ul>
+                <li>
+                  <h3 class="reason-text">- The website of your dreams,
+                                           <span class="highlight">without</span> breaking the bank</h3>
+                </li>
+                <li>
+                  <h3 class="reason-text">- Yet even with our prices, you don't have to sacrifice <span class="highlight">quality</span></h3>
+                </li>
+                <li>
+                  <h3 class="reason-text">- Everyone on our team is a <span class="highlight">certified Website Developer</span></h3>
+                </li>
+                <!-- <li>
+                  <h3 class="reason-text">Insert Some example pricing here maybe</h3>
+                </li> -->
+              </ul>
             </div>
+          </div>
+      </section>
 
-            <div class="reason-wrapper" id="fade-left2">
-              <h2 class="reason-subject">Reasonable Prices, Beautiful Results</h2>
-              <div class="reason-left">
-                <ul>
-                  <li>
-                    <h3 class="reason-text">- The website of your dreams,
-                                             <span class="highlight">without</span> breaking the bank</h3>
-                  </li>
-                  <li>
-                    <h3 class="reason-text">- Yet even with our prices, you don't have to sacrifice <span class="highlight">quality</span></h3>
-                  </li>
-                  <li>
-                    <h3 class="reason-text">- Everyone on our team is a <span class="highlight">certified Website Developer</span></h3>
-                  </li>
-                  <!-- <li>
-                    <h3 class="reason-text">Insert Some example pricing here maybe</h3>
-                  </li> -->
-                </ul>
-              </div>
-            </div>
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PORTFOLIO SECTION  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <section class="portfolio" id="portfolio">
+        <h1 class="introText">Portfolio</h1>
+        <h3>Oh yeah... we just launched our company.</h3>
+        <h3> We don't have any clients yet.</h3>
+        <h3>That means you could be first!</h3>
 
-        </section>
+        <br>
+        <h3>Let's make a breathtaking site together!</h3>
+        <br><br>
+      </section>
 
-        <!-- ~~~~~~~~~~~~~~~~~~~~~~~ CONTACT US SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~- -->
-        <section class="full-screen contact" id="pinned-trigger3">
-          <h1 class="introText">Contact Us</h1>
-          <form action="#">
-            <label for="Name">Name: </label><input type="text" name="name" required><br>
-            <label for="Email"> Email: </label><input type="email" name="email" required><br>
-            <input type="radio" name="type" value="Suggestion/Comment" checked>  Question/Comment<br>
-            <input type="radio" name="type" value="Job"> Job Request<br>
-            <input type="radio" name="type" value="Other"> Other<br>
-            <label for="paragraph"> Comment/Request: </label><br>
-            <textarea name="paragraph" cols="20" rows="5"></textarea><br>
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~ CONTACT US SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~- -->
+      <section class="contact" id="pinned-trigger3">
+        <h1 class="introText" style="padding-bottom: 0;">Contact Us</h1>
+        <p id="dontBite">(we don't bite)</p>
+        <form action="form-to-email.php" method="post" enctype="text/plain">
 
-            <input type="submit" value="Submit"><br>
-          </form>
-        </section>
-      </main><!-- End of mainWrapper -->
+        <!--  Name and Email-->
+          <h2>Name<span>*</span></h2>
+          <input id="formName" type="text" name="name" required>
+
+          <h2 class="formGutters">Email<span>*</span></h2>
+          <input id="formEmail" type="email" name="email" required>
+
+
+        <!--  How they heard of us-->
+        <div id="radioWrapper_1">
+          <h2 id="howYouHear">How Did You Hear About Us?</h2>
+          <div id="radioWrapper_2">
+            <label id="mouth" class="radioText">
+              <input id="mouth" type="radio" name="type" value="Word Of Mouth">
+              Word Of Mouth
+            </label><br>
+
+            <label id="google" class="radioText">
+              <input id="google" type="radio" name="type" value="Googling for Web Devs">
+              Googling For Web Developers
+            </label><br>
+
+            <label id="inPerson" class="radioText">
+              <input id="inPerson" type="radio" name="type" value="Contacted By Us">
+              Contacted In Person
+            </label><br>
+
+            <label id="other" class="radioText">
+              <input id="other" type="radio" name="type" value="other">
+              Other
+              <input id="other" type="text" name="type" placeholder="E.g. Messenger Pigeon"value="">
+            </label><br>
+          </div>
+        </div>
+
+        <!--  Their Message -->
+          <h2 class="formGutters">Comment/Request:</h2>
+          <textarea id="formComment" name="paragraph" cols="60" rows="7"></textarea><br>
+
+          <input id="formSubmit" type="submit" value="Submit">
+        </form>
+      </section>
+
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~  FOOTER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~- -->
+      <footer>
+        <h1>Old Souls, New Ideas</h1>
+      </footer>
+
+    </main>
   <!-- This is for the animations in javascript -->
       <script src="SCRIPTS/hamburger.js"></script>
-      <script src="SCRIPTS/main.js"></script>
       <script src="SCRIPTS/aboutUsDropdown.js"></script>
       <!--  Header disappear/reappear upon scroll logic-->
       <script src="SCRIPTS/headerLogic.js"></script>
-
-  <!-- Larry your inline code has been moved to main.js  -->
-
   </body>
 </html>
