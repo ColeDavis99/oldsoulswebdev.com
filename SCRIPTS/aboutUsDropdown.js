@@ -40,7 +40,7 @@ $(document).ready(function(){
 
   //Close .desc when user clicks on #about blank space, unless hamburger menu is open (design choice)
   var $nav = $('nav')
-  $('#about').click(function(e){
+  $('.aboutUs').click(function(e){
     if($(e.target).is('.mugshot, h3, span, .bioArrow')){
       e.preventDefault();
       return;

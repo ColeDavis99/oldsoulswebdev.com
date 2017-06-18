@@ -214,16 +214,14 @@ header {
 .reason-wrapper.left {
   opacity: 1;
   transform: translateX(0);
-  //Adjust position between elements
-  margin-top: -2%;
+  padding-top:3%;
 }
 
 .reason-wrapper2{
   opacity: 0;
   transform: translateX(-500px);
   transition: all 1s ease-out;
-  //Adjust position between elements
-  margin-top: -2%;
+  padding-top:3%;
 }
 .reason-wrapper2.right{
   opacity: 1;
@@ -268,27 +266,27 @@ header {
 
 #ruler{
   transform: rotate(330deg);
-  position:relative;
+  position:absolute;
   height:100px;
   width:170px;
-  top:8.5vw;
-  right:30%;
+  top:2vw;
+  right:74%;
 }
 #phone{
   transform: rotate(25deg);
-  position: relative;
   height:160px;
   width:140px;
-  top:9.5vw;
-  right:30%;
+  position:absolute;
+  top:.1vw;
+  right:75%;
 }
 #rose{
   transform: rotate(17deg);
-  position: relative;
   height:160px;
   width:110px;
-  top:9.5vw;
-  right:30%;
+  position:absolute;
+  top:1.3vw;
+  right:76%;
 }
 // -------------------------------
 //------ The PORTFOLIO Section ----------
@@ -397,11 +395,15 @@ footer{
   width:100%;
   background-color: rgba(99, 132, 249, 0.6);
   text-align: center;
-  height:24vh;
+  height:17.5vh;
   font-family: "Garamond", cursive, sans-serif;
+
+    h2{
+      font-size: 13px;
+    }
 }
 .footerPhrase{
-  padding-top: 10px;
+  padding-top: 15px;
 }
 .backToTop{
   color: rgb(176, 116, 19);
@@ -627,33 +629,34 @@ footer{
   .desc.larry{
     width:190%;
     right:45%;
-    float:left
+    float:left;
+    padding-top:20px;
   }
 
 //The Why Us Images
   #ruler{
     transform: rotate(330deg);
-    position:relative;
+    position:absolute;
     height:65px;
     width:112px;
-    top:14vw;
-    right:42%;
+    top:5.5vw;
+    right:85%;
   }
   #phone{
     transform: rotate(25deg);
-    position: relative;
+    position: absolute;
     height:105px;
     width:94px;
-    top:15.5vw;
-    right:42%;
+    top:2.5vw;
+    right:86.5%;
   }
   #rose{
     transform: rotate(21deg);
-    position: relative;
+    position: absolute;
     height:105px;
     width:95px;
-    top:15.5vw;
-    right:42%;
+    top:2.5vw;
+    right:86.5%;
   }
 }
 

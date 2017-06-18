@@ -253,12 +253,15 @@
         <p id="dontBite">(we don't bite)</p>
         <form action="form-to-email.php" method="post" enctype="text/plain">
 
-        <!--  Name and Email-->
+        <!--  Name and Email and Phone-->
           <h2>Name<span>*</span></h2>
           <input id="formName" type="text" name="name" required>
 
           <h2 class="formGutters">Email<span>*</span></h2>
           <input id="formEmail" type="email" name="email" required>
+
+          <h2 class="formGutters">Phone<span>*</span></h2>
+          <input id="formPhone" type="text" name="phone" placeholder="417-867-5309" onfocus="this.placeholder = ''" onblur="this.placeholder = '417-867-5309'"required>
 
 
         <!--  How they heard of us-->
@@ -272,7 +275,7 @@
 
             <label id="google" class="radioText">
               <input id="google" type="radio" name="type" value="Googling for Web Devs">
-              Googling For Web Developers
+              Online Research
             </label><br>
 
             <label id="inPerson" class="radioText">
