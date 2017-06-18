@@ -136,6 +136,8 @@ $(document).ready(function(){
 
 
 
+
+
   //~~~~~~~~~~~~~~~~~~~~ NAVIGATION LINK CLICK EVENT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
   $("a").on("click", function(){
       //Scroll The Page
@@ -161,4 +163,106 @@ $(document).ready(function(){
       fromNav = false;
     }, 1100);
   });//End of a.onclick()
+
+
+
+
+
+
+
+
+
+
+  //~~~~~~~~~~~~~~~~~~~~ MOBILE NAV SLIDE LOGIC ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+  var $hamburger = $(".hamburger");
+  $hamburger.on("click", function() {
+    $hamburger.toggleClass("is-active");
+    if($hamburger.hasClass("is-active")){
+      //Slide #mobileNav In
+      $('#mobileNav').removeClass('animated slideOutUp').addClass('animated slideInDown');
+      //Make #mobileNav visible when button is clicked.
+      $('#mobileNav').css("top", "9vw");
+      $("#mobileNav").css("visibility", "visible");
+    }
+    else{
+      //Slide #mobileNav Up and Out
+      $('#mobileNav').removeClass('animated slideInDown').addClass('animated slideOutUp');
+      //Little #mobileNav Fix for when user minimizes hamburger menu and triggers header to slideOutUp
+      $('#mobileNav').css("top", "0");
+    }
+  });
+
+
+  //CLose #mobileNavigation if user clicks blank space.
+  $("main").on("click", function(){
+    if($hamburger.hasClass("is-active")){
+        $('#mobileNav').removeClass('animated slideInDown').addClass('animated slideOutUp');
+
+        //Little #mobileNav Fix for when user minimizes hamburger menu and triggers header to slideOutUp
+        $('#mobileNav').css("top", "0");
+
+        $hamburger.removeClass("is-active");
+      };
+    });
+
+
+
+
+
+
+
+
+
+
+  //~~~~~~~~~~~~~~~~~~~~ ABOUT US DROPDOWN LOGIC ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
+      //When our image is clicked...
+      $('.mugshot').on("click", function(){
+        //Select the .desc to be expanded and open it
+        expandedDesc = $(this).next().next();
+        expandedDesc.slideToggle();
+
+        //Flip The Arrow
+        flipArrow($(this));
+      });
+
+      function flipArrow(thisArgument){
+        // animate the corresponding bioArrow 180deg.
+        //Keep in mind, $(this) is still referring to .mugshot
+        animateThisArrow = thisArgument.parent().find(".bioArrow");
+        animateThisArrow.toggleClass("flip");
+        //De-Animate All Who Are Not The currently selected bioArrow
+        $(".bioArrow").not(animateThisArrow).removeClass("flip");
+
+        //.... and close all other .descs, except for the one just clicked
+        $(".desc").not(expandedDesc).delay(380).slideUp();
+      }
+
+
+
+      //When our arrow is clicked...
+      $('.bioArrow').on("click", function(){
+        expandedDescArrow = $(this).prev().slideToggle();
+        $(this).toggleClass("flip");
+
+        $(".bioArrow").not(this).removeClass("flip");
+        $(".desc").not(expandedDescArrow).delay(380).slideUp();
+      });//End of bioArrow click
+
+
+
+
+      //Close .desc when user clicks on #about blank space, unless hamburger menu is open (design choice)
+      var $nav = $('nav')
+      $('.aboutUs').click(function(e){
+        if($(e.target).is('.mugshot, h3, span, .bioArrow')){
+          e.preventDefault();
+          return;
+        }
+        if($nav.hasClass("slideOutUp")){
+          $('.desc').slideUp();
+          $(".bioArrow").removeClass("flip");
+        };
+      });
+
 });//End of document.ready()
