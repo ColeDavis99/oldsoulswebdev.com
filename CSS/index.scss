@@ -395,11 +395,19 @@ section {
 //------ FOOTER ----------
 footer{
   width:100%;
-  background-color: purple;
+  background-color: rgba(99, 132, 249, 0.6);
   text-align: center;
-  height:30vh;
+  height:24vh;
+  font-family: "Garamond", cursive, sans-serif;
 }
-
+.footerPhrase{
+  padding-top: 10px;
+}
+.backToTop{
+  color: rgb(176, 116, 19);
+  font-weight: bold;
+  font-size: 30px;
+}
 
 
 
@@ -736,6 +744,9 @@ footer{
   .reason-right, .reason-left{
     width: 45%;
   }
+  footer{
+    height: 17vh;
+  }
 }
 
 #bcg-parallax{
@@ -747,7 +758,7 @@ footer{
     overflow: hidden;
     z-index: -2;
   }
-#bcg{
+#bcgThank{
     background-image: url('../IMAGES/mountians.jpg');
     background-repeat: no-repeat;
     background-size: cover;

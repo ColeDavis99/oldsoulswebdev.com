@@ -26,5 +26,5 @@ $headers = "From: $email_from \r\n";
 //Send the Email!
 mail($to,$email_subject,$email_body,$headers);
 //Done with Email, Next send them to Thank You Page
-include(thankYou.html);
+include('thankYou.html');
  ?>
