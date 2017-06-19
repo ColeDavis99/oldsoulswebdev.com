@@ -147,14 +147,22 @@ $(document).ready(function(){
          scrollTop: $(loc).offset().top
      }, 1000);
 
-     //Get the header out of here lul
-     $('header, #desktopNav').removeClass('animated slideInDown').addClass('animated slideOutUp');
+     //Keep the header from sliding out when "Back To Top" is clicked. Else, slide it out.
+     if($(this).attr("class") == "backToTop"){
+       $('header, #desktopNav').removeClass('animated slideOutUp').addClass('animated slideInDown');
+
+     }
+     else{
+       //Get the header out of here lul
+       $('header, #desktopNav').removeClass('animated slideInDown').addClass('animated slideOutUp');
+     }
+
 
      //Slide #mobileNav Up and Out
      $('#mobileNav').removeClass('animated slideInDown').addClass('animated slideOutUp');
      //Little #mobileNav Fix for when user minimizes hamburger menu and triggers header to slideOutUp
      $('#mobileNav').css("top", "0");
-     //Make the hamburger button return to resting state
+     //Make the hamburger button return to resting state every time
      $('.hamburger').toggleClass("is-active");
 
 
