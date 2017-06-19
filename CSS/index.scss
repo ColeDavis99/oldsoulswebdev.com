@@ -22,16 +22,18 @@ main{
     width:100%;
   }
 
+  header {
+    //Header contains hamburger button, and logo.
+    position: fixed;
+    background-image: url("../IMAGES/background_1.jpg");
+    border-bottom: 3px solid rgb(183, 116, 7);
+    padding-top: 6px;
+    width: 100%;
+  }
+
 // ---------- NAVIGATION -------
 // -----------------------------
-header {
-  //Header contains hamburger button, and logo.
-  position: fixed;
-  background-image: url("../IMAGES./background_1.jpg");
-  width: 100%;
-  padding-top: 6px;
-  border-bottom: 1px solid white;
-}
+
 
 .hamburger:focus{
   outline:0;
@@ -292,10 +294,8 @@ header {
 //------ The PORTFOLIO Section ----------
 
 .portfolio{
-  background-image: url("../IMAGES/background_1_light.jpg");
   margin: 0 auto;
 }
-
 
 
 // --- The Contact Us Form ------------------
@@ -705,13 +705,6 @@ footer{
     bottom:3px;
   }
 
-  header {
-    //Header contains hamburger button, and logo.
-    position: fixed;
-    border-bottom: 3px solid rgb(183, 116, 7);
-    background-image: url("../IMAGES./background_1.jpg");
-    width: 100%;
-  }
 
   .spacer{
     @include spacer(3vw);
