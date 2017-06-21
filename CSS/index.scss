@@ -3,33 +3,37 @@
 
 // ------ MAIN CONTENT -------
 main{
-  width: 100%;
+  overflow-x: hidden;
 }
 
 //------- BODY/HTML ----------
-  * {
-    margin: 0;
-    border: 0;
-    padding: 0;
-  }
-
-  html,body{
-  overflow-x: hidden;//This should solve resizing problems
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
 }
 
+<<<<<<< HEAD
   body {
     background-image: url("../IMAGES/background_1_light.jpg");
     width:100%;
   }
+=======
+>>>>>>> origin/creation
 
-  header {
-    //Header contains hamburger button, and logo.
-    position: fixed;
-    background-image: url("../IMAGES/background_1.jpg");
-    border-bottom: 3px solid rgb(183, 116, 7);
-    padding-top: 6px;
-    width: 100%;
-  }
+
+body {
+  background-image: url("../IMAGES./background_1_light.jpg");
+  width:100%;
+}
+
+header {
+  //Header contains hamburger button, and logo.
+  position: fixed;
+  background-image: url("../IMAGES/background_1.jpg");
+  border-bottom: 3px solid rgb(183, 116, 7);
+  width: 100%;
+}
 
 // ---------- NAVIGATION -------
 // -----------------------------
@@ -86,8 +90,8 @@ main{
                                     	background-position: center;
                                     	position: absolute;
                                     	width: 100%;
-                                    	height: 100%;
-                                    	top: 35%;
+                                    	height: 113%;
+                                    	top: 20%;
                                     	z-index: 1;
                                     	opacity: 0.7;
                                     }
@@ -215,7 +219,6 @@ main{
 .reason-wrapper.left {
   opacity: 1;
   transform: translateX(0);
-  padding-top:3%;
 }
 
 .reason-wrapper2{
@@ -263,6 +266,7 @@ main{
   margin-top: 10px;
   margin-bottom: 10px;
   font-family: 'Raleway', sans-serif;
+  font-size: 20px;
 }
 
 #ruler{
@@ -394,7 +398,6 @@ footer{
   width:100%;
   background-color: rgba(99, 132, 249, 0.6);
   text-align: center;
-  height:17.5vh;
   font-family: "Garamond", cursive, sans-serif;
 
     h2{
@@ -417,77 +420,74 @@ footer{
 ////////////////////////////////////////////////////////////
 
 /* Smartphones */
-@media only screen and (min-width: 0px) and (max-width: 416px){
-
-  #desktopNav{
-    display: none;
-  }
-
-  #mobileNav{
-    padding-top: 15vw;
-  }
-
-  @include HamburgerNav(80vh, 210px);
-
-  .spacer{
-    @include spacer(15vw);
-  }
-
-  header{
-    text-align: center;
-  }
-
-  #logo{
-    display: inline-block;
-    width: 70%;
-    position: relative;
-    top:4vw;
-  }
-
-  .hamburger{
-    visibility: visible;
-    position: relative;
-    right: 5vw;
-  }
-
-  #jumboText{
-    font-size: 25px;
-    top:36.4%;
-  }
-
-  main{
-    //Keep the main content centered, even with position:fixed.
-    transform: translate(0%, 0);
-    width: 100%;
-  }
-
-  .mugshot{
-    height:50vw;
-    width:50vw;
-    border-radius: 50%;
-  }
-
-  #ruler{
-    display: none;
-  }
-  #phone{
-    display: none;
-  }
-  #rose{
-    display: none;
-  }
-
-  .reason-right, .reason-left{
-    width: 92%;
-  }
-
-  .desc p{
-    font-size: 13px;
-  }
-}
+// @media only screen and (min-width: 0px) and (max-width: 416px){
+//
+//   #desktopNav{
+//     display: none;
+//   }
+//
+//   #mobileNav{
+//     padding-top: 15vw;
+//   }
+//
+//   @include HamburgerNav(80vh, 210px);
+//
+//
+//   header{
+//     text-align: center;
+//   }
+//
+//   #logo{
+//     display: inline-block;
+//     width: 70%;
+//     position: relative;
+//     top:4vw;
+//   }
+//
+//   .hamburger{
+//     visibility: visible;
+//     position: relative;
+//     right: 5vw;
+//   }
+//
+//   #jumboText{
+//     font-size: 25px;
+//     top:36.4%;
+//   }
+//
+//   main{
+//     //Keep the main content centered, even with position:fixed.
+//     transform: translate(0%, 0);
+//     width: 100%;
+//   }
+//
+//   .mugshot{
+//     height:50vw;
+//     width:50vw;
+//     border-radius: 50%;
+//   }
+//
+//   #ruler{
+//     display: none;
+//   }
+//   #phone{
+//     display: none;
+//   }
+//   #rose{
+//     display: none;
+//   }
+//
+//   .reason-right, .reason-left{
+//     width: 92%;
+//   }
+//
+//   .desc p{
+//     font-size: 13px;
+//   }
+// }
 
 /* Large Smartphones */
-@media only screen and (min-width: 417px) and (max-width: 767px) {
+@media only screen and (min-width: 0px) and (max-width: 767px) {
 
   #desktopNav{
     display: none;
@@ -497,12 +497,8 @@ footer{
     padding-top: 3vw;
   }
 
-  @include HamburgerNav(160vh, 210px);
+  @include HamburgerNav(210px);
 
-
-  .spacer{
-    @include spacer(7.5vw);
-  }
 
   header{
     text-align: center;
@@ -510,15 +506,16 @@ footer{
 
   #logo{
     display: inline-block;
-    width: 45%;
+    width: 40vh;
     position: relative;
-    top:2vw;
+    top:1vw;
   }
 
   .hamburger{
     visibility: visible;
-    position: relative;
-    right: 19vw;
+    position: absolute;
+    right: 87vw;
+    top:3.5vh;
   }
 
   #jumboText{
@@ -539,7 +536,9 @@ footer{
   .desc p{
     font-size: 14px;
   }
-
+  .reason-right, .reason-left{
+    width: 85%;
+  }
   #ruler{
     display: none;
   }
@@ -550,15 +549,15 @@ footer{
     display: none;
   }
 
-//The Left-Side Icons are gone now, so fix the margins.
-  .reason-wrapper.left {
-    margin-top: 3%;
+  .reason-text{
+    margin-top: 8px;
+    width:90%;
+    font-size: 11px;
   }
 
-  .reason-wrapper2{
-    margin-top: 3%;
+  textarea{
+    width:89%;
   }
-
 }
 
 
@@ -572,7 +571,7 @@ footer{
     display: none;
   }
 
-   @include HamburgerNav(160vh, 210px);
+   @include HamburgerNav(210px);
 
   .hamburger{
     position: relative;
@@ -580,9 +579,6 @@ footer{
     bottom:.5vw;
   }
 
-  .spacer{
-    @include spacer(5.3vw);
-  }
 
   #jumboText{
     font-size: 54px;
@@ -676,15 +672,15 @@ footer{
     display: inline-block;
     width: 18%;
     position: relative;
-    top:1vw;
+    top:.5vw;
   }
 
   #desktopNav{
     position: fixed;
     z-index: 3;
     right: 20px;
-    top:0;
-    padding-top:5.93vw;
+    top:.02vw;
+    padding-top:5vw;
   }
 
   #desktopNav a{
@@ -704,10 +700,6 @@ footer{
     bottom:3px;
   }
 
-
-  .spacer{
-    @include spacer(3vw);
-  }
 
   #jumboText{
     font-size: 54px;

@@ -53,7 +53,6 @@ $(document).ready(function(){
     var fadeScene3 = new ScrollMagic.Scene({
       triggerElement: '#fade-right',
       triggerHook: 0.65,
-      offset:140,//Finely tuning when it appears.
       reverse:false
     })
     .setClassToggle('#fade-right', 'right')
@@ -150,8 +149,8 @@ $(document).ready(function(){
      //Keep the header from sliding out when "Back To Top" is clicked. Else, slide it out.
      if($(this).attr("class") == "backToTop"){
        $('header, #desktopNav').removeClass('animated slideOutUp').addClass('animated slideInDown');
-
      }
+
      else{
        //Get the header out of here lul
        $('header, #desktopNav').removeClass('animated slideInDown').addClass('animated slideOutUp');
@@ -228,7 +227,7 @@ $(document).ready(function(){
       $('.mugshot').on("click", function(){
         //Select the .desc to be expanded and open it
         expandedDesc = $(this).next().next();
-        expandedDesc.slideToggle();
+        expandedDesc.delay(380).slideToggle();
 
         //Flip The Arrow
         flipArrow($(this));
