@@ -115,20 +115,23 @@ $(document).ready(function(){
             //User is scrolling Down
             scrollAmount = distance;
             var $hamburger = $(".hamburger");
+
+          ////////// REMOVING HEADER  ///////////
             //Don't scroll up the header if the hamburger menu is open.
             if(!$hamburger.hasClass("is-active")){
-              $('header, #desktopNav').removeClass('animated slideInDown').addClass('animated slideOutUp');
+              $('header, #desktopNav').slideUp();
             }
           }
+          ////////// INSERT HEADER  ///////////
           if(distance < scrollAmount - pixelsToTriggerExpand){
           //User is Scrolling Up
             scrollAmount = distance;
-
           //Change animation type and speed (animate.css)
-            $('header, #desktopNav').removeClass('animated slideOutUp').addClass('animated slideInDown');
+            $('header, #desktopNav').slideDown();
           }
         }
       });//End of document.scroll()
+
 
 
 
