@@ -53,11 +53,6 @@ header {
     }
 }
 
-#navFast{
-  //Used for increasing speed of header slideOutUp
-  animation-duration: .5s;
-}
-
 #headerWrapper{
   position: relative;
   z-index: 3;
@@ -556,7 +551,7 @@ footer{
 
 
 /* Tablets */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   header{
     text-align: center;
   }
@@ -566,10 +561,10 @@ footer{
   }
 
   #mobileNav{
-    padding-top: 15vh;
+    padding-top: 14vh;
 
       li{
-        padding-top: 5vh;
+        padding-top: 3.3vh;
       }
     }
 
@@ -660,7 +655,7 @@ footer{
 
 
 /* Desktop */
-@media only screen and (min-width: 1024px) and (max-width: 9920px){
+@media only screen and (min-width: 1025px) and (max-width: 9920px){
 
   #mobileNav{
     display: none;
@@ -681,8 +676,7 @@ footer{
     position: fixed;
     z-index: 3;
     right: 20px;
-    top:.02vw;
-    padding-top:5vw;
+    padding-top:4.5vw;
   }
 
   #desktopNav a{

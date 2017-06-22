@@ -1,4 +1,9 @@
 $(document).ready(function(){
+
+  //Stops Nav Suddenly Appearing on first click
+  $("#mobileNav").slideDown(0);
+  $("#mobileNav").slideUp(0);
+
   //Used for cancelling out header animation when the page is
   //scrolling due to the user clicking on the nav, as opposed to scrolling with mousewheel
   fromNav = null;
@@ -21,29 +26,7 @@ $(document).ready(function(){
     .setClassToggle('#about', 'fade-in') //add class to elem with about ID
     .addTo(controller);
 
-    // ---------------  LARRYS CODE -----------------------------------------
-    //SCENE HANDLER
-    var scene = new ScrollMagic.Scene({
-      triggerElement: "#pinned-trigger1", // point of execution
-      duration: $(window).height() - 100, // pin element for the window height - 1
-      triggerHook: 0, // don't trigger until #pinned-trigger1 hits the top of the viewport
-      reverse: true // allows the effect to trigger when scrolled in the reverse direction
-    })
-    .setPin("#pinned-element1"); // the element we want to pin
 
-    // Scene2 Handler
-    var scene2 = new ScrollMagic.Scene({
-      triggerElement: "#pinned-trigger2", // point of execution
-      duration: 400 // pin the element for a total of 400px
-    })
-    .setPin("#pinned-element2"); // the element we want to pin
-
-    // Add Scenes to ScrollMagic Controller
-    controller.addScene([
-      scene,
-      scene2
-    ]);
-    // ---------------------------------------------------------------------
     // These are the functions for sliding in the why choose us reasons
 
     var fadeScene2 = new ScrollMagic.Scene({
@@ -147,14 +130,15 @@ $(document).ready(function(){
 
   //~~~~~~~~~~~~~~~~~~~~ NAVIGATION LINK CLICK EVENT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
   $("a").on("click", function(){
-      //Scroll The Page
+//Animate The Page
       fromNav = true;
       var loc = $(this).attr("href");
        $('html, body').animate({
          scrollTop: $(loc).offset().top
      }, 1000);
+//======================
 
-     //Keep the header from sliding out when "Back To Top" is clicked. Else, slide it out.
+//Keep the header from sliding out when "Back To Top" is clicked. Else, slide it out.
      if($(this).attr("class") == "backToTop"){
        $('header, #desktopNav').slideDown();
      }
@@ -163,13 +147,13 @@ $(document).ready(function(){
        //Get the header out of here lul
        $('header, #desktopNav').slideUp();
      }
+//==============
 
-
-     //Slide #mobileNav Up and Out
+//Slide #mobileNav Up and Out
      $('#mobileNav').slideUp();
-     //Little #mobileNav Fix for when user minimizes hamburger menu and triggers header to slideOutUp
+//Little #mobileNav Fix for when user minimizes hamburger menu and triggers header to slideOutUp
      $('#mobileNav').css("top", "0");
-     //Make the hamburger button return to resting state every time
+//Make the hamburger button return to resting state every time
      $('.hamburger').toggleClass("is-active");
 
 
@@ -194,13 +178,13 @@ $(document).ready(function(){
     $hamburger.toggleClass("is-active");
     if($hamburger.hasClass("is-active")){
       //Slide #mobileNav In
-      $('#mobileNav').removeClass('animated slideOutUp').addClass('animated slideInDown');
-      $("#mobileNav").css("visibility", "visible");
+      $('#mobileNav').slideDown();
+      $('#mobileNav').css("visibility", "visible");
     }
 
     else{
       //Slide #mobileNav Up and Out
-      $('#mobileNav').removeClass('animated slideInDown').addClass('animated slideOutUp');
+      $('#mobileNav').slideUp();
     }
   });
 
@@ -208,7 +192,7 @@ $(document).ready(function(){
   //CLose #mobileNavigation if user clicks blank space.
   $("main").on("click", function(){
     if($hamburger.hasClass("is-active")){
-        $('#mobileNav').removeClass('animated slideInDown').addClass('animated slideOutUp');
+        $('#mobileNav').slideUp();
 
 
         $hamburger.removeClass("is-active");
@@ -263,13 +247,15 @@ $(document).ready(function(){
 
 
       //Close .desc when user clicks on #about blank space, unless hamburger menu is open (design choice)
-      var $nav = $('nav')
+      var $mobileNav = $('#mobileNav');
       $('.aboutUs').click(function(e){
         if($(e.target).is('.mugshot, h3, span, .bioArrow')){
           e.preventDefault();
           return;
         }
-        if($nav.hasClass("slideOutUp")){
+
+
+        if(!$mobileNav.is(":visible")){
           $('.desc').slideUp();
           $(".bioArrow").removeClass("flip");
         };
