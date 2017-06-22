@@ -2,6 +2,11 @@ $(document).ready(function(){
   //Used for cancelling out header animation when the page is
   //scrolling due to the user clicking on the nav, as opposed to scrolling with mousewheel
   fromNav = null;
+
+
+
+
+
   //~~~~~~~~~~~~~~~~~~~~ SCROLLMAGIC SCENES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
     // Init ScrollMagic
@@ -151,17 +156,17 @@ $(document).ready(function(){
 
      //Keep the header from sliding out when "Back To Top" is clicked. Else, slide it out.
      if($(this).attr("class") == "backToTop"){
-       $('header, #desktopNav').removeClass('animated slideOutUp').addClass('animated slideInDown');
+       $('header, #desktopNav').slideDown();
      }
 
      else{
        //Get the header out of here lul
-       $('header, #desktopNav').removeClass('animated slideInDown').addClass('animated slideOutUp');
+       $('header, #desktopNav').slideUp();
      }
 
 
      //Slide #mobileNav Up and Out
-     $('#mobileNav').removeClass('animated slideInDown').addClass('animated slideOutUp');
+     $('#mobileNav').slideUp();
      //Little #mobileNav Fix for when user minimizes hamburger menu and triggers header to slideOutUp
      $('#mobileNav').css("top", "0");
      //Make the hamburger button return to resting state every time
@@ -190,15 +195,12 @@ $(document).ready(function(){
     if($hamburger.hasClass("is-active")){
       //Slide #mobileNav In
       $('#mobileNav').removeClass('animated slideOutUp').addClass('animated slideInDown');
-      //Make #mobileNav visible when button is clicked.
-      $('#mobileNav').css("top", "9vw");
       $("#mobileNav").css("visibility", "visible");
     }
+
     else{
       //Slide #mobileNav Up and Out
       $('#mobileNav').removeClass('animated slideInDown').addClass('animated slideOutUp');
-      //Little #mobileNav Fix for when user minimizes hamburger menu and triggers header to slideOutUp
-      $('#mobileNav').css("top", "0");
     }
   });
 
@@ -208,8 +210,6 @@ $(document).ready(function(){
     if($hamburger.hasClass("is-active")){
         $('#mobileNav').removeClass('animated slideInDown').addClass('animated slideOutUp');
 
-        //Little #mobileNav Fix for when user minimizes hamburger menu and triggers header to slideOutUp
-        $('#mobileNav').css("top", "0");
 
         $hamburger.removeClass("is-active");
       };

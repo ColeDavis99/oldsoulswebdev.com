@@ -13,13 +13,6 @@ main{
   padding: 0;
 }
 
-<<<<<<< HEAD
-  body {
-    background-image: url("../IMAGES/background_1_light.jpg");
-    width:100%;
-  }
-=======
->>>>>>> origin/creation
 
 
 body {
@@ -240,9 +233,6 @@ header {
   padding-bottom: 20px;
 }
 
-.reason-wrapper{
-  text-align: center;
-}
 
 .reason-right ul, .reason-left ul{
   text-decoration:none;
@@ -494,8 +484,12 @@ footer{
   }
 
   #mobileNav{
-    padding-top: 3vw;
-  }
+    padding-top: 15vh;
+
+      li{
+        padding-top: 5vh;
+      }
+    }
 
   @include HamburgerNav(210px);
 
@@ -515,7 +509,7 @@ footer{
     visibility: visible;
     position: absolute;
     right: 87vw;
-    top:3.5vh;
+    top:2vh;
   }
 
   #jumboText{
@@ -562,7 +556,7 @@ footer{
 
 
 /* Tablets */
-@media only screen and (min-width: 768px) and (max-width: 1280px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   header{
     text-align: center;
   }
@@ -570,6 +564,14 @@ footer{
   #desktopNav{
     display: none;
   }
+
+  #mobileNav{
+    padding-top: 15vh;
+
+      li{
+        padding-top: 5vh;
+      }
+    }
 
    @include HamburgerNav(210px);
 
@@ -658,7 +660,7 @@ footer{
 
 
 /* Desktop */
-@media only screen and (min-width: 1281px) and (max-width: 9920px){
+@media only screen and (min-width: 1024px) and (max-width: 9920px){
 
   #mobileNav{
     display: none;
