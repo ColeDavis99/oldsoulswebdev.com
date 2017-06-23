@@ -1,4 +1,19 @@
 $(document).ready(function(){
+/*
+          Here is a map of this script:
+            1 -Scrollmagic Scenes
+            2 -Header slideDown() and slideUp() logic
+            3 -Navigation Link clicking
+            4 -Hamburger Button & Mobile Menu
+            5 -About Us Dropdown
+*/
+
+
+
+
+
+
+
 
   //Stops Nav Suddenly Appearing on first click
   $("#mobileNav").slideDown(0);
@@ -34,7 +49,7 @@ $(document).ready(function(){
       triggerHook: 0.65, // This pushes the trigger point (when things happen) lower
       reverse:false // This is so that the setClassToggle doesnt toggle off anymore
     })
-    .setClassToggle('#fade-left1', 'left') // append 'left' onto the class of whatever element has the ID of 'fade-left1'
+    .setClassToggle('#fade-left1', 'right') // append 'left' onto the class of whatever element has the ID of 'fade-left1'
     .addTo(controller);
 
 
@@ -46,16 +61,17 @@ $(document).ready(function(){
     .setClassToggle('#fade-right', 'right')
     .addTo(controller);
 
+
     var fadeScene4 = new ScrollMagic.Scene({
       triggerElement: '#fade-left2',
       triggerHook: 0.65,
       reverse:false
     })
-    .setClassToggle('#fade-left2', 'left')
+    .setClassToggle('#fade-left2', 'right')
     .addTo(controller);
 
     // ---------------------------------------------------------------------
-    // This is Cole's Parallax Scene
+    // This is the Parallax Scene
 
     var slideParallaxScene = new ScrollMagic.Scene({
       triggerElement: '#bcg-parallax',
@@ -82,14 +98,10 @@ $(document).ready(function(){
 
 
 
-
-
-
-
   //~~~~~~~~~~~~~~~~~~~~ HEADER SCROLLING LOGIC ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
   var scrollAmount = 0;
   var pixelsToTriggerExpand = 30;
-  var pixelsToTriggerContract = 30;
+  var pixelsToTriggerContract = 430;
 
     $(document).scroll(function(e){
       //Ignore all this if the page is scrolling from a nav click, instead of typical mousewheel scrolling.
@@ -107,15 +119,16 @@ $(document).ready(function(){
           ////////// REMOVING HEADER  ///////////
             //Don't scroll up the header if the hamburger menu is open.
             if(!$hamburger.hasClass("is-active")){
-              $('header, #desktopNav').slideUp();
+              $('#desktopNav a').slideUp(130);
+              $('header').slideUp();
             }
           }
           ////////// INSERT HEADER  ///////////
           if(distance < scrollAmount - pixelsToTriggerExpand){
           //User is Scrolling Up
             scrollAmount = distance;
-          //Change animation type and speed (animate.css)
-            $('header, #desktopNav').slideDown();
+            $('#desktopNav a').slideDown(430);
+            $('header').slideDown();
           }
         }
       });//End of document.scroll()
@@ -140,12 +153,14 @@ $(document).ready(function(){
 
 //Keep the header from sliding out when "Back To Top" is clicked. Else, slide it out.
      if($(this).attr("class") == "backToTop"){
-       $('header, #desktopNav').slideDown();
+      $('header').slideDown();
+      $('#desktopNav a').slideDown(430);
      }
 
      else{
        //Get the header out of here lul
-       $('header, #desktopNav').slideUp();
+       $('header').slideUp();
+       $('#desktopNav a').slideUp(130);
      }
 //==============
 
@@ -194,7 +209,6 @@ $(document).ready(function(){
     if($hamburger.hasClass("is-active")){
         $('#mobileNav').slideUp();
 
-
         $hamburger.removeClass("is-active");
       };
     });
@@ -242,7 +256,6 @@ $(document).ready(function(){
         $(".bioArrow").not(this).removeClass("flip");
         $(".desc").not(expandedDescArrow).delay(380).slideUp();
       });//End of bioArrow click
-
 
 
 

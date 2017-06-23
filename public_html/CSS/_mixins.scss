@@ -1,0 +1,8 @@
+@mixin HamburgerNav($width){
+  nav{
+    width: $width;
+    background-color: rgba(0,0,0,.75);
+    position: fixed;
+    z-index: 2;
+  }
+}

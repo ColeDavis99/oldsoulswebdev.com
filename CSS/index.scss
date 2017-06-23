@@ -16,7 +16,7 @@ main{
 
 
 body {
-  background-image: url("../IMAGES./background_1_light.jpg");
+  background-image: url("../IMAGES/background_1_light.jpg");
   width:100%;
 }
 
@@ -404,72 +404,22 @@ footer{
 //////////////////      Media Queries     //////////////////
 ////////////////////////////////////////////////////////////
 
-/* Smartphones */
-// @media only screen and (min-width: 0px) and (max-width: 416px){
-//
-//   #desktopNav{
-//     display: none;
-//   }
-//
-//   #mobileNav{
-//     padding-top: 15vw;
-//   }
-//
-//   @include HamburgerNav(80vh, 210px);
-//
-//
-//   header{
-//     text-align: center;
-//   }
-//
-//   #logo{
-//     display: inline-block;
-//     width: 70%;
-//     position: relative;
-//     top:4vw;
-//   }
-//
-//   .hamburger{
-//     visibility: visible;
-//     position: relative;
-//     right: 5vw;
-//   }
-//
-//   #jumboText{
-//     font-size: 25px;
-//     top:36.4%;
-//   }
-//
-//   main{
-//     //Keep the main content centered, even with position:fixed.
-//     transform: translate(0%, 0);
-//     width: 100%;
-//   }
-//
-//   .mugshot{
-//     height:50vw;
-//     width:50vw;
-//     border-radius: 50%;
-//   }
-//
-//   #ruler{
-//     display: none;
-//   }
-//   #phone{
-//     display: none;
-//   }
-//   #rose{
-//     display: none;
-//   }
-//
-//   .reason-right, .reason-left{
-//     width: 92%;
-//   }
-//
-//   .desc p{
-//     font-size: 13px;
-//   }
-// }
+/* Internet Explorer Styles (IE 10+ doesn't if(IE) conditionals)*/
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  #bcg-parallax{
+    background-image: url('../IMAGES/expanse.jpg');
+
+  }
+
+  #bcg{
+    display: none;
+  }
+
+  #content-wrapper{
+  }
+}
+
 
 /* Large Smartphones */
 @media only screen and (min-width: 0px) and (max-width: 767px) {
@@ -497,7 +447,6 @@ footer{
     display: inline-block;
     width: 40vh;
     position: relative;
-    top:1vw;
   }
 
   .hamburger{
@@ -517,9 +466,12 @@ footer{
   }
 
   .mugshot{
-    height:35vw;
-    width:35vw;
+    height:30vh;
+    width:30vh;
     border-radius: 50%;
+  }
+  .bioArrow{
+    width:17vh;
   }
 
   .desc p{
@@ -541,7 +493,7 @@ footer{
   .reason-text{
     margin-top: 8px;
     width:90%;
-    font-size: 11px;
+    font-size: 13px;
   }
 
   textarea{
@@ -551,7 +503,7 @@ footer{
 
 
 /* Tablets */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1366px) {
   header{
     text-align: center;
   }
@@ -587,7 +539,7 @@ footer{
     display: inline-block;
     width: 28%;
     position: relative;
-    top:1vw;
+    top:.5vw;
   }
 
 
@@ -655,7 +607,7 @@ footer{
 
 
 /* Desktop */
-@media only screen and (min-width: 1025px) and (max-width: 9920px){
+@media only screen and (min-width: 1367px) and (max-width: 9920px){
 
   #mobileNav{
     display: none;
