@@ -71,7 +71,7 @@
         <div id="content-wrapper">
           <!-- <div class="spacer"></div> -->
           <h1 id="jumboText">Thank&nbsp;you for&nbsp;your&nbsp;message</h1>
-          <h1 id="jumboText">We will get back to you shortly ( ͡° ͜ʖ ͡°)</h1>
+          <h1 id="jumboText">We will get back to you shortly</h1>
         </div>
       </div>
 
