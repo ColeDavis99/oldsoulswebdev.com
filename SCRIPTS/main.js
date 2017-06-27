@@ -24,6 +24,13 @@ $(document).ready(function(){
   fromNav = null;
 
 
+//Used for parallax image changing.
+  loc = window.location.href;
+  if(loc=="http://oldsoulswebdev.com/form-to-email.php") {
+    $('#bcg').css('background-image','url(../IMAGES/mountains.jpg)');
+  }
+
+
 
 
 
