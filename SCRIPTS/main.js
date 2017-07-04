@@ -14,7 +14,6 @@ $(document).ready(function(){
 
 
 
-
   //Stops Nav Suddenly Appearing on first click
   $("#mobileNav").slideDown(0);
   $("#mobileNav").slideUp(0);
@@ -211,8 +210,8 @@ $(document).ready(function(){
   });
 
 
-  //CLose #mobileNavigation if user clicks blank space.
-  $("main").on("click", function(){
+  //CLose #mobileNavigation if user clicks 'blank' space.
+  $("main, #bcg-parallax").on("click", function(){
     if($hamburger.hasClass("is-active")){
         $('#mobileNav').slideUp();
 
