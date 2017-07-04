@@ -1,5 +1,5 @@
 @import "../3rd_Party_Libraries/Hamburgers/_hamburgers.scss";
-@import "_mixins.scss";
+//@import "_mixins.scss";
 
 // ------ MAIN CONTENT -------
 main{
@@ -26,6 +26,7 @@ header {
   background-image: url("../IMAGES/background_1.jpg");
   border-bottom: 3px solid rgb(183, 116, 7);
   width: 100%;
+  height: 110px;
 }
 
 // ---------- NAVIGATION -------
@@ -50,6 +51,7 @@ header {
       font-family: "Garamond", cursive, sans-serif;
       transition: 0.2s all ease;
       padding-left: 10px;
+      padding-right: 10px;
     }
 }
 
@@ -178,7 +180,7 @@ header {
     display: block;
     margin-top: 5.5%;
     text-align: left;
-    color:rgb(99, 132, 249);
+    color:rgb(183, 116, 7);
   }
 
   // -------------------------------
@@ -223,7 +225,7 @@ header {
 //------ The Why Us Section ----------
 
 .why{
-  background-image: url("../IMAGES/background_1.jpg");
+  background-color: rgba(20,20,20,.8);
   margin: 0 auto;
   padding-bottom: 20px;
 }
@@ -236,7 +238,7 @@ header {
 
 .reason-right, .reason-left{
   width: 65%;
-  border-top: 5px solid rgb(99, 132, 249);
+  border-top: 3px solid rgb(183, 116, 7);
   margin: 0 auto;
   padding-bottom: 40px;
   text-align: left;
@@ -289,7 +291,7 @@ header {
 // --- The Contact Us Form ------------------
 
 .contact{
-  background-image: url("../IMAGES/background_1.jpg");
+  background-color: rgba(20,20,20,.8);
   margin: 0 auto;
 }
 
@@ -412,7 +414,6 @@ footer{
     background-repeat: no-repeat;
     background-image: url('../IMAGES/expanse.jpg');
     padding: 45vh 0;
-
   }
 
   #bcg{
@@ -426,38 +427,43 @@ footer{
 
 /* Large Smartphones */
 @media only screen and (min-width: 0px) and (max-width: 767px) {
+  $headerHeight: 60px;
 
   #desktopNav{
     display: none;
   }
 
-  #mobileNav{
-    padding-top: 15vh;
-
-      li{
-        padding-top: 5vh;
-      }
-    }
-
-  @include HamburgerNav(210px);
-
-
   header{
     text-align: center;
+    height: $headerHeight;
   }
 
   #logo{
     display: inline-block;
-    width: 40vh;
     position: relative;
+    width:$headerHeight * 2.7;
+    top:$headerHeight*.05;
   }
 
-  .hamburger{
-    visibility: visible;
-    position: absolute;
-    right: 87vw;
-    top:2vh;
-  }
+  #mobileNav{
+    padding-top: $headerHeight;
+    background-color: rgba(0,0,0,.75);
+    position: fixed;
+    z-index: 2;
+
+      li{
+        padding-top: 20px;
+      }
+    }
+
+
+    .hamburger{
+      visibility: visible;
+      position: absolute;
+      top:$headerHeight / 4.2;
+      left: 0;
+      margin-left: 25px;
+    }
 
   #jumboText{
     font-size: 30px;
@@ -507,44 +513,48 @@ footer{
 
 /* Tablets */
 @media only screen and (min-width: 768px) and (max-width: 1366px) {
-  header{
-    text-align: center;
-  }
+
+  $headerHeight: 90px;
 
   #desktopNav{
     display: none;
   }
 
+  header{
+    text-align: center;
+    height: $headerHeight;
+  }
+
+  #logo{
+    display: inline-block;
+    position: relative;
+    width:$headerHeight * 2.9
+  }
+
   #mobileNav{
-    padding-top: 14vh;
+    padding-top: $headerHeight;
+    background-color: rgba(0,0,0,.75);
+    position: fixed;
+    z-index: 2;
 
       li{
-        padding-top: 3.3vh;
+        padding-top: 25px;
       }
     }
 
-   @include HamburgerNav(210px);
 
   .hamburger{
-    position: relative;
-    right: 26vw;
-    bottom:.5vw;
+    visibility: visible;
+    position: absolute;
+    top:$headerHeight / 3;
+    left: 0;
+    margin-left: 30px;
   }
-
 
   #jumboText{
     font-size: 54px;
     top:37%;
   }
-
-
-  #logo{
-    display: inline-block;
-    width: 28%;
-    position: relative;
-    top:.5vw;
-  }
-
 
   .bio{
     display: inline-block;
@@ -611,46 +621,51 @@ footer{
 
 /* Desktop */
 @media only screen and (min-width: 1367px) and (max-width: 9920px){
+  $headerHeight: 100px;
 
   #mobileNav{
     display: none;
   }
-
   .hamburger{
     visibility: hidden;
   }
 
+
+  header{
+    text-align: left;
+    height: $headerHeight;
+  }
+
   #logo{
     display: inline-block;
-    width: 18%;
     position: relative;
-    top:.5vw;
+    width:$headerHeight * 2.7;
+    top:$headerHeight*.05;
   }
 
   #desktopNav{
     position: fixed;
     z-index: 3;
     right: 20px;
-    padding-top:4.5vw;
+    padding-top:$headerHeight * .76;
   }
 
   #desktopNav a{
-    margin-left: .6vw;
-    margin-right: .6vw;
     text-decoration:none;
     color:white;
     font-size: 23px;
     font-family: "Garamond", cursive, sans-serif;
-    transition: 0.2s all ease;
     position: relative;
-    bottom:0px;
+    transition: 0.2s all ease;
+    padding-left: 10px;
+    padding-right: 10px;
+    bottom: 0px;
   }
 
   #desktopNav a:hover{
     color:rgb(183, 116, 7);
     bottom:3px;
   }
-
 
   #jumboText{
     font-size: 54px;

@@ -8,7 +8,7 @@
     <script src="3rd_Party_Libraries\ScrollMagic\plugins\GSAP_Tweening.js"></script>
     <script src="3rd_Party_Libraries\ScrollMagic\plugins\animation.gsap.min.js"></script>
     <!--  Custom Logic Script-->
-    <script src="SCRIPTS/main.js"></script>  </head>  <body>    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ HEADER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->    <div id="headerWrapper">      <header>        <button class="hamburger hamburger--elastic" type="button">          <span class="hamburger-box">            <span class="hamburger-inner"></span>          </span>        </button>        <img src="IMAGES/logo_2.png" id="logo">      </header>      <div class="spacer"></div>    </div>
+    <script src="SCRIPTS/main.js"></script>  </head>  <body>    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ HEADER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->    <div id="headerWrapper">      <header>        <button class="hamburger hamburger--elastic" type="button">          <span class="hamburger-box">            <span class="hamburger-inner"></span>          </span>        </button>        <img src="IMAGES/logo_2.png" id="logo">      </header>    </div>
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ NAVIGATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <!--  Mobile Navigation-->    <nav class="slideOutUp" id="mobileNav">      <ul class="mobileNav">        <li style="padding-top: 42px;"><a  href="http://oldsoulswebdev.com">Home</a></li>      </ul>    </nav>
     <!--  Desktop Navigation -->    <nav id="desktopNav">      <a href="http://oldsoulswebdev.com">Home</a>    </nav>

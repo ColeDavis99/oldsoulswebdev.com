@@ -258,7 +258,7 @@
           <input id="formEmail" type="email" name="email" required>
 
           <h2 class="formGutters">Phone<span>*</span></h2>
-          <input id="formPhone" type="number" name="phone" placeholder="417-867-5309" onfocus="this.placeholder = ''" onblur="this.placeholder = '417-867-5309'"required>
+          <input id="formPhone" type="number" name="phone" placeholder="ex: 417-867-5309" onfocus="this.placeholder = ''" onblur="this.placeholder = '417-867-5309'"required>
 
 
         <!--  How they heard of us-->

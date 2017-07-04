@@ -1,8 +1,10 @@
-@mixin HamburgerNav($width){
-  nav{
-    width: $width;
-    background-color: rgba(0,0,0,.75);
-    position: fixed;
-    z-index: 2;
-  }
-}
+// Here is an example of how you would use mixins (if I needed thems)
+
+
+//@mixin HamburgerNav(){
+//   nav{
+//     background-color: rgba(0,0,0,.75);
+//     position: fixed;
+//     z-index: 2;
+//   }
+// }
