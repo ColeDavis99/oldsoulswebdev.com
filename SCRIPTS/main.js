@@ -127,7 +127,7 @@ $(document).ready(function(){
             if(!$hamburger.hasClass("is-active")){
               $('#desktopNav a').slideUp(20);
 
-              $('header').stop().slideUp();
+              $('header').stop().slideUp(200);
             }
           }
           ////////// INSERT HEADER  ///////////
@@ -135,7 +135,7 @@ $(document).ready(function(){
           //User is Scrolling Up
             scrollAmount = distance;
             $('#desktopNav a').slideDown(450);
-            $('header').stop().slideDown();
+            $('header').stop().slideDown(200);
           }
         }
       });//End of document.scroll()
