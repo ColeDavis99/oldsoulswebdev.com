@@ -428,7 +428,7 @@ footer{
 
 /* Large Smartphones */
 @media only screen and (min-width: 0px) and (max-width: 767px) {
-  $headerHeight: 60px;
+  // $headerHeight: 60px;
 
   #desktopNav{
     display: none;
@@ -436,18 +436,18 @@ footer{
 
   header{
     text-align: center;
-    height: $headerHeight;
+    height: 60px;
   }
 
   #logo{
     display: inline-block;
     position: relative;
-    width:$headerHeight * 2.7;
-    top:$headerHeight*.05;
+    width:162px;
+    top:3px;
   }
 
   #mobileNav{
-    margin-top: $headerHeight;
+    margin-top: 60px;
     background-color: rgba(0,0,0,.75);
     position: fixed;
       li{
@@ -459,7 +459,7 @@ footer{
     .hamburger{
       visibility: visible;
       position: absolute;
-      top:$headerHeight / 4;
+      top:15px;
       left: 0;
       margin-left: 25px;
     }
@@ -513,7 +513,7 @@ footer{
 /* Tablets */
 @media only screen and (min-width: 768px) and (max-width: 1366px) {
 
-  $headerHeight: 90px;
+  // $headerHeight: 90px;
 
   #desktopNav{
     display: none;
@@ -521,17 +521,17 @@ footer{
 
   header{
     text-align: center;
-    height: $headerHeight;
+    height: 90px;
   }
 
   #logo{
     display: inline-block;
     position: relative;
-    width:$headerHeight * 2.9
+    width:261;
   }
 
   #mobileNav{
-    margin-top: $headerHeight;
+    margin-top: 90px;
     background-color: rgba(0,0,0,.75);
     position: fixed;
       li{
@@ -543,7 +543,7 @@ footer{
   .hamburger{
     visibility: visible;
     position: absolute;
-    top:$headerHeight / 3;
+    top:30px;
     left: 0;
     margin-left: 30px;
   }
@@ -618,7 +618,7 @@ footer{
 
 /* Desktop */
 @media only screen and (min-width: 1367px) and (max-width: 9920px){
-  $headerHeight: 100px;
+  // $headerHeight: 100px;
 
   #mobileNav{
     display: none;
@@ -630,21 +630,21 @@ footer{
 
   header{
     text-align: left;
-    height: $headerHeight;
+    height: 100px;
   }
 
   #logo{
     display: inline-block;
     position: relative;
-    width:$headerHeight * 2.7;
-    top:$headerHeight*.05;
+    width:270px;
+    top:5px;
   }
 
   #desktopNav{
     position: fixed;
     z-index: 5;
     right: 20px;
-    padding-top:$headerHeight * .76;
+    padding-top:76px;
   }
 
   #desktopNav a{
