@@ -200,13 +200,13 @@ $(document).ready(function(){
     $hamburger.toggleClass("is-active");
     if($hamburger.hasClass("is-active")){
       //Slide #mobileNav In
-      $('#mobileNav').slideDown();
+      $('#mobileNav').stop().slideDown();
       $('#mobileNav').css("visibility", "visible");
     }
 
     else{
       //Slide #mobileNav Up and Out
-      $('#mobileNav').slideUp();
+      $('#mobileNav').stop().slideUp();
     }
   });
 
