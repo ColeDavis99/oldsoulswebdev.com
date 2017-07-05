@@ -176,7 +176,7 @@ $(document).ready(function(){
 //Little #mobileNav Fix for when user minimizes hamburger menu and triggers header to slideOutUp
      $('#mobileNav').css("top", "0");
 //Make the hamburger button return to resting state every time
-     $('.hamburger').toggleClass("is-active");
+     $('.hamburger').removeClass("is-active");
 
 
      //reset "fromNav" to false after 1000ms has passed.
