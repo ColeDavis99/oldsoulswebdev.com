@@ -126,7 +126,8 @@ $(document).ready(function(){
             //Don't scroll up the header if the hamburger menu is open.
             if(!$hamburger.hasClass("is-active")){
               $('#desktopNav a').slideUp(20);
-              $('header').slideUp();
+
+              $('header').stop().slideUp();
             }
           }
           ////////// INSERT HEADER  ///////////
@@ -134,7 +135,7 @@ $(document).ready(function(){
           //User is Scrolling Up
             scrollAmount = distance;
             $('#desktopNav a').slideDown(450);
-            $('header').slideDown();
+            $('header').stop().slideDown();
           }
         }
       });//End of document.scroll()
