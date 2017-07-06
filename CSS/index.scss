@@ -26,7 +26,6 @@ header {
   background-image: url("../IMAGES/background_1.jpg");
   border-bottom: 3px solid rgb(183, 116, 7);
   width: 100%;
-  height: 110px;
 }
 
 // ---------- NAVIGATION -------
@@ -428,7 +427,6 @@ footer{
 
 /* Large Smartphones */
 @media only screen and (min-width: 0px) and (max-width: 767px) {
-  // $headerHeight: 60px;
 
   #desktopNav{
     display: none;
@@ -436,20 +434,19 @@ footer{
 
   header{
     text-align: center;
-    height: 60px;
   }
 
   #logo{
     display: inline-block;
     position: relative;
-    width:162px;
-    top:3px;
+    top:2px;
+    width:160px;
   }
 
   #mobileNav{
-    margin-top: 60px;
     background-color: rgba(0,0,0,.75);
     position: fixed;
+    margin-top: 57px;
       li{
         margin-top: 20px;
       }
@@ -513,27 +510,25 @@ footer{
 /* Tablets */
 @media only screen and (min-width: 768px) and (max-width: 1366px) {
 
-  // $headerHeight: 90px;
-
   #desktopNav{
     display: none;
   }
 
   header{
     text-align: center;
-    height: 90px;
   }
 
   #logo{
     display: inline-block;
     position: relative;
-    width:261;
+    width:230px;
+    top:3px;
   }
 
   #mobileNav{
-    margin-top: 90px;
     background-color: rgba(0,0,0,.75);
     position: fixed;
+    margin-top: 80px;
       li{
         margin-top: 25px;
       }
@@ -618,7 +613,6 @@ footer{
 
 /* Desktop */
 @media only screen and (min-width: 1367px) and (max-width: 9920px){
-  // $headerHeight: 100px;
 
   #mobileNav{
     display: none;
@@ -630,13 +624,12 @@ footer{
 
   header{
     text-align: left;
-    height: 100px;
   }
 
   #logo{
     display: inline-block;
     position: relative;
-    width:270px;
+    width:290px;
     top:5px;
   }
 

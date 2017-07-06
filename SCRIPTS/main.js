@@ -123,11 +123,11 @@ $(document).ready(function(){
             var $hamburger = $(".hamburger");
 
           ////////// REMOVING HEADER  ///////////
-            //Don't scroll up the header if the hamburger menu is open.
+            //Don't slide up the header if the hamburger menu is open.
             if(!$hamburger.hasClass("is-active")){
               $('#desktopNav a').slideUp(20);
 
-              $('header').stop().slideUp(200);
+              $('header').slideUp(200);
             }
           }
           ////////// INSERT HEADER  ///////////
@@ -135,7 +135,7 @@ $(document).ready(function(){
           //User is Scrolling Up
             scrollAmount = distance;
             $('#desktopNav a').slideDown(450);
-            $('header').stop().slideDown(200);
+            $('header').slideDown(200);
           }
         }
       });//End of document.scroll()
@@ -200,13 +200,13 @@ $(document).ready(function(){
     $hamburger.toggleClass("is-active");
     if($hamburger.hasClass("is-active")){
       //Slide #mobileNav In
-      $('#mobileNav').stop().slideDown();
+      $('#mobileNav').slideDown();
       $('#mobileNav').css("visibility", "visible");
     }
 
     else{
       //Slide #mobileNav Up and Out
-      $('#mobileNav').stop().slideUp();
+      $('#mobileNav').slideUp();
     }
   });
 
