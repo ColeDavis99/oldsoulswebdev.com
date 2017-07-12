@@ -13,8 +13,6 @@ main{
   padding: 0;
 }
 
-
-
 body {
   background-image: url("../IMAGES/background_1_light.jpg");
   width:100%;
@@ -26,6 +24,7 @@ header {
   background-image: url("../IMAGES/background_1.jpg");
   border-bottom: 3px solid rgb(183, 116, 7);
   width: 100%;
+  height: 110px;
 }
 
 // ---------- NAVIGATION -------
@@ -66,7 +65,7 @@ header {
 // ---------------------------
                               //~~~~~~~~~~~~~Parralax Stuff~~~~~~~~~~~~~~//
                                     #bcg-parallax{
-                                    	padding: 50vh 0vh 50vh 0vh;
+                                    	padding: 50vh 0 50vh 0;
                                     	color:#fff;
                                     	background-color:#000;
                                     	text-align:center;
@@ -80,8 +79,8 @@ header {
                                     	background-size: cover;
                                     	background-position: center;
                                     	position: absolute;
-                                    	width: 100%;
                                     	height: 115%;
+                                      width: 100%;
                                     	top: 20%;
                                     	opacity: 0.7;
                                     }
@@ -427,6 +426,7 @@ footer{
 
 /* Large Smartphones */
 @media only screen and (min-width: 0px) and (max-width: 767px) {
+  $headerHeight: 60px;
 
   #desktopNav{
     display: none;
@@ -434,19 +434,20 @@ footer{
 
   header{
     text-align: center;
+    height: $headerHeight;
   }
 
   #logo{
     display: inline-block;
     position: relative;
-    top:2px;
-    width:160px;
+    width:$headerHeight * 2.7;
+    top:$headerHeight*.05;
   }
 
   #mobileNav{
+    margin-top: $headerHeight;
     background-color: rgba(0,0,0,.75);
     position: fixed;
-    margin-top: 57px;
       li{
         margin-top: 20px;
       }
@@ -456,7 +457,7 @@ footer{
     .hamburger{
       visibility: visible;
       position: absolute;
-      top:15px;
+      top:$headerHeight / 4;
       left: 0;
       margin-left: 25px;
     }
@@ -471,8 +472,8 @@ footer{
   }
 
   .mugshot{
-    height:30vh;
-    width:30vh;
+    height:60%;
+    width:60%;
     border-radius: 50%;
   }
   .bioArrow{
@@ -510,25 +511,27 @@ footer{
 /* Tablets */
 @media only screen and (min-width: 768px) and (max-width: 1366px) {
 
+  $headerHeight: 90px;
+
   #desktopNav{
     display: none;
   }
 
   header{
     text-align: center;
+    height: $headerHeight;
   }
 
   #logo{
     display: inline-block;
     position: relative;
-    width:230px;
-    top:3px;
+    width:$headerHeight * 2.9
   }
 
   #mobileNav{
+    margin-top: $headerHeight;
     background-color: rgba(0,0,0,.75);
     position: fixed;
-    margin-top: 80px;
       li{
         margin-top: 25px;
       }
@@ -538,7 +541,7 @@ footer{
   .hamburger{
     visibility: visible;
     position: absolute;
-    top:30px;
+    top:$headerHeight / 3;
     left: 0;
     margin-left: 30px;
   }
@@ -613,6 +616,7 @@ footer{
 
 /* Desktop */
 @media only screen and (min-width: 1367px) and (max-width: 9920px){
+  $headerHeight: 100px;
 
   #mobileNav{
     display: none;
@@ -624,24 +628,25 @@ footer{
 
   header{
     text-align: left;
+    height: $headerHeight;
   }
 
   #logo{
     display: inline-block;
     position: relative;
-    width:290px;
-    top:5px;
+    width:$headerHeight * 2.7;
+    top:$headerHeight*.05;
   }
 
   #desktopNav{
     position: fixed;
     z-index: 5;
     right: 20px;
-    padding-top:76px;
+    padding-top:$headerHeight * .76;
   }
 
   #desktopNav a{
-    text-decoration:none;
+    text-decoration: none;
     font-family: 'Raleway', sans-serif;
     color:white;
     font-size: 23px;

@@ -123,11 +123,10 @@ $(document).ready(function(){
             var $hamburger = $(".hamburger");
 
           ////////// REMOVING HEADER  ///////////
-            //Don't slide up the header if the hamburger menu is open.
+            //Don't scroll up the header if the hamburger menu is open.
             if(!$hamburger.hasClass("is-active")){
               $('#desktopNav a').slideUp(20);
-
-              $('header').slideUp(200);
+              $('header').slideUp();
             }
           }
           ////////// INSERT HEADER  ///////////
@@ -135,7 +134,7 @@ $(document).ready(function(){
           //User is Scrolling Up
             scrollAmount = distance;
             $('#desktopNav a').slideDown(450);
-            $('header').slideDown(200);
+            $('header').slideDown();
           }
         }
       });//End of document.scroll()
@@ -176,7 +175,7 @@ $(document).ready(function(){
 //Little #mobileNav Fix for when user minimizes hamburger menu and triggers header to slideOutUp
      $('#mobileNav').css("top", "0");
 //Make the hamburger button return to resting state every time
-     $('.hamburger').removeClass("is-active");
+     $('.hamburger').toggleClass("is-active");
 
 
      //reset "fromNav" to false after 1000ms has passed.
