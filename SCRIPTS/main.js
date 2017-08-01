@@ -81,7 +81,7 @@ $(document).ready(function(){
 
     var slideParallaxScene = new ScrollMagic.Scene({
       triggerElement: '#bcg-parallax',
-      triggerHook:0,
+      triggerHook:-100,
       offset:-200,//Change this offset to alter when the parallax effect begins.
       //Right now, I have it to where the effect stops just before the img leaves the screen.
       duration: '120%',
@@ -142,6 +142,18 @@ $(document).ready(function(){
 
 
 
+//~~~~~~~~~~~~~~~~~~~~~~~~~ This removes the "personal architect" banner so you can't see it through the transparent footer.~~~~~~~~~~~~~~~~~~~~~~~~~ //
+$(window).on('scroll', function() {
+    var y_scroll_pos = window.pageYOffset;
+    var scroll_pos_test = 550;             // set to whatever you want it to be
+
+    if(y_scroll_pos > scroll_pos_test) {
+        $('#jumboText').css("visibility", "hidden");
+    }
+    else{
+      $('#jumboText').css("visibility", "visible");
+    }
+});
 
 
 
@@ -211,7 +223,7 @@ $(document).ready(function(){
 
 
   //CLose #mobileNavigation if user clicks 'blank' space.
-  $("main, #bcg-parallax").on("click", function(){
+  $("main, #bcg-parallax, #fadeImgSpacer").on("click", function(){
     if($hamburger.hasClass("is-active")){
         $('#mobileNav').slideUp();
 

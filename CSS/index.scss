@@ -1,5 +1,5 @@
 @import "../3rd_Party_Libraries/Hamburgers/_hamburgers.scss";
-//@import "_mixins.scss";
+@import "_mixins.scss";
 
 // ------ MAIN CONTENT -------
 main{
@@ -16,6 +16,7 @@ main{
 body {
   background-image: url("../IMAGES/background_1_light.jpg");
   width:100%;
+  height: 100%;
 }
 
 header {
@@ -63,33 +64,6 @@ header {
 
 //------ INTRO CONTENT --------
 // ---------------------------
-                              //~~~~~~~~~~~~~Parralax Stuff~~~~~~~~~~~~~~//
-                                    #bcg-parallax{
-                                    	padding: 50vh 0 50vh 0;
-                                    	color:#fff;
-                                    	background-color:#000;
-                                    	text-align:center;
-                                    	position:relative;
-                                    	overflow: hidden;
-                                    }
-
-                                    #bcg{
-                                    	background-image: url('../IMAGES/expanse.jpg');
-                                    	background-repeat: no-repeat;
-                                    	background-size: cover;
-                                    	background-position: center;
-                                    	position: absolute;
-                                    	height: 115%;
-                                      width: 100%;
-                                    	top: 20%;
-                                    	opacity: 0.7;
-                                    }
-
-                                    #content-wrapper{
-                                    	width:100%;
-                                    	position:relative;
-                                    	z-index: 2;
-                                    }
 
 
 #jumboText{
@@ -122,7 +96,7 @@ header {
   .bioArrow{
     transition: all .4s ease;
     display: block;
-    width:30%;
+    width:90px;
     margin: auto;
   }
   .flip{
@@ -406,7 +380,7 @@ footer{
 //////////////////      Media Queries     //////////////////
 ////////////////////////////////////////////////////////////
 
-/* Internet Explorer Styles (IE 10+ doesn't if(IE) conditionals)*/
+/* Internet Explorer Query (IE 10+ doesn't support if(IE) {...} conditionals)*/
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   #bcg-parallax{
@@ -418,14 +392,13 @@ footer{
   #bcg{
     display: none;
   }
-
-  #content-wrapper{
-  }
 }
 
 
 /* Large Smartphones */
 @media only screen and (min-width: 0px) and (max-width: 767px) {
+  @include mobileIntro;//This replaced the parallax for mobile broswers.
+
   $headerHeight: 60px;
 
   #desktopNav{
@@ -464,7 +437,7 @@ footer{
 
   #jumboText{
     font-size: 30px;
-    top:20%;
+    top:40%;
   }
 
   .introText{
@@ -472,12 +445,9 @@ footer{
   }
 
   .mugshot{
-    height:60%;
-    width:60%;
+    height:50%;
+    width:50%;
     border-radius: 50%;
-  }
-  .bioArrow{
-    width:17vh;
   }
 
   .desc p{
@@ -510,6 +480,7 @@ footer{
 
 /* Tablets */
 @media only screen and (min-width: 768px) and (max-width: 1366px) {
+  @include mobileIntro;//This replaced the parallax for mobile broswers.
 
   $headerHeight: 90px;
 
@@ -616,6 +587,29 @@ footer{
 
 /* Desktop */
 @media only screen and (min-width: 1367px) and (max-width: 9920px){
+  //~~~~~~~~~~~~~Parralax Stuff (Desktop only now)~~~~~~~~~~~~~~//
+        #bcg-parallax{
+          padding: 50vh 0 50vh 0;
+          color:#fff;
+          background-color:#000;
+          text-align:center;
+          position:relative;
+          overflow: hidden;
+        }
+
+        #bcg{
+          background-image: url('../IMAGES/expanse.jpg');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          position: absolute;
+          height: 115%;
+          width: 100%;
+          top: 20%;
+          opacity: 0.7;
+        }
+
+
   $headerHeight: 100px;
 
   #mobileNav{
@@ -692,7 +686,7 @@ footer{
   .reason-right, .reason-left{
     width: 45%;
   }
-  footer{
-    height: 17vh;
-  }
+  // footer{
+  //   height: 20px;
+  // }
 }
