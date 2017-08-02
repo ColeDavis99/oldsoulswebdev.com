@@ -142,7 +142,7 @@ $(document).ready(function(){
 
 
 
-//~~~~~~~~~~~~~~~~~~~~~~~~~ This removes the "personal architect" banner so you can't see it through the transparent footer.~~~~~~~~~~~~~~~~~~~~~~~~~ //
+//~~~~~~~~~~~~~~~~~~~~~~~~~ This removes the "personal architect" banner so you can't see it through the transparent footer.~~~~~~~~~~~~~~~~~~~~~~~~~ //  
 $(window).on('scroll', function() {
     var y_scroll_pos = window.pageYOffset;
     var scroll_pos_test = 550;             // set to whatever you want it to be

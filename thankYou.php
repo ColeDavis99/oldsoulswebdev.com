@@ -58,10 +58,13 @@
       <div id="bcg-parallax">
         <div id="bcg"></div>
         <div id="content-wrapper">
-          <h1 id="jumboText">Thank You For Contacting Us</h1>
-          <h1 id="jumboText">We Will Get In Touch With You Shortly</h1>
+          <h1 id="jumboText">Thank You! <br> We Will Get In Touch With You Shortly</h1>
          </div>
        </div>
+
+       <!-- Equally Pretty Intro for mobile browsers (parallax didn't work b/c the vh changed when URL bar slides & was choppy)-->
+         <div id="bcg-fadeImg2"></div>
+         <div id="fadeImgSpacer"></div>
 
 
        <!--~~~~~~~~~~~~~~~~~~~~~   FOOTER   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
